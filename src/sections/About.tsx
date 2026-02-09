@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calculator, BookOpen, TrendingUp, Award, FileCheck, PieChart } from 'lucide-react';
+import { Calculator, Users, TrendingUp, Award, Star, PieChart, Building2 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { icon: BookOpen, value: 5, suffix: '+', label: 'Years Experience', color: 'text-primary' },
-  { icon: Calculator, value: 98, suffix: '%', label: 'Accuracy Rate', color: 'text-accent' },
-  { icon: FileCheck, value: 500, suffix: '+', label: 'Returns Filed', color: 'text-primary' },
+  { icon: Users, value: 92, suffix: '%', label: 'Client Retention', color: 'text-primary' },
+  { icon: Star, value: 95, suffix: '%', label: 'Client Satisfaction', color: 'text-primary' },
+  { icon: Building2, value: 15, suffix: '+', label: 'Industries Served', color: 'text-accent' },
   { icon: Award, value: 10, suffix: '+', label: 'Certifications', color: 'text-accent' },
 ];
 
@@ -186,7 +186,7 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
@@ -217,18 +217,14 @@ export default function About() {
           })}
         </div>
 
-        {/* Bio Section */}
-        <div className="mt-16 max-w-3xl mx-auto">
-          <div className="p-8 bg-card border border-border rounded-2xl shadow-card">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              I'm a dedicated Certified Public Accountant with <span className="text-primary font-semibold">5+ years of experience</span> providing 
-              comprehensive financial services to individuals and businesses. Specializing in QuickBooks solutions, I help clients 
-              streamline their accounting processes and make informed financial decisions.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              My expertise covers the <span className="text-accent font-semibold">full spectrum</span> of accounting services - from bookkeeping 
-              and financial statement preparation to tax planning and compliance. I'm committed to accuracy, integrity, and delivering 
-              personalized solutions that drive business success.
+        {/* Mission Statement */}
+        <div className="mt-16 max-w-4xl mx-auto text-center">
+          <div className="relative p-8 lg:p-10 bg-gradient-to-br from-primary/5 via-card to-accent/5 border-2 border-primary/20 rounded-2xl">
+            <div className="absolute top-4 left-4 text-6xl text-primary/10 font-serif">"</div>
+            <div className="absolute bottom-4 right-4 text-6xl text-primary/10 font-serif">"</div>
+            <p className="text-xl lg:text-2xl font-serif text-foreground leading-relaxed relative z-10">
+              I believe in delivering <span className="text-primary font-bold">precise financial solutions</span> with integrity and transparency. 
+              Every client deserves accounting services that not only ensure compliance but <span className="text-accent font-bold">drive strategic growth</span>.
             </p>
           </div>
         </div>

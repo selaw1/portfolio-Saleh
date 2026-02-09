@@ -7,26 +7,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const education = [
   {
-    degree: 'Bachelor of Science in Accounting',
-    institution: 'Wayne State University',
-    location: 'Detroit, Michigan',
-    period: '2014 - 2018',
-    gpa: '3.8/4.0',
-    honors: 'Magna Cum Laude',
-    highlights: [
-      'Dean\'s List all semesters',
-      'Recipient of Academic Excellence Scholarship',
-      'Active member of Beta Alpha Psi (Accounting Honor Society)',
-      'Completed advanced coursework in taxation, auditing, and financial analysis',
-    ],
+    degree: 'Bachelor of Commerce in Accounting',
+    institution: 'Nagpur University',
+    location: 'Nagpur, India',
+    period: '1983 - 1986',
+  },
+  {
+    degree: 'Master of Commerce in Accounting',
+    institution: 'Nagpur University',
+    location: 'Nagpur, India',
+    period: '1986 - 1989',
   },
 ];
 
 export default function Education() {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -48,34 +45,18 @@ export default function Education() {
         })
       );
 
-      // Card entrance
-      scrollTriggers.push(
-        ScrollTrigger.create({
-          trigger: cardRef.current,
-          start: 'top 75%',
-          onEnter: () => {
-            gsap.fromTo(
-              cardRef.current,
-              { opacity: 0, y: 50, scale: 0.95 },
-              { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out' }
-            );
-          },
-          once: true
-        })
-      );
-
-      // Highlight items stagger
-      itemsRef.current.forEach((item, i) => {
-        if (item) {
+      // Cards entrance
+      cardsRef.current.forEach((card, i) => {
+        if (card) {
           scrollTriggers.push(
             ScrollTrigger.create({
-              trigger: item,
-              start: 'top 90%',
+              trigger: card,
+              start: 'top 80%',
               onEnter: () => {
                 gsap.fromTo(
-                  item,
-                  { opacity: 0, x: -20 },
-                  { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out', delay: i * 0.1 }
+                  card,
+                  { opacity: 0, y: 50, scale: 0.95 },
+                  { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', delay: i * 0.15 }
                 );
               },
               once: true
@@ -120,79 +101,50 @@ export default function Education() {
           </p>
         </div>
 
-        {/* Education Card */}
-        {education.map((edu) => (
-          <div
-            key={edu.institution}
-            ref={cardRef}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="group relative p-8 lg:p-10 bg-gradient-to-br from-card via-card to-primary/5 border-2 border-border rounded-2xl hover:border-primary/50 hover:shadow-2xl transition-all duration-300">
+        {/* Education Cards Grid */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {education.map((edu, index) => (
+            <div
+              key={edu.degree}
+              ref={(el) => { cardsRef.current[index] = el; }}
+              className="group relative p-6 lg:p-8 bg-gradient-to-br from-card via-card to-primary/5 border-2 border-border rounded-2xl hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
               {/* Icon Badge */}
-              <div className="absolute -top-6 left-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/50 group-hover:scale-110 transition-transform">
-                <GraduationCap className="w-8 h-8 text-primary-foreground" />
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
+                <GraduationCap className="w-7 h-7 text-primary-foreground" />
               </div>
 
               {/* Content */}
-              <div className="pt-6">
-                {/* Degree and Honors */}
-                <div className="mb-6">
-                  <h3 className="text-2xl lg:text-3xl font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {edu.degree}
-                  </h3>
-                  <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <span className="text-xl font-semibold text-primary">{edu.institution}</span>
-                    {edu.honors && (
-                      <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-bold rounded-full border border-primary/20">
-                        {edu.honors}
-                      </span>
-                    )}
-                  </div>
-                  
-                  {/* Meta Info */}
-                  <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" />
-                      {edu.location}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      {edu.period}
-                    </div>
-                    {edu.gpa && (
-                      <div className="px-3 py-1 bg-accent/10 text-accent font-semibold text-sm rounded-lg">
-                        GPA: {edu.gpa}
-                      </div>
-                    )}
-                  </div>
+              <div>
+                {/* Degree */}
+                <h3 className="text-xl lg:text-2xl font-serif font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-tight">
+                  {edu.degree}
+                </h3>
+                
+                {/* Institution */}
+                <div className="text-lg font-semibold text-primary mb-4">
+                  {edu.institution}
                 </div>
-
-                {/* Highlights */}
-                <div className="mt-8">
-                  <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                    <span className="text-primary">★</span> Achievements & Activities
-                  </h4>
-                  <ul className="space-y-3">
-                    {edu.highlights.map((highlight, i) => (
-                      <li 
-                        key={i}
-                        ref={(el) => { itemsRef.current[i] = el; }}
-                        className="flex items-start gap-3 text-muted-foreground leading-relaxed"
-                      >
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                
+                {/* Meta Info */}
+                <div className="space-y-2 text-muted-foreground text-sm">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-primary" />
+                    {edu.location}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-primary" />
+                    {edu.period}
+                  </div>
                 </div>
               </div>
 
-              {/* Decorative Elements */}
-              <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-primary/20 rounded-br-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Decorative Corner */}
+              <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/20 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

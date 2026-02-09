@@ -8,42 +8,108 @@ gsap.registerPlugin(ScrollTrigger);
 const experiences = [
   {
     company: 'Self-Employed',
-    role: 'Freelance Accountant & Tax Consultant',
-    location: 'Michigan, USA',
-    period: 'September 2020 - Present',
+    role: 'Online Accounting & Financial Services',
+    location: 'Global',
+    period: 'April 2024 - Present',
     description: [
-      'Provide comprehensive bookkeeping, financial reporting, and tax preparation services to 50+ individual and business clients',
-      'Specialize in QuickBooks Online and Desktop setup, customization, and training for small to medium-sized businesses',
-      'Prepare and file federal and state tax returns with 98% accuracy rate, maximizing deductions and ensuring compliance',
-      'Conduct financial analysis and budget planning to help clients make informed business decisions and improve profitability',
-      'Manage accounts payable/receivable, payroll processing, and bank reconciliations with meticulous attention to detail',
-      'Implement efficient accounting systems and procedures that reduce errors and save clients an average of 15 hours per month',
+      'Providing comprehensive accounting and bookkeeping services for clients\' businesses across various markets',
+      'Maintaining and recording all bank statement transactions to create monthly financial statements',
+      'Delivering payroll services, taxation, and financial statement analysis services',
     ],
     achievements: [
-      '50+ satisfied clients with recurring engagements',
-      '98% tax return accuracy rate',
-      '15+ hours monthly time saved per client',
-      'Zero compliance violations in 4+ years',
+      'Global client portfolio',
+      'Consistent monthly reporting',
+      'Full-service financial management',
     ],
   },
   {
-    company: 'RSM US LLP',
-    role: 'Staff Accountant',
-    location: 'Detroit, Michigan',
-    period: 'January 2019 - August 2020',
+    company: 'Al-Ashegaa Real Estate, LLC',
+    role: 'Financial Manager',
+    location: 'Amman, Jordan',
+    period: 'May 2011 - December 2023',
     description: [
-      'Performed detailed financial audits and reviews for clients in manufacturing, retail, and service industries',
-      'Prepared complex financial statements, tax returns, and management reports in compliance with GAAP and tax regulations',
-      'Assisted in quarterly and annual report preparation, ensuring accuracy and timeliness of all submissions',
-      'Conducted detailed variance analysis and reconciliations of general ledger accounts',
-      'Collaborated with senior accountants and managers on audit planning, fieldwork execution, and report finalization',
-      'Utilized QuickBooks, Excel, and accounting software to streamline data analysis and reporting processes',
+      'Reviewed accounting, audit (external/internal), and consultancy assignments for clients, effectively allocating resources to meet goals',
+      'Implemented cost accounting tools to enhance cost efficiency and drive cost reductions in apartment production',
+      'Maintained accurate financial documentation, reporting, and records, ensuring compliance and transparency',
+      'Established and administered comprehensive operational control plans, including profit planning and capital investment programs',
     ],
     achievements: [
-      'Completed 30+ successful audits',
-      'Reduced audit time by 20% through process improvements',
-      'Recognized for exceptional attention to detail',
-      'Mentored 3 junior staff members',
+      '12+ years leadership',
+      'Cost reduction initiatives',
+      'Enhanced operational controls',
+      'Improved accounting processes',
+    ],
+  },
+  {
+    company: 'MAZEN, INC',
+    role: 'Financial Manager',
+    location: 'Texas, USA',
+    period: 'January 2001 - February 2011',
+    description: [
+      'Achieved significant cost savings of over $2 million through effective financial management and strategic decision-making',
+      'Established and coordinated credit policies with the credit department to ensure effective credit management',
+      'Maintained and controlled all cost accounting aspects related to products, optimizing cost efficiency and profitability',
+      'Prepared and presented accurate financial statements for management, providing valuable insights for decision-making',
+    ],
+    achievements: [
+      '$2M+ cost savings achieved',
+      'Optimized cash flow management',
+      'Strong banking relationships',
+      'Tax compliance maintained',
+    ],
+  },
+  {
+    company: 'Paradise Fine Food, INC',
+    role: 'Chief Accountant',
+    location: 'Toronto, ON',
+    period: 'May 1997 - December 2000',
+    description: [
+      'Monitored and supervised salaries and wages, ensuring accurate and timely processing',
+      'Coordinated with bankers and financial institutions, maintaining strong relationships',
+      'Proposed upgrades to the financial and accounting system to enhance efficiency',
+      'Prepared comprehensive financial statements including P&L, Balance Sheet, and Cash Flow statements',
+    ],
+    achievements: [
+      'System efficiency improvements',
+      'Accurate payroll management',
+      'Tax compliance ensured',
+      'Budget alignment achieved',
+    ],
+  },
+  {
+    company: 'Lanka Trading Co',
+    role: 'Administration & Financial Manager',
+    location: 'Hatyai, Thailand',
+    period: 'October 1995 - March 1997',
+    description: [
+      'Planned, organized, and managed divisional operations to ensure smooth functioning and achievement of objectives',
+      'Conducted regular account reviews and liaised with group managers to identify and address potential problems',
+      'Implemented upgrades to financial accounting systems, incorporating the latest field developments',
+      'Developed policies, plans, and schedules to drive divisional objectives and ensure effective resource allocation',
+    ],
+    achievements: [
+      'Division operations management',
+      'System modernization',
+      'Proactive problem resolution',
+      'Team coordination excellence',
+    ],
+  },
+  {
+    company: 'Zakat House',
+    role: 'Internal Auditor & Accountant',
+    location: 'Kuwait',
+    period: 'October 1986 - September 1995',
+    description: [
+      'Prepared, reviewed, and analyzed annual financial statements in compliance with IAS and IFRS',
+      'Reviewed entity policies, procedure manuals, and internal control activities with comprehensive reporting',
+      'Conducted internal audit assignments, producing detailed written reports with implementation solutions',
+      'Executed detailed audit procedures ensuring accuracy by reviewing transactions, documents, and records',
+    ],
+    achievements: [
+      '9 years audit experience',
+      'IAS & IFRS compliance',
+      'Internal control excellence',
+      'Policy development expertise',
     ],
   },
 ];
@@ -52,7 +118,7 @@ const experiences = [
 export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const descriptionsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
@@ -75,34 +141,18 @@ export default function Experience() {
         })
       );
 
-      // Card entrance
-      scrollTriggers.push(
-        ScrollTrigger.create({
-          trigger: cardRef.current,
-          start: 'top 75%',
-          onEnter: () => {
-            gsap.fromTo(
-              cardRef.current,
-              { opacity: 0, y: 50, rotateX: 10 },
-              { opacity: 1, y: 0, rotateX: 0, duration: 0.8, ease: 'power3.out' }
-            );
-          },
-          once: true
-        })
-      );
-
-      // Description items stagger
-      descriptionsRef.current.forEach((item, i) => {
-        if (item) {
+      // Cards entrance
+      cardsRef.current.forEach((card, i) => {
+        if (card) {
           scrollTriggers.push(
             ScrollTrigger.create({
-              trigger: item,
-              start: 'top 90%',
+              trigger: card,
+              start: 'top 85%',
               onEnter: () => {
                 gsap.fromTo(
-                  item,
-                  { opacity: 0, x: -20 },
-                  { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out', delay: i * 0.1 }
+                  card,
+                  { opacity: 0, y: 50, rotateX: 10 },
+                  { opacity: 1, y: 0, rotateX: 0, duration: 0.8, ease: 'power3.out', delay: i * 0.1 }
                 );
               },
               once: true
@@ -158,9 +208,8 @@ export default function Experience() {
           {/* Experience Items */}
           {experiences.map((exp, index) => (
             <div
-              key={exp.company}
-              ref={cardRef}
-              className={`relative mb-12 md:mb-20 ${
+              key={exp.company + exp.period}
+              className={`relative mb-12 md:mb-16 ${
                 index % 2 === 0 ? 'md:pr-1/2 md:mr-8' : 'md:pl-1/2 md:ml-8'
               }`}
             >
@@ -169,21 +218,24 @@ export default function Experience() {
 
               {/* Experience Card */}
               <div className={`ml-16 md:ml-0 ${index % 2 === 1 ? 'md:ml-8' : 'md:mr-8'}`}>
-                <div className="group relative p-8 bg-card border-2 border-border rounded-2xl hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+                <div 
+                  ref={(el) => { cardsRef.current[index] = el; }}
+                  className="group relative p-6 lg:p-8 bg-card border-2 border-border rounded-2xl hover:border-primary/50 hover:shadow-xl transition-all duration-300"
+                >
                   {/* Period Badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
                     <Calendar className="w-4 h-4" />
                     {exp.period}
                   </div>
 
                   {/* Header */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <div className="mb-4">
+                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {exp.role}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-3 text-muted-foreground text-sm">
                       <div className="flex items-center gap-2 font-semibold text-primary">
-                        <Briefcase className="w-5 h-5" />
+                        <Briefcase className="w-4 h-4" />
                         {exp.company}
                       </div>
                       <div className="flex items-center gap-2">
@@ -194,32 +246,31 @@ export default function Experience() {
                   </div>
 
                   {/* Description */}
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2.5 mb-5">
                     {exp.description.map((item, i) => (
                       <li 
-                        key={i} 
-                        ref={(el) => { descriptionsRef.current[i] = el; }}
-                        className="flex items-start gap-3 text-muted-foreground leading-relaxed"
+                        key={i}
+                        className="flex items-start gap-2.5 text-muted-foreground leading-relaxed text-sm"
                       >
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Achievements Section */}
-                  <div className="pt-6 border-t border-border">
-                    <p className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
+                  <div className="pt-4 border-t border-border">
+                    <p className="text-xs font-bold text-foreground mb-3 flex items-center gap-2">
                       <span className="text-primary">★</span> Key Achievements
                     </p>
-                    <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="grid sm:grid-cols-2 gap-2">
                       {exp.achievements.map((achievement, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-2 px-3 py-2 bg-primary/5 rounded-lg border border-primary/20"
+                          className="flex items-center gap-2 px-3 py-1.5 bg-primary/5 rounded-lg border border-primary/20"
                         >
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                          <span className="text-sm text-foreground font-medium">{achievement}</span>
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                          <span className="text-xs text-foreground font-medium">{achievement}</span>
                         </div>
                       ))}
                     </div>

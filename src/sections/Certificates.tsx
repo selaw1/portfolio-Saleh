@@ -1,70 +1,38 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Award, ExternalLink, CheckCircle } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const certificates = [
   {
-    title: 'Certified Public Accountant (CPA)',
-    issuer: 'American Institute of CPAs',
-    date: 'March 2019',
-    credential: 'License #123456',
+    title: 'Arab Certified Professional Accountant (ACPA)',
+    issuer: 'University of Cambridge',
+    date: '2010',
     description: 'Comprehensive certification covering auditing, financial accounting, taxation, and business environment concepts.',
     featured: true,
   },
   {
-    title: 'QuickBooks Online Advanced Certification',
-    issuer: 'Intuit',
-    date: 'June 2020',
-    credential: 'Cert #QBO-2020-456',
-    description: 'Advanced proficiency in QuickBooks Online including setup, customization, reporting, and troubleshooting.',
+    title: 'CIMA Islamic Finance Diploma',
+    issuer: 'University of Cambridge',
+    date: '2012',
+    description: 'Specialized certification in Islamic finance principles, Sharia-compliant accounting practices, and ethical financial management.',
     featured: true,
   },
   {
-    title: 'QuickBooks Desktop Pro Certification',
-    issuer: 'Intuit',
-    date: 'May 2020',
-    credential: 'Cert #QBD-2020-789',
-    description: 'Expert-level certification in QuickBooks Desktop featuring advanced accounting functions and integration.',
+    title: 'Zakat Accounting Diploma',
+    issuer: 'Kuwait Zakat House',
+    date: '2020',
+    description: 'Expert certification in Zakat calculation, Islamic charitable accounting principles, and religious financial obligations.',
     featured: true,
   },
   {
-    title: 'Certified Management Accountant (CMA)',
-    issuer: 'Institute of Management Accountants',
-    date: 'September 2021',
-    credential: 'Cert #CMA-2021-321',
-    description: 'Strategic management accounting certification focusing on financial planning, analysis, and decision support.',
-  },
-  {
-    title: 'Enrolled Agent (EA)',
-    issuer: 'Internal Revenue Service',
-    date: 'January 2020',
-    credential: 'EA #987654',
-    description: 'Federal tax certification granting unlimited rights to represent taxpayers before the IRS.',
-  },
-  {
-    title: 'Certified Fraud Examiner (CFE)',
-    issuer: 'Association of Certified Fraud Examiners',
-    date: 'November 2021',
-    credential: 'CFE #654321',
-    description: 'Specialized certification in fraud prevention, detection, and investigation.',
-  },
-  {
-    title: 'Excel Expert Certification',
+    title: 'Advanced Excel Expert Certification',
     issuer: 'Microsoft',
-    date: 'February 2019',
-    credential: 'MOS Expert',
+    date: '2013',
     description: 'Advanced Microsoft Excel certification including complex formulas, pivot tables, and data analysis.',
-  },
-  {
-    title: 'Financial Modeling & Valuation Analyst',
-    issuer: 'Corporate Finance Institute',
-    date: 'August 2022',
-    credential: 'FMVA #2022-147',
-    description: 'Comprehensive training in financial modeling, valuation techniques, and corporate finance.',
-  },
+  }
 ];
 
 export default function Certificates() {
@@ -153,7 +121,7 @@ export default function Certificates() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificates.map((cert, i) => (
             <div
-              key={cert.credential}
+              key={cert.title}
               ref={(el) => { cardsRef.current[i] = el; }}
               className={`group relative p-6 bg-card border-2 rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 cert.featured 
@@ -181,27 +149,15 @@ export default function Certificates() {
               </h3>
 
               {/* Issuer and Date */}
-              <div className="space-y-1 mb-3">
+              <div className="space-y-1 mb-4">
                 <p className="text-sm font-semibold text-primary">{cert.issuer}</p>
                 <p className="text-xs text-muted-foreground">{cert.date}</p>
               </div>
 
-              {/* Credential ID */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary rounded-full mb-4">
-                <CheckCircle className="w-3 h-3 text-primary" />
-                <span className="text-xs font-mono text-muted-foreground">{cert.credential}</span>
-              </div>
-
               {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {cert.description}
               </p>
-
-              {/* Verify Link (placeholder) */}
-              <button className="flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
-                Verify Credential
-                <ExternalLink className="w-4 h-4" />
-              </button>
 
               {/* Hover Effect */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -209,15 +165,6 @@ export default function Certificates() {
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-16 max-w-3xl mx-auto">
-          <div className="p-6 bg-card/50 border border-border rounded-xl text-center backdrop-blur-sm">
-            <p className="text-muted-foreground">
-              All certifications are current and in good standing. Continuing Professional Education (CPE) 
-              requirements are maintained annually to ensure up-to-date knowledge and expertise.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

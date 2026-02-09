@@ -15,9 +15,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Phone, label: 'Phone', href: 'tel:+1234567890' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/saleh-alselawi' },
-  { icon: Mail, label: 'Email', href: 'mailto:saleh.accounting@example.com' },
+  { icon: Phone, label: 'Phone', href: 'tel:+16822397650' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/saleh-ahmad-57807142/' },
+  { icon: Mail, label: 'Email', href: 'mailto:saleh@selawii.com' },
 ];
 
 export default function Footer() {
@@ -70,7 +70,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Calculator className="w-6 h-6 text-primary" />
-              <span className="text-xl font-serif font-bold text-foreground">Saleh Alselawi</span>
+              <span className="text-xl font-serif font-bold text-foreground">Saleh Ahmad</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Certified Public Accountant specializing in QuickBooks and comprehensive financial services.
@@ -119,7 +119,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Saleh Alselawi, CPA. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Saleh Ahmad, CPA. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Professional Accounting Services
           </p>

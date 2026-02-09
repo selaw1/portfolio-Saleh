@@ -6,9 +6,9 @@ import { Mail, Linkedin, Phone, Send, MapPin } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
-  { icon: Phone, label: 'Phone', href: 'tel:+1234567890', color: 'hover:text-primary' },
-  { icon: Mail, label: 'Email', href: 'mailto:saleh.accounting@example.com', color: 'hover:text-primary' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/saleh-alselawi', color: 'hover:text-[#0077b5]' },
+  { icon: Phone, label: 'Phone', href: 'tel:+16822397650', color: 'hover:text-primary' },
+  { icon: Mail, label: 'Email', href: 'mailto:saleh@selawii.com', color: 'hover:text-primary' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/saleh-ahmad-57807142/', color: 'hover:text-[#0077b5]' },
 ];
 
 
@@ -126,7 +126,7 @@ export default function Contact() {
         {/* Direct Email CTA */}
         <div className="text-center">
           <a
-            href="mailto:me@usefselawi.com"
+            href="mailto:saleh@selawii.com"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-300"
           >
             <Send className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -137,7 +137,7 @@ export default function Contact() {
         {/* Location Badge */}
         <div className="mt-12 flex items-center justify-center gap-2 text-muted-foreground">
           <MapPin className="w-4 h-4" />
-          <span className="text-sm">Based in Dubai, UAE</span>
+          <span className="text-sm">Based in Texas, USA</span>
         </div>
       </div>
     </section>

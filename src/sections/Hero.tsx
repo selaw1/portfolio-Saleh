@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calculator, TrendingUp, FileCheck, ChevronDown } from 'lucide-react';
+import { Calculator, TrendingUp, FileCheck, ChevronDown, Briefcase } from 'lucide-react';
 import FloatingNumbers from '../components/FloatingNumbers';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -92,7 +92,7 @@ export default function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground mb-6 relative"
           >
             <span className="text-foreground">Saleh </span>
-            <span className="text-primary">Alselawi</span>
+            <span className="text-primary">Ahmad</span>
           </h1>
 
           {/* Subtitle */}
@@ -127,31 +127,31 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div ref={ctaRef} className="flex flex-wrap justify-center gap-4 pt-8">
             <a
-              href="/Saleh_Resume.pdf"
-              download
+              href="#contact"
+              onClick={(e) => scrollToSection(e, '#contact')}
               className="group relative inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg overflow-hidden hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
             >
-              <span className="relative z-10">Download Resume</span>
-              <FileCheck className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
+              <span className="relative z-10">Let's Connect</span>
+              <TrendingUp className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
             
             <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, '#contact')}
+              href="#skills"
+              onClick={(e) => scrollToSection(e, '#skills')}
               className="inline-flex items-center gap-2 px-8 py-4 bg-card text-foreground font-semibold rounded-lg border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300"
             >
-              Let's Connect
-              <TrendingUp className="w-5 h-5" />
+              View Services
+              <Briefcase className="w-5 h-5" />
             </a>
           </div>
 
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8">
             {[
-              { number: '5+', label: 'Years Experience' },
-              { number: '98%', label: 'Accuracy Rate' },
-              { number: '50+', label: 'Clients Served' }
+              { number: '38+', label: 'Years Experience' },
+              { number: '100+', label: 'Clients' },
+              { number: '5+', label: 'Countries Served' }
             ].map((stat, i) => (
               <div 
                 key={stat.label}

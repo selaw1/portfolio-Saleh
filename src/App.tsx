@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
+import Countries from './sections/Countries';
 import About from './sections/About';
 import Skills from './sections/Skills';
 import Experience from './sections/Experience';
@@ -41,6 +42,7 @@ function App() {
         <Navigation />
         <main>
           <Hero />
+          <Countries />
           <About />
           <Skills />
           <Experience />

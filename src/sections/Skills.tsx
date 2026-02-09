@@ -11,18 +11,9 @@ const skills = [
   { name: 'QuickBooks Desktop', category: 'QuickBooks', level: 95, featured: true },
   { name: 'QuickBooks Payroll', category: 'QuickBooks', level: 92 },
   { name: 'QuickBooks Point of Sale', category: 'QuickBooks', level: 88 },
-  
-  // Accounting Software
-  { name: 'Xero', category: 'Software', level: 85 },
-  { name: 'Sage 50', category: 'Software', level: 82 },
-  { name: 'FreshBooks', category: 'Software', level: 80 },
-  { name: 'Wave Accounting', category: 'Software', level: 78 },
-  
+
   // Tax Software
   { name: 'TurboTax', category: 'Tax', level: 94 },
-  { name: 'ProSeries', category: 'Tax', level: 90 },
-  { name: 'Lacerte', category: 'Tax', level: 88 },
-  { name: 'Drake Tax', category: 'Tax', level: 85 },
   
   // Microsoft Office
   { name: 'Excel (Advanced)', category: 'Office', level: 96 },
