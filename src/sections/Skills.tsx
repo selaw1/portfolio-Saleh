@@ -161,7 +161,7 @@ export default function Skills() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {skills.filter(s => s.featured).map((skill, i) => (
-                <div key={skill.name} className="bg-card/50 backdrop-blur-sm rounded-xl p-4 border border-border">
+                <div key={`${skill.name}-${i}`} className="bg-card/50 backdrop-blur-sm rounded-xl p-4 border border-border">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-bold text-foreground">{skill.name}</span>
                     <span className="text-primary font-semibold">{skill.level}%</span>

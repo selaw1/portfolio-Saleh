@@ -119,7 +119,6 @@ export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const descriptionsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
