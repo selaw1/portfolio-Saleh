@@ -1,128 +1,21 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Linkedin, Mail, Phone, Calculator } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
-
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Certificates', href: '#certificates' },
-  { label: 'Contact', href: '#contact' },
-];
-
-const socialLinks = [
-  { icon: Phone, label: 'Phone', href: 'tel:+16822397650' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/saleh-ahmad-57807142/' },
-  { icon: Mail, label: 'Email', href: 'mailto:saleh@selawii.com' },
-];
+import { contact } from '../data/content';
 
 export default function Footer() {
-  const footerRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const scrollTriggers: ScrollTrigger[] = [];
-
-      scrollTriggers.push(
-        ScrollTrigger.create({
-          trigger: footerRef.current,
-          start: 'top 90%',
-          onEnter: () => {
-            gsap.fromTo(
-              contentRef.current,
-              { opacity: 0, y: 30 },
-              { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
-            );
-          },
-          once: true
-        })
-      );
-
-      return () => {
-        scrollTriggers.forEach(st => st.kill());
-      };
-    }, footerRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <footer
-      ref={footerRef}
-      className="relative py-12 bg-card border-t border-border transition-colors"
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div ref={contentRef} className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Calculator className="w-6 h-6 text-primary" />
-              <span className="text-xl font-serif font-bold text-foreground">Saleh Ahmad</span>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Certified Public Accountant specializing in QuickBooks and comprehensive financial services.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">Quick Links</h4>
-            <div className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">Connect</h4>
-            <div className="flex gap-3">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target={social.href.startsWith('http') ? '_blank' : undefined}
-                    rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center hover:text-primary transition-all"
-                    aria-label={social.label}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Saleh Ahmad, CPA. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Professional Accounting Services
-          </p>
+    <footer data-tone="dark" className="bg-deep text-porcelain/60">
+      <div className="wrap flex flex-col gap-6 border-t border-porcelain/10 py-10 text-sm md:flex-row md:items-center md:justify-between">
+        <p>
+          <span className="font-semibold text-porcelain">Saleh Ahmad</span>
+          <span className="ml-3">Accounting, payroll and tax. Based in {contact.base}.</span>
+        </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="link-draw hover:text-porcelain">
+            LinkedIn
+          </a>
+          <a href={`mailto:${contact.email}`} className="link-draw hover:text-porcelain">
+            Email
+          </a>
+          <span>© {new Date().getFullYear()}</span>
         </div>
       </div>
     </footer>

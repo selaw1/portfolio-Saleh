@@ -5,8 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['"Schibsted Grotesk"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -42,24 +41,16 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        brand: {
-          primary: '#22c55e',
-          dark: '#15803d',
-          light: '#4ade80',
-          accent: '#16a34a',
-          yellow: '#fcd34d',
-          cream: '#fef3c7',
-          mint: '#d1fae5',
-          gray: '#e5e7eb',
-          black: '#1f1f1f',
-          'dark-gray': '#374151',
-          'medium-gray': '#6b7280',
-          'light-gray': '#9ca3af',
-          'soft-gray': '#d1d5db',
-          silver: '#e5e7eb',
-          'bg-gray': '#f9fafb',
-          'light-bg': '#f0fdf4',
-        },
+        porcelain: 'rgb(var(--porcelain) / <alpha-value>)',
+        mist: 'rgb(var(--mist) / <alpha-value>)',
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        fog: 'rgb(var(--fog) / <alpha-value>)',
+        evergreen: 'rgb(var(--evergreen) / <alpha-value>)',
+        deep: 'rgb(var(--deep) / <alpha-value>)',
+        brass: 'rgb(var(--brass) / <alpha-value>)',
+      },
+      transitionTimingFunction: {
+        expo: 'cubic-bezier(0.16, 1, 0.3, 1)',
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",

@@ -1,173 +1,121 @@
-import { useEffect, useState, useRef } from 'react';
-import { Menu, X, Sun, Moon, Calculator } from 'lucide-react';
-import gsap from 'gsap';
-import { useTheme } from '../contexts/ThemeContext';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'Approach', href: '#approach' },
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Certificates', href: '#certificates' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
-  const navRef = useRef<HTMLElement>(null);
-  const logoRef = useRef<HTMLAnchorElement>(null);
-  const linksRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const [onDark, setOnDark] = useState(true);
+  const [hidden, setHidden] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const update = () => {
+      const y = window.scrollY;
+      // Light-on-dark while over a dark section (the hero or the booking section)
+      const darkSections = document.querySelectorAll<HTMLElement>('[data-tone="dark"]');
+      setOnDark(
+        Array.from(darkSections).some((section) => {
+          const rect = section.getBoundingClientRect();
+          return rect.top <= 40 && rect.bottom >= 40;
+        })
+      );
+      setHidden(y > 120 && y > lastY);
+      lastY = y;
+      ticking = false;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.2 });
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  }, [menuOpen]);
 
-      tl.fromTo(
-        logoRef.current,
-        { opacity: 0, x: -20 },
-        { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out' }
-      );
-
-      linksRef.current.forEach((link, i) => {
-        if (link) {
-          tl.fromTo(
-            link,
-            { opacity: 0, y: -10 },
-            { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' },
-            0.1 + i * 0.05
-          );
-        }
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-  };
+  const light = onDark || menuOpen;
 
   return (
     <>
-      <nav
-        ref={navRef}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-background/80 dark:bg-brand-black/80 backdrop-blur-xl shadow-lg border-b border-border'
-            : 'bg-transparent'
-        }`}
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-[transform,background-color,color] duration-500 ease-expo ${
+          hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'
+        } ${light ? 'text-porcelain' : 'bg-porcelain/80 text-ink backdrop-blur-xl'}`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <a
-            ref={logoRef}
-            href="#"
-            className="flex items-center gap-2 text-xl font-serif font-bold text-foreground hover:text-primary transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          >
-            <Calculator className="w-6 h-6 text-primary" />
-            <span>SA</span>
+        <div className="wrap flex h-16 items-center justify-between md:h-20">
+          <a href="#top" onClick={() => setMenuOpen(false)} className="text-[17px] font-semibold tracking-tight">
+            Saleh Ahmad
           </a>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link, i) => (
-              <a
-                key={link.href}
-                ref={(el) => { linksRef.current[i] = el; }}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
+          <nav className="hidden items-center gap-9 md:flex" aria-label="Main">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="link-draw text-[15px] opacity-80 hover:opacity-100">
                 {link.label}
               </a>
             ))}
-            
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-foreground" />
-              ) : (
-                <Moon className="w-5 h-5 text-foreground" />
-              )}
-            </button>
-          </div>
+            <a href="#book" className={light ? 'pill-light min-h-[42px] px-5' : 'pill-dark min-h-[42px] px-5'}>
+              Book a call
+            </a>
+          </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-foreground" />
-              ) : (
-                <Moon className="w-5 h-5 text-foreground" />
-              )}
-            </button>
-            
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5 text-foreground" />
-              ) : (
-                <Menu className="w-5 h-5 text-foreground" />
-              )}
-            </button>
-          </div>
+          <button
+            onClick={() => setMenuOpen((open) => !open)}
+            className="relative -mr-2 flex h-11 w-11 items-center justify-center md:hidden"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            <span
+              className={`absolute h-[1.5px] w-6 bg-current transition-transform duration-500 ease-expo ${
+                menuOpen ? 'rotate-45' : '-translate-y-[4px]'
+              }`}
+            />
+            <span
+              className={`absolute h-[1.5px] w-6 bg-current transition-transform duration-500 ease-expo ${
+                menuOpen ? '-rotate-45' : 'translate-y-[4px]'
+              }`}
+            />
+          </button>
         </div>
-      </nav>
+      </header>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="absolute top-20 right-0 left-0 bg-card border-b border-border p-6 shadow-xl">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Mobile menu */}
+      <div
+        className={`fixed inset-0 z-40 flex flex-col bg-deep px-5 pb-10 pt-28 text-porcelain transition-[opacity,visibility] duration-500 md:hidden ${
+          menuOpen ? 'visible opacity-100' : 'invisible opacity-0'
+        }`}
+      >
+        <nav className="flex flex-col" aria-label="Mobile">
+          {navLinks.map((link, i) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className={`border-b border-porcelain/10 py-4 text-4xl font-medium tracking-tight transition-[opacity,transform] duration-700 ease-expo ${
+                menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: menuOpen ? `${120 + i * 60}ms` : '0ms' }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <a href="#book" onClick={() => setMenuOpen(false)} className="pill-light mt-auto w-full">
+          Book a call
+        </a>
+      </div>
     </>
   );
 }

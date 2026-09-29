@@ -1,58 +1,29 @@
-import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { useReveal } from './hooks/useReveal';
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
-import Countries from './sections/Countries';
+import Figures from './sections/Figures';
+import Services from './sections/Services';
+import Process from './sections/Process';
 import About from './sections/About';
-import Skills from './sections/Skills';
-import Experience from './sections/Experience';
-import Education from './sections/Education';
-import Certificates from './sections/Certificates';
-import Contact from './sections/Contact';
+import Booking from './sections/Booking';
 import Footer from './sections/Footer';
-import './App.css';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  useEffect(() => {
-    // Initialize smooth scroll behavior
-    ScrollTrigger.defaults({
-      toggleActions: 'play none none none',
-    });
-
-    // Refresh ScrollTrigger on window resize
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      ScrollTrigger.getAll().forEach(st => st.kill());
-    };
-  }, []);
+  useReveal();
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-brand-black transition-colors duration-300">
-        <Navigation />
-        <main>
-          <Hero />
-          <Countries />
-          <About />
-          <Skills />
-          <Experience />
-          <Education />
-          <Certificates />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-porcelain">
+      <Navigation />
+      <main>
+        <Hero />
+        <Figures />
+        <Services />
+        <Process />
+        <About />
+        <Booking />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

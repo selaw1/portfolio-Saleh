@@ -1,183 +1,106 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calculator, TrendingUp, FileCheck, ChevronDown, Briefcase } from 'lucide-react';
-import FloatingNumbers from '../components/FloatingNumbers';
+import { Check } from 'lucide-react';
 
-gsap.registerPlugin(ScrollTrigger);
+const headline = ['Your', 'books,', 'finally', 'in', 'order.'];
 
-export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
+const closeSteps = ['Bank accounts reconciled', 'Card transactions categorized', 'Payroll recorded', 'Statements delivered'];
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 });
+// Illustrative bar heights for the sample report
+const bars = [42, 55, 48, 63, 58, 74];
+const months = ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
 
-      // Headline entrance
-      tl.fromTo(
-        headlineRef.current,
-        { opacity: 0, y: 50, filter: 'blur(10px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out' }
-      );
-
-      // Subtitle
-      tl.fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' },
-        '-=0.5'
-      );
-
-      // CTA buttons
-      tl.fromTo(
-        ctaRef.current?.children || [],
-        { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.7)', stagger: 0.1 },
-        '-=0.3'
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+function ClosePanel() {
   return (
-    <section
-      id="hero"
-      ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-brand-light-bg to-brand-mint dark:from-brand-black dark:via-brand-dark-gray dark:to-brand-black transition-colors"
-    >
-      {/* Floating Numbers Background */}
-      <FloatingNumbers />
-
-      {/* Animated Pattern Background */}
-      <div className="absolute inset-0 opacity-10 dark:opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            repeating-linear-gradient(0deg, transparent, transparent 50px, hsl(var(--primary)) 50px, hsl(var(--primary)) 51px),
-            repeating-linear-gradient(90deg, transparent, transparent 50px, hsl(var(--primary)) 50px, hsl(var(--primary)) 51px)
-          `,
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
-
-      {/* Floating orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 right-1/3 w-80 h-80 bg-brand-yellow/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 relative z-10">
-        <div className="text-center space-y-8">
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/20">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-primary">Certified QuickBooks Expert</span>
+    <div className="rounded-[28px] bg-porcelain/[0.06] p-2 ring-1 ring-inset ring-porcelain/10 backdrop-blur-sm">
+      <div className="rounded-[22px] bg-porcelain p-6 text-ink shadow-[0_40px_80px_-30px_rgb(0_0_0/0.6)] sm:p-8">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-sm text-fog">Monthly close</p>
+            <p className="mt-1 text-2xl font-medium tracking-tight">September</p>
           </div>
+          <span className="fade-up inline-flex items-center gap-2 rounded-full bg-evergreen px-3 py-1.5 text-xs font-medium text-porcelain [--d:2000ms]">
+            <span className="h-1.5 w-1.5 rounded-full bg-brass" />
+            Closed
+          </span>
+        </div>
 
-          {/* Main Heading */}
-          <h1
-            ref={headlineRef}
-            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground mb-6 relative"
-          >
-            <span className="text-foreground">Saleh </span>
-            <span className="text-primary">Ahmad</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p
-            ref={subtitleRef}
-            className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto font-medium"
-          >
-            <Calculator className="inline-block w-6 h-6 mr-2 text-primary" />
-            Certified Accountant <span className="text-primary">|</span> QuickBooks Specialist
-          </p>
-
-          {/* Specialization Pills */}
-          <div className="flex flex-wrap justify-center gap-3 pt-4">
-            {[
-              { icon: Calculator, text: 'QuickBooks Online' },
-              { icon: FileCheck, text: 'Financial Analysis' },
-              { icon: TrendingUp, text: 'Tax Planning' },
-            ].map((item, i) => (
-              <div
-                key={item.text}
-                className="px-5 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 hover:scale-105 transition-all duration-300 cursor-default group"
-                style={{ animationDelay: `${i * 0.1}s` }}
+        <ul className="mt-7 space-y-3.5">
+          {closeSteps.map((step, i) => (
+            <li key={step} className="flex items-center gap-3 text-[15px]">
+              <span
+                className="tick flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-evergreen text-porcelain"
+                style={{ '--d': `${900 + i * 220}ms` } as React.CSSProperties}
               >
-                <div className="flex items-center gap-2">
-                  <item.icon className="w-4 h-4 text-primary group-hover:rotate-12 transition-transform" />
-                  <span className="text-sm font-semibold text-foreground">{item.text}</span>
-                </div>
+                <Check className="h-3 w-3" strokeWidth={3} aria-hidden="true" />
+              </span>
+              {step}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 border-t border-ink/10 pt-6">
+          <div className="flex items-baseline justify-between">
+            <p className="text-sm text-fog">Net income</p>
+            <p className="text-xs text-fog/70">Sample report</p>
+          </div>
+          <div className="mt-4 flex h-24 items-end gap-2 sm:gap-3" aria-hidden="true">
+            {bars.map((h, i) => (
+              <div key={months[i]} className="flex flex-1 flex-col items-center gap-2">
+                <div
+                  className={`bar w-full rounded-md ${i === bars.length - 1 ? 'bg-evergreen' : 'bg-mist'}`}
+                  style={{ height: `${h}px`, '--d': `${1100 + i * 90}ms` } as React.CSSProperties}
+                />
+                <span className="text-[11px] text-fog">{months[i]}</span>
               </div>
             ))}
           </div>
-
-          {/* CTA Buttons */}
-          <div ref={ctaRef} className="flex flex-wrap justify-center gap-4 pt-8">
-            <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, '#contact')}
-              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg overflow-hidden hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
-            >
-              <span className="relative z-10">Let's Connect</span>
-              <TrendingUp className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-            
-            <a
-              href="#skills"
-              onClick={(e) => scrollToSection(e, '#skills')}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-card text-foreground font-semibold rounded-lg border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300"
-            >
-              View Services
-              <Briefcase className="w-5 h-5" />
-            </a>
-          </div>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8">
-            {[
-              { number: '38+', label: 'Years Experience' },
-              { number: '100+', label: 'Clients' },
-              { number: '5+', label: 'Countries Served' }
-            ].map((stat, i) => (
-              <div 
-                key={stat.label}
-                className="p-4 rounded-xl bg-card/50 border border-border backdrop-blur-sm hover:border-primary/50 transition-all duration-300"
-                style={{ animationDelay: `${i * 0.15}s` }}
-              >
-                <div className="text-3xl font-bold text-primary mb-1">{stat.number}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Scroll Indicator */}
-          <a
-            href="#about"
-            onClick={(e) => scrollToSection(e, '#about')}
-            className="inline-block pt-12 text-muted-foreground hover:text-primary transition-colors animate-bounce cursor-pointer"
-          >
-            <ChevronDown className="w-8 h-8" />
-          </a>
         </div>
       </div>
+    </div>
+  );
+}
 
-      {/* Corner Accents */}
-      <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-primary/30" />
-      <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-primary/30" />
+export default function Hero() {
+  return (
+    <section
+      id="top"
+      data-tone="dark"
+      className="relative overflow-hidden bg-[radial-gradient(120%_80%_at_85%_0%,rgb(var(--evergreen))_0%,rgb(var(--deep))_60%)] text-porcelain"
+    >
+      <div className="wrap grid min-h-[min(100svh,60rem)] content-center gap-14 pb-16 pt-32 lg:grid-cols-12 lg:items-end lg:gap-8 lg:pb-24 lg:pt-40">
+        <div className="lg:col-span-7">
+          <p className="fade-up text-[15px] text-porcelain/60 [--d:100ms]">
+            Accounting, payroll and tax for growing businesses
+          </p>
+          <h1 className="display mt-6">
+            {headline.map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
+                <span className="word" style={{ '--d': `${150 + i * 80}ms` } as React.CSSProperties}>
+                  {word}
+                </span>
+                {i < headline.length - 1 && ' '}
+              </span>
+            ))}
+          </h1>
+          <p className="lede fade-up mt-8 max-w-[34ch] text-porcelain/70 [--d:650ms]">
+            Saleh Ahmad keeps the books, runs payroll and prepares taxes for businesses in the US and abroad, with 38
+            years of practice behind every close.
+          </p>
+          <div className="fade-up mt-10 flex flex-col gap-3 sm:flex-row [--d:800ms]">
+            <a href="#book" className="pill-light">
+              Book a call
+            </a>
+            <a href="#services" className="pill-ghost">
+              See services
+            </a>
+          </div>
+        </div>
+
+        <div className="drift-out lg:col-span-5 lg:col-start-8">
+          <div className="fade-up mx-auto max-w-md [--d:500ms] lg:max-w-none">
+            <ClosePanel />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
