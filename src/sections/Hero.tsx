@@ -68,10 +68,10 @@ export default function Hero() {
     >
       <div className="wrap grid min-h-[min(100svh,60rem)] content-center gap-14 pb-16 pt-32 lg:grid-cols-12 lg:items-end lg:gap-8 lg:pb-24 lg:pt-40">
         <div className="lg:col-span-7">
-          <p className="fade-up text-[15px] text-porcelain/60 [--d:100ms]">
-            Accounting, payroll and tax for growing businesses
-          </p>
-          <h1 className="display mt-6">
+          <h1 className="fade-up text-[15px] font-normal text-porcelain/60 [--d:100ms]">
+            Bookkeeping, payroll, tax and QuickBooks services for growing businesses
+          </h1>
+          <p className="display mt-6">
             {headline.map((word, i) => (
               <span key={i} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
                 <span className="word" style={{ '--d': `${150 + i * 80}ms` } as React.CSSProperties}>
@@ -80,7 +80,7 @@ export default function Hero() {
                 {i < headline.length - 1 && ' '}
               </span>
             ))}
-          </h1>
+          </p>
           <p className="lede fade-up mt-8 max-w-[34ch] text-porcelain/70 [--d:650ms]">
             Saleh Ahmad keeps the books, runs payroll and prepares taxes for businesses in the US and abroad, with 38
             years of practice behind every close.

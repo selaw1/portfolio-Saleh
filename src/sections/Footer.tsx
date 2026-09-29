@@ -15,7 +15,7 @@ export default function Footer() {
           <a href={`mailto:${contact.email}`} className="link-draw hover:text-porcelain">
             Email
           </a>
-          <span>© {new Date().getFullYear()}</span>
+          <span suppressHydrationWarning>© {new Date().getFullYear()}</span>
         </div>
       </div>
     </footer>

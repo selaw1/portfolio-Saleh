@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  // Only the files the site uses; the unused components/ui kit would bloat the CSS
+  content: ['./index.html', './src/*.{ts,tsx}', './src/sections/**/*.tsx', './src/components/*.tsx', './src/hooks/**/*.ts'],
   theme: {
     extend: {
       fontFamily: {
