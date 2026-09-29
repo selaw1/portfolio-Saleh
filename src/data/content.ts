@@ -8,7 +8,7 @@ export const contact = {
 
 // Saleh's Calendly event link, e.g. 'https://calendly.com/saleh-ahmad/intro-call'.
 // While empty, the booking section shows email and phone instead of the scheduler.
-export const calendlyUrl = 'https://calendly.com/usefselawi/30min';
+export const calendlyUrl = 'https://calendly.com/saleh-selawii/30min';
 
 export const figures = [
   { value: 38, suffix: '+', label: 'Years in accounting' },
