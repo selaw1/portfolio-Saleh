@@ -29,6 +29,7 @@ Rewriting the prose is fine. These parts are not prose and must stay as they are
 | File | Keep these phrases |
 |---|---|
 | accounting-system-setup-guide.md | accounting system, small business, chart of accounts, QuickBooks Online |
+| how-to-do-a-bank-reconciliation.md | bank reconciliation, reconcile your bank account, QuickBooks Online |
 | biweekly-vs-semi-monthly-payroll.md | biweekly payroll, semi-monthly payroll, pay schedule, Texas Payday Law |
 | catch-up-bookkeeping.md | catch-up bookkeeping, behind on your books, reconcile |
 | how-much-does-bookkeeping-cost.md | how much does bookkeeping cost, bookkeeping cost, a month, an hour |
