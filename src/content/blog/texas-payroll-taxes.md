@@ -9,23 +9,26 @@ Texas is one of the simpler states for payroll because it has no state income ta
 
 ## Payroll taxes in Texas at a glance
 
-| Tax | Who pays | Rate | Paid to |
+| Tax | Who pays | Rate and taxable wages | Paid to |
 |---|---|---|---|
-| Federal income tax | Employee (withheld) | Based on the employee's W-4 | IRS |
-| Social Security | Employee and employer | 6.2% each | IRS |
-| Medicare | Employee and employer | 1.45% each | IRS |
-| Additional Medicare | Employee (withheld) | 0.9% on wages over $200,000 | IRS |
-| Federal unemployment (FUTA) | Employer | 6.0% on the first $7,000 per employee, usually reduced to 0.6% by the state credit | IRS |
-| Texas unemployment tax | Employer | Assigned by the TWC; most new employers start at 2.7% | TWC |
-| State income tax | None | No state income tax in Texas | None |
+| Federal income tax | Employee, withheld by the employer | Based on the employee's Form W-4 and IRS rules | IRS |
+| Social Security | Employee and employer | 6.2% each, on the first $184,500 per employee | IRS |
+| Medicare | Employee and employer | 1.45% each, on all wages | IRS |
+| Additional Medicare | Employee only | 0.9% withheld on wages above $200,000 | IRS |
+| Federal unemployment (FUTA) | Employer | 6.0% on the first $7,000 per employee, generally 0.6% after the maximum state credit | IRS |
+| Texas unemployment tax | Employer | Generally 2.7% for new employers, then a rate based on your history, on the first $9,000 per employee | TWC |
+| State income tax | Neither | 0%, since Texas has no state income tax | None |
 
 ## Federal taxes you withhold from employees
 
 From each paycheck, you withhold:
 
 - Federal income tax, based on the Form W-4 the employee gave you
-- The employee's share of Social Security, 6.2%
-- The employee's share of Medicare, 1.45%, plus the additional 0.9% once an employee's wages for the year pass $200,000
+- The employee's share of Social Security, 6.2%, until the employee's wages for the year reach $184,500
+- The employee's share of Medicare, 1.45%, on all wages
+- Additional Medicare tax of 0.9% once an employee's wages from you pass $200,000 for the year
+
+The $200,000 figure is when you, the employer, must start withholding the additional Medicare tax. What the employee actually owes is settled on their own tax return, based on their filing status.
 
 This money belongs to your employees and the IRS, not to the business. Hold it separately in your books as a liability until you deposit it.
 
@@ -34,7 +37,9 @@ This money belongs to your employees and the IRS, not to the business. Hold it s
 On top of what you withhold, the business pays:
 
 - The employer's matching share of Social Security (6.2%) and Medicare (1.45%)
-- Federal unemployment tax (FUTA) of 6.0% on the first $7,000 of each employee's wages, usually reduced to 0.6% by the credit for paying state unemployment tax
+- Federal unemployment tax (FUTA) of 6.0% on the first $7,000 of each employee's wages, generally reduced to 0.6% by the credit for paying state unemployment tax
+
+The 0.6% FUTA rate assumes you qualify for the full state tax credit. If you don't, your effective FUTA rate can be higher.
 
 These are real costs of having employees, and they should be recorded as payroll tax expense, separate from wages.
 
@@ -44,7 +49,7 @@ Texas unemployment tax is paid only by the employer. Nothing is withheld from em
 
 - You register with the Texas Workforce Commission once your business becomes liable for the tax under Texas law.
 - The tax applies to the first $9,000 each employee earns in a year.
-- The TWC assigns your rate. Most new employers start at 2.7%, and the rate changes later based on your history of claims.
+- The TWC assigns your rate. New employers generally start at 2.7%, and established employers get a rate based on their own experience.
 - You file a quarterly wage report and pay the tax online.
 
 ## Filing deadlines for Texas employers
