@@ -7,7 +7,7 @@ category: bookkeeping
 
 Many new business owners aren't sure how they're allowed to take money out of their LLC. Can you put yourself on payroll? Do you just transfer money to your personal account? Does it matter how you record it?
 
-It does matter, and the answer depends on how your LLC is taxed. Here is how paying yourself works for each type, and how to keep it clean in your books.
+It does matter, and the answer depends on how your LLC is taxed.
 
 ## How to pay yourself from an LLC depends on how it's taxed
 

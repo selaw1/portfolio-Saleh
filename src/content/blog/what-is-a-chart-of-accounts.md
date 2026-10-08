@@ -18,7 +18,7 @@ Think of it as the filing system for your books. It decides:
 - What questions your reports can answer, such as which sales channel or location makes the most money
 - How easily your tax preparer can find the numbers they need
 
-Every accounting program, including QuickBooks Online, starts you off with a standard chart of accounts. It's a reasonable starting point, but it was built for a generic business, not yours.
+Every accounting program, including QuickBooks Online, starts you off with a standard chart of accounts. It's a reasonable starting point, but it was built for a generic business, and you'll want to change it to match how yours sells.
 
 ## The five types of accounts
 

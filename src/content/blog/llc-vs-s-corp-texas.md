@@ -5,15 +5,13 @@ date: 2026-10-08
 category: accounting-setup
 ---
 
-"Should I be an LLC or an S corp?" is one of the questions I hear most from small business owners. The confusing part is that it isn't really an either-or choice. An LLC is a type of business you form under state law. An S corp is a way of being taxed by the IRS. Many Texas businesses are both: an LLC that has elected to be taxed as an S corp.
-
-This guide explains the difference, how each one is taxed, and how to tell when the S corp election is worth the extra work.
+"Should I be an LLC or an S corp?" is one of the questions I hear most from small business owners. The confusing part is that it isn't really an either-or choice. An LLC is a type of business you form under state law. An S corp is a way of being taxed by the IRS. Many Texas businesses are both: an LLC that has elected to be taxed as an S corp. Whether that election is worth the extra work depends on your profit.
 
 ## The difference between an LLC and an S corp
 
 An LLC (limited liability company) is a legal entity. In Texas you create one by filing a Certificate of Formation (Form 205) with the Secretary of State, with a $300 filing fee. The LLC keeps your personal assets separate from the debts and lawsuits of the business, as long as you run it as a separate business.
 
-An S corp is not a separate kind of company. It's a tax status that an eligible LLC or corporation chooses by filing Form 2553 with the IRS. The legal protection stays the same; only the way the IRS taxes the profit changes.
+An S corp is a tax status that an eligible LLC or corporation chooses by filing Form 2553 with the IRS. The legal protection stays the same; only the way the IRS taxes the profit changes.
 
 | | LLC (default tax treatment) | LLC taxed as an S corp |
 |---|---|---|
@@ -35,9 +33,7 @@ The owner pays income tax on that profit, plus self-employment tax of 15.3% (12.
 An S corp's profit also flows through to the owners' personal returns, so there's no separate corporate income tax. The difference is how the owner who works in the business gets paid:
 
 1. The owner is an employee and must take a reasonable salary through payroll. Social Security and Medicare taxes are withheld and paid on that salary, just as for any employee.
-2. Profit left over after the salary can be paid out as distributions. Distributions are subject to income tax but not to Social Security and Medicare taxes.
-
-That second point is where the savings come from.
+2. Profit left over after the salary can be paid out as distributions. Distributions are subject to income tax but not to Social Security and Medicare taxes, which is where the savings come from.
 
 ## When an S corp saves money: an example
 
@@ -48,7 +44,7 @@ Say your Texas LLC makes $100,000 in profit for the year.
 
 In this simplified example, that's roughly 15.3% of $40,000, or about $6,000 a year, before the extra costs of running an S corp. Your real numbers depend on your profit, a salary you can defend, and your other income.
 
-The key word is "reasonable." The IRS expects the salary to match what you'd pay someone else to do your job. Paying yourself a token salary to push everything into distributions is one of the first things the IRS looks for.
+The IRS expects the salary to be reasonable, meaning close to what you'd pay someone else to do your job. Paying yourself a token salary to push everything into distributions is one of the first things the IRS looks for.
 
 ## What an S corp costs to run
 
