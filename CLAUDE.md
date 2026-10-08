@@ -36,6 +36,7 @@ Rewriting the prose is fine. These parts are not prose and must stay as they are
 | how-much-does-bookkeeping-cost.md | how much does bookkeeping cost, bookkeeping cost, a month, an hour |
 | how-to-file-1099s-in-quickbooks.md | 1099s in QuickBooks, 1099-NEC, $2,000 threshold, W-9 |
 | should-you-outsource-bookkeeping.md | outsource your bookkeeping, outsourced bookkeeping, remote bookkeeper |
+| year-end-checklist-small-business.md | year-end checklist, small business owners, close the books |
 | texas-franchise-tax-guide.md | Texas franchise tax, no-tax-due threshold, Public Information Report |
 | texas-sales-tax-guide.md | Texas sales tax, sales tax permit, filing deadlines |
 
