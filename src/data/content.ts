@@ -22,8 +22,8 @@ export const services = [
     name: 'Accounting setup',
     href: '/accounting-system-setup',
     summary:
-      'A complete accounting system built for your business, controlling every transaction from the first sale to the final statement, with Excel dashboards that show you the numbers at a glance.',
-    includes: ['Full transaction cycle, A to Z', 'Internal controls & approvals', 'Excel dashboards that update automatically'],
+      'A complete accounting system built for your business, controlling every transaction from the first sale to the final statement, with clear Excel reports that show you the numbers at a glance.',
+    includes: ['Full transaction cycle, A to Z', 'Internal controls & approvals', 'Clear Excel reports & budgets'],
   },
   {
     name: 'Bookkeeping',

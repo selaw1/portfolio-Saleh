@@ -4,7 +4,7 @@
 
 ## Services
 
-- **Accounting system setup:** a complete accounting system designed for the business, controlling every transaction from A to Z (sales, purchasing, payments, payroll, inventory, monthly close), with internal controls and approvals, written procedures, and Excel dashboards linked to the accounting data so they update automatically.
+- **Accounting system setup:** a complete accounting system set up for the business: separate business banking, QuickBooks, a chart of accounts built around sales channels and products, inventory tracking, internal controls and approvals, a written weekly/monthly/quarterly bookkeeping routine, a budget and KPIs, and clear Excel reports (with routine updates automated where the software allows).
 - **Bookkeeping:** every bank and card transaction recorded and reconciled to statements; payables and receivables; a monthly profit and loss statement, balance sheet and cash flow statement.
 - **Payroll:** salaries and wages processed accurately and on time using QuickBooks Payroll, with records kept ready for year-end.
 - **Tax preparation and planning:** returns prepared from clean books, deductions claimed, filings kept compliant. Uses TurboTax.

@@ -44,6 +44,25 @@ export default function ServicePage({ service }: { service: Service }) {
         </ul>
       </section>
 
+      {service.steps && (
+        <section className="border-t border-ink/10">
+          <div className="wrap py-20 md:py-28">
+            <h2 className="heading reveal max-w-[16ch]">How the system is set up</h2>
+            <ol className="mt-12 grid gap-x-8 gap-y-10 md:mt-16 md:grid-cols-2">
+              {service.steps.map((step, i) => (
+                <li key={step.title} className="reveal flex gap-5" style={{ '--d': `${(i % 2) * 80}ms` } as React.CSSProperties}>
+                  <span className="text-sm leading-8 text-fog">{String(i + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3 className="text-xl font-medium tracking-tight">{step.title}</h3>
+                    <p className="mt-2 max-w-[48ch] leading-relaxed text-fog">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
       <section className="bg-mist/60">
         <div className="wrap grid gap-14 py-20 md:py-28 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">

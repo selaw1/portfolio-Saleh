@@ -9,6 +9,8 @@ export type ServicePage = {
   heading: string;
   intro: string;
   included: { title: string; body: string }[];
+  // Optional numbered walkthrough of how the work is done
+  steps?: { title: string; body: string }[];
   forWho: string[];
   faqs: { q: string; a: string }[];
   // Blog post slugs to link at the bottom of the page
@@ -19,43 +21,77 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'accounting-system-setup',
     name: 'Accounting system setup',
-    seoTitle: 'Accounting System Setup for Businesses | Internal Controls & Excel Dashboards | Saleh Ahmad',
+    seoTitle: 'Accounting System Setup for Small Businesses | Texas & Online | Saleh Ahmad',
     description:
-      'A complete accounting system designed for your business: every transaction controlled from A to Z, internal controls and approvals, and Excel dashboards that update automatically so you can see and control your numbers. Texas-based, working online.',
+      'A complete accounting system set up for your business: separate business banking, QuickBooks, a chart of accounts built around how you sell, inventory tracking, internal controls, a bookkeeping routine and clear Excel reports. Simple, scalable and ready for tax filing from day one.',
     heading: 'An accounting system built around your business',
     intro:
-      'Most businesses never get a real accounting system. They get software and a habit. I design the whole system: how every transaction is recorded, checked and approved, from the first sale to the final statement, plus Excel dashboards that keep the numbers in front of you without anyone retyping them.',
+      'Most businesses never get a real accounting system. They get software and a habit. I set up the whole system, from the bank accounts to the monthly reports, so it is simple to run, grows with you and is ready for tax filing from day one.',
     included: [
       {
         title: 'Every transaction, A to Z',
-        body: 'Each cycle mapped and set up: sales and invoicing, collections, purchasing, bills and payments, payroll, inventory and fixed assets, through to the monthly close and financial statements.',
+        body: 'Each cycle set up: sales and invoicing, collections, purchasing, bills and payments, payroll and inventory, through to the monthly close and financial statements.',
       },
       {
-        title: 'Chart of accounts and structure',
-        body: 'Accounts, classes, cost centers and departments designed to answer the questions you actually ask about your business.',
+        title: 'Chart of accounts built around how you sell',
+        body: 'Income split by sales channel (your online store, marketplaces like Amazon, wholesale, distributors) and costs split by product line, so you can see what actually makes money.',
+      },
+      {
+        title: 'Inventory tracking',
+        body: 'Products set up with SKUs, so purchases, sales, cost of goods sold and stock on hand are tracked properly instead of estimated.',
       },
       {
         title: 'Internal controls and approvals',
-        body: 'Clear rules for who records, who approves and who pays, with segregation of duties and review points so errors and fraud are caught early. Built on years of internal audit experience.',
+        body: 'Clear rules for who records, who approves and who pays, with review points so errors and fraud are caught early. Built on years of internal audit experience.',
       },
       {
-        title: 'Excel dashboards that update automatically',
-        body: 'Visual Excel reports for sales, expenses, cash, receivables and profit, linked to your accounting data so they refresh as the books are updated. No copying and pasting.',
+        title: 'Procedures manual',
+        body: 'Written step-by-step procedures for the weekly, monthly and quarterly routine, so the work is done the same way every time and new staff can be trained quickly.',
       },
       {
-        title: 'Policies and procedures',
-        body: 'Written step-by-step procedures for each process, so your team does things the same way every time and new staff can be trained quickly.',
+        title: 'Clear Excel reports',
+        body: 'Well-designed Excel workbooks with charts and summaries for sales, costs, cash and profit, plus a 12-month reporting template and budget. Where your software allows it, the routine updates are automated so reporting takes less manual work.',
+      },
+    ],
+    steps: [
+      {
+        title: 'Separate business banking',
+        body: 'A business checking account, a business credit card and, if useful, a savings account. Personal and business money are never mixed.',
       },
       {
-        title: 'Software setup and training',
-        body: 'QuickBooks Online or Desktop configured to match the system, and your team trained to run it day to day.',
+        title: 'The right software',
+        body: 'Usually QuickBooks Online, set up with bank connections, sales tax tracking, inventory where needed, and links to sales platforms like Shopify or Amazon.',
+      },
+      {
+        title: 'Chart of accounts',
+        body: 'Assets, liabilities, equity, income by channel, cost of goods sold by product, and expenses such as marketing, platform fees, payroll and rent.',
+      },
+      {
+        title: 'Inventory',
+        body: 'Each product with its own SKU and cost, tracking beginning inventory, purchases, sales and ending inventory.',
+      },
+      {
+        title: 'A bookkeeping routine',
+        body: 'Weekly: categorize transactions, record sales, upload receipts. Monthly: reconcile bank and card accounts, review inventory and the profit and loss. Quarterly: sales tax filings and an estimated tax review.',
+      },
+      {
+        title: 'Key reports',
+        body: 'A monthly profit and loss (revenue, cost of goods, gross profit, expenses, net profit), balance sheet and cash flow statement.',
+      },
+      {
+        title: 'Budget and KPIs',
+        body: 'A monthly budget by category, and the numbers worth watching: revenue, gross margin, net profit margin, inventory turnover, average order value, customer acquisition cost and repeat purchase rate.',
+      },
+      {
+        title: 'Organized documents',
+        body: 'A simple digital folder structure for bank statements, sales tax, receipts, inventory purchases, payroll, insurance, contracts and tax returns.',
       },
     ],
     forWho: [
       'New businesses that want to start with a proper system instead of fixing one later',
+      'Product businesses selling online, on marketplaces or wholesale, with inventory to track',
       'Growing businesses that have outgrown a spreadsheet or a bank-feed-only setup',
-      'Owners who want to see and control their numbers without depending on one person',
-      'Businesses with staff handling money, where controls and approvals matter',
+      'Owners preparing for investors or lenders who will ask for reliable financial statements',
     ],
     faqs: [
       {
@@ -63,19 +99,19 @@ export const servicePages: ServicePage[] = [
         a: 'Bookkeeping records the transactions each month. System setup designs how those transactions flow, who approves them, how they are checked and how the results are reported. A good system makes monthly bookkeeping faster and more reliable.',
       },
       {
-        q: 'What do the Excel dashboards show?',
-        a: "Whatever you need to run the business: typically sales, expenses, profit, cash position and who owes you money, shown as charts and summaries. They're linked to your accounting data, so they update as the books do.",
+        q: 'What do the Excel reports look like?',
+        a: 'Clean, easy-to-read workbooks with charts and summaries of the numbers you care about, such as sales by channel, gross margin, expenses against budget and cash. What can be automated, such as refreshing from exported reports, is automated. The rest is kept simple to update.',
       },
       {
-        q: 'Do I need to change my accounting software?',
-        a: 'Usually not. Most systems are built in QuickBooks Online or Desktop. If your current software is holding you back, we will talk about the options first.',
+        q: 'Which software do you recommend?',
+        a: 'For most growing businesses, QuickBooks Online, especially if you hold inventory or sell through several channels. For very small or early-stage businesses, a simpler setup can be enough to start. We will pick what fits on the intro call.',
       },
       {
         q: 'Can you keep running the system after it is set up?',
         a: 'Yes. Many clients continue with monthly bookkeeping, so the system is maintained by the person who designed it.',
       },
     ],
-    relatedPosts: ['catch-up-bookkeeping'],
+    relatedPosts: ['catch-up-bookkeeping', 'texas-sales-tax-guide'],
   },
   {
     slug: 'bookkeeping',
