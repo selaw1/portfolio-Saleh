@@ -4,21 +4,19 @@ description: What every small business selling in Texas needs to know about sale
 date: 2026-10-08
 ---
 
-If you sell products, or certain services, in Texas, you are responsible for collecting sales tax from your customers and sending it to the state. The money isn't yours; you're holding it for the Comptroller. That's exactly why mistakes here hurt: if you under-collect, the difference comes out of your own pocket.
-
-Here's what you need to know.
+If you sell products, or certain services, in Texas, you are responsible for collecting sales tax from your customers and sending it to the state. The money isn't yours; you're holding it for the Comptroller. So if you under-collect, the difference comes out of your own pocket.
 
 ## Do you need a sales tax permit?
 
-You need a **Texas sales and use tax permit** if you:
+You need a Texas sales and use tax permit if you:
 
 - Sell tangible goods in Texas (from a store, online, at markets or events)
 - Lease or rent out goods
-- Sell **taxable services**
+- Sell taxable services
 
-The permit is **free**, and you apply online through the Texas Comptroller. Get it **before** you make your first taxable sale.
+The permit is free, and you apply online through the Texas Comptroller. Get it before you make your first taxable sale.
 
-Online sellers based outside Texas must also register once their sales into Texas pass **$500,000 in the previous twelve months**.
+Online sellers based outside Texas must also register once their sales into Texas pass $500,000 in the previous twelve months.
 
 ## Which services are taxable in Texas?
 
@@ -33,12 +31,12 @@ If you're a service business and you're not sure where you stand, check before y
 
 ## How the rate works
 
-The **state rate is 6.25%**. Cities, counties, transit authorities and special purpose districts can add up to **2%** more, so the **maximum combined rate is 8.25%**.
+The state rate is 6.25%. Cities, counties, transit authorities and special purpose districts can add up to 2% more, so the maximum combined rate is 8.25%.
 
 Which local rate applies depends on where the sale happens:
 
-- **In-state sellers** generally collect local tax based on the location of their business.
-- **Delivered goods** can be sourced to the delivery address in some cases.
+- In-state sellers generally collect local tax based on the location of their business.
+- Delivered goods can be sourced to the delivery address in some cases.
 
 The Comptroller has a free rate lookup by address. Set up your invoicing or point-of-sale system with the correct rate once, and check it each January, since local rates can change.
 
@@ -46,41 +44,41 @@ The Comptroller has a free rate lookup by address. Set up your invoicing or poin
 
 When you get your permit, the Comptroller assigns you a filing frequency based on how much tax you collect:
 
-- **Monthly** for larger amounts
-- **Quarterly** for most small businesses
-- **Annually** for very small amounts
+- Monthly for larger amounts
+- Quarterly for most small businesses
+- Annually for very small amounts
 
-Returns are **due on the 20th day of the month after the reporting period**. A quarterly filer, for example, reports July through September by **October 20**.
+Returns are due on the 20th day of the month after the reporting period. A quarterly filer, for example, reports July through September by October 20.
 
-**You must file even if you had no sales.** A "zero" return is still a return, and skipping it triggers the same late penalty.
+You must file even if you had no sales. Skipping a "zero" return triggers the same late penalty as skipping any other return.
 
 ## Discounts for paying on time
 
-Texas actually rewards you for paying on time:
+Texas rewards you for paying on time:
 
-- **Timely filing discount:** you keep **0.5%** of the tax due when you file and pay on time.
-- **Prepayment discount:** if you prepay a reasonable estimate before the due date, you get an additional **1.25%**.
+- Timely filing discount: you keep 0.5% of the tax due when you file and pay on time.
+- Prepayment discount: if you prepay a reasonable estimate before the due date, you get an additional 1.25%.
 
-On a few thousand dollars a quarter it's not life-changing, but it's free money that disappears the moment you're late.
+On a few thousand dollars a quarter the discount is small, but you lose it the moment you're late.
 
 ## Penalties for filing late
 
-- **$50** late filing fee for each return
-- **5%** penalty on tax paid 1 to 30 days late
-- **10%** penalty on tax paid more than 30 days late
+- $50 late filing fee for each return
+- 5% penalty on tax paid 1 to 30 days late
+- 10% penalty on tax paid more than 30 days late
 - Interest after 60 days
 
 Repeated late returns can also lead to the Comptroller requiring a security bond from your business.
 
 ## The bookkeeping that keeps you safe
 
-Most sales tax problems aren't caused by not knowing the rules. They come from messy records. The basics that prevent them:
+Most sales tax problems come from messy records rather than from not knowing the rules. The basics that prevent them:
 
-1. **Record sales tax separately** from your revenue. Collected tax is a liability, not income.
-2. **Reconcile** the sales tax collected in your books against your sales reports every month.
-3. **Keep exemption and resale certificates** for every customer you didn't charge tax.
-4. **File every period**, including zero periods, and save the confirmations.
-5. **Track your due dates** with a reminder a week before the 20th.
+1. Record sales tax separately from your revenue. Collected tax is a liability, not income.
+2. Reconcile the sales tax collected in your books against your sales reports every month.
+3. Keep exemption and resale certificates for every customer you didn't charge tax.
+4. File every period, including zero periods, and save the confirmations.
+5. Track your due dates with a reminder a week before the 20th.
 
 QuickBooks can track sales tax automatically, but only if it's set up with the right rates and the right taxable and non-taxable items. That setup is one of the first things I check when I take over a client's books.
 
