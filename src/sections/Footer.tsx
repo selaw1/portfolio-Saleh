@@ -9,6 +9,9 @@ export default function Footer() {
           <span className="ml-3">Accounting, payroll and tax. Based in {contact.base}.</span>
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <a href="/blog" className="link-draw hover:text-porcelain">
+            Blog
+          </a>
           <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="link-draw hover:text-porcelain">
             LinkedIn
           </a>

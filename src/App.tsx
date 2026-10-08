@@ -1,27 +1,16 @@
 import { useReveal } from './hooks/useReveal';
 import Navigation from './sections/Navigation';
-import Hero from './sections/Hero';
-import Figures from './sections/Figures';
-import Services from './sections/Services';
-import Process from './sections/Process';
-import About from './sections/About';
-import Booking from './sections/Booking';
 import Footer from './sections/Footer';
+import { resolve } from './routes';
 
-function App() {
+function App({ path }: { path: string }) {
   useReveal();
+  const page = resolve(path);
 
   return (
     <div className="min-h-screen bg-porcelain">
       <Navigation />
-      <main>
-        <Hero />
-        <Figures />
-        <Services />
-        <Process />
-        <About />
-        <Booking />
-      </main>
+      <main>{page.element}</main>
       <Footer />
     </div>
   );

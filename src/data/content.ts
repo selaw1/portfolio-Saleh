@@ -3,7 +3,7 @@ export const contact = {
   phone: '+1 (682) 239-7650',
   phoneHref: 'tel:+16822397650',
   linkedin: 'https://www.linkedin.com/in/saleh-ahmad-57807142/',
-  base: 'Texas, USA',
+  base: 'Weatherford, Texas',
 };
 
 // Saleh's Calendly event link, e.g. 'https://calendly.com/saleh-ahmad/intro-call'.

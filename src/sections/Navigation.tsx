@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 
+// Absolute links so they work from the blog pages too; on the homepage they just scroll
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Approach', href: '#approach' },
-  { label: 'About', href: '#about' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Approach', href: '/#approach' },
+  { label: 'About', href: '/#about' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 export default function Navigation() {
@@ -56,7 +58,7 @@ export default function Navigation() {
         } ${light ? 'text-porcelain' : 'bg-porcelain/80 text-ink backdrop-blur-xl'}`}
       >
         <div className="wrap flex h-16 items-center justify-between md:h-20">
-          <a href="#top" onClick={() => setMenuOpen(false)} className="text-[17px] font-semibold tracking-tight">
+          <a href="/" onClick={() => setMenuOpen(false)} className="text-[17px] font-semibold tracking-tight">
             Saleh Ahmad
           </a>
 
@@ -66,7 +68,7 @@ export default function Navigation() {
                 {link.label}
               </a>
             ))}
-            <a href="#book" className={light ? 'pill-light min-h-[42px] px-5' : 'pill-dark min-h-[42px] px-5'}>
+            <a href="/#book" className={light ? 'pill-light min-h-[42px] px-5' : 'pill-dark min-h-[42px] px-5'}>
               Book a call
             </a>
           </nav>
@@ -112,7 +114,7 @@ export default function Navigation() {
             </a>
           ))}
         </nav>
-        <a href="#book" onClick={() => setMenuOpen(false)} className="pill-light mt-auto w-full">
+        <a href="/#book" onClick={() => setMenuOpen(false)} className="pill-light mt-auto w-full">
           Book a call
         </a>
       </div>

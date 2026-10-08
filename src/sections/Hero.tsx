@@ -82,8 +82,8 @@ export default function Hero() {
             ))}
           </p>
           <p className="lede fade-up mt-8 max-w-[34ch] text-porcelain/70 [--d:650ms]">
-            Saleh Ahmad keeps the books, runs payroll and prepares taxes for businesses in the US and abroad, with 38
-            years of practice behind every close.
+            Saleh Ahmad keeps the books, runs payroll and prepares taxes for businesses across Texas, the US and abroad,
+            with 38 years of practice behind every close.
           </p>
           <div className="fade-up mt-10 flex flex-col gap-3 sm:flex-row [--d:800ms]">
             <a href="#book" className="pill-light">
