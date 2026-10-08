@@ -17,6 +17,67 @@ export type ServicePage = {
 
 export const servicePages: ServicePage[] = [
   {
+    slug: 'accounting-system-setup',
+    name: 'Accounting system setup',
+    seoTitle: 'Accounting System Setup for Businesses | Internal Controls & Excel Dashboards | Saleh Ahmad',
+    description:
+      'A complete accounting system designed for your business: every transaction controlled from A to Z, internal controls and approvals, and Excel dashboards that update automatically so you can see and control your numbers. Texas-based, working online.',
+    heading: 'An accounting system built around your business',
+    intro:
+      'Most businesses never get a real accounting system. They get software and a habit. I design the whole system: how every transaction is recorded, checked and approved, from the first sale to the final statement, plus Excel dashboards that keep the numbers in front of you without anyone retyping them.',
+    included: [
+      {
+        title: 'Every transaction, A to Z',
+        body: 'Each cycle mapped and set up: sales and invoicing, collections, purchasing, bills and payments, payroll, inventory and fixed assets, through to the monthly close and financial statements.',
+      },
+      {
+        title: 'Chart of accounts and structure',
+        body: 'Accounts, classes, cost centers and departments designed to answer the questions you actually ask about your business.',
+      },
+      {
+        title: 'Internal controls and approvals',
+        body: 'Clear rules for who records, who approves and who pays, with segregation of duties and review points so errors and fraud are caught early. Built on years of internal audit experience.',
+      },
+      {
+        title: 'Excel dashboards that update automatically',
+        body: 'Visual Excel reports for sales, expenses, cash, receivables and profit, linked to your accounting data so they refresh as the books are updated. No copying and pasting.',
+      },
+      {
+        title: 'Policies and procedures',
+        body: 'Written step-by-step procedures for each process, so your team does things the same way every time and new staff can be trained quickly.',
+      },
+      {
+        title: 'Software setup and training',
+        body: 'QuickBooks Online or Desktop configured to match the system, and your team trained to run it day to day.',
+      },
+    ],
+    forWho: [
+      'New businesses that want to start with a proper system instead of fixing one later',
+      'Growing businesses that have outgrown a spreadsheet or a bank-feed-only setup',
+      'Owners who want to see and control their numbers without depending on one person',
+      'Businesses with staff handling money, where controls and approvals matter',
+    ],
+    faqs: [
+      {
+        q: 'How is this different from bookkeeping?',
+        a: 'Bookkeeping records the transactions each month. System setup designs how those transactions flow, who approves them, how they are checked and how the results are reported. A good system makes monthly bookkeeping faster and more reliable.',
+      },
+      {
+        q: 'What do the Excel dashboards show?',
+        a: "Whatever you need to run the business: typically sales, expenses, profit, cash position and who owes you money, shown as charts and summaries. They're linked to your accounting data, so they update as the books do.",
+      },
+      {
+        q: 'Do I need to change my accounting software?',
+        a: 'Usually not. Most systems are built in QuickBooks Online or Desktop. If your current software is holding you back, we will talk about the options first.',
+      },
+      {
+        q: 'Can you keep running the system after it is set up?',
+        a: 'Yes. Many clients continue with monthly bookkeeping, so the system is maintained by the person who designed it.',
+      },
+    ],
+    relatedPosts: ['catch-up-bookkeeping'],
+  },
+  {
     slug: 'bookkeeping',
     name: 'Bookkeeping',
     seoTitle: 'Online Bookkeeping Services for Small Businesses in Texas | Saleh Ahmad',
