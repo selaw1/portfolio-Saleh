@@ -172,7 +172,7 @@ export const servicePages: ServicePage[] = [
         a: "Access to your bank and credit card statements, your accounting software if you have it, and last year's tax return. We'll go through the rest on a short intro call.",
       },
     ],
-    relatedPosts: ['catch-up-bookkeeping', 'accounting-system-setup-guide'],
+    relatedPosts: ['how-much-does-bookkeeping-cost', 'catch-up-bookkeeping'],
   },
   {
     slug: 'payroll',
