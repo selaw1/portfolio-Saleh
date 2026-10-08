@@ -2,6 +2,7 @@
 title: How to File 1099s in QuickBooks Online (and the New $2,000 Threshold)
 description: A step-by-step guide to preparing and e-filing 1099-NEC forms in QuickBooks Online, who needs a 1099, the new $2,000 threshold for 2026 payments, the January 31 deadline, and common mistakes to avoid.
 date: 2026-10-08
+category: quickbooks
 ---
 
 If you pay contractors, you'll probably need to send them a Form 1099-NEC each January. QuickBooks Online can prepare and e-file these for you, as long as your records are set up correctly during the year.
@@ -75,7 +76,7 @@ Choose **E-file** and follow the steps. QuickBooks files with the IRS and can em
 
 - January 31: the 1099-NEC is due to both your contractors and the IRS. If January 31 falls on a weekend, the deadline moves to the next business day.
 - E-filing: if you file 10 or more information returns in total for the year (1099s and W-2s combined), you're required to file electronically.
-- State filing: Texas has no state income tax, so there's no state 1099 filing in Texas. Other states may require it.
+- State filing: Texas has no [state income tax](/blog/texas-franchise-tax-guide/), so there's no state 1099 filing in Texas. Other states may require it.
 
 ## Common mistakes to avoid
 

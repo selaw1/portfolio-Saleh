@@ -2,6 +2,7 @@
 title: Should You Outsource Your Bookkeeping? Pros, Cons and When It Makes Sense
 description: Doing your own books, hiring in-house, or outsourcing to a remote bookkeeper? The pros and cons of outsourced bookkeeping, signs it's time, what to expect, and how to choose the right bookkeeper.
 date: 2026-10-08
+category: bookkeeping
 ---
 
 Most small business owners start out doing their own bookkeeping, which makes sense when money is tight and there aren't many transactions. As the business grows, the books take longer and mistakes cost more, and eventually you start wondering whether to hand them off.
@@ -49,7 +50,7 @@ Quality varies. Low-cost providers sometimes rotate staff and do little review, 
 - You're more than a month behind on your books
 - You spend more than a few hours a month on bookkeeping
 - You dread tax season because your numbers aren't ready
-- You've had a late fee or penalty from sales tax or payroll
+- You've had a late fee or penalty from [sales tax](/blog/texas-sales-tax-guide/) or payroll
 - You can't answer "how much profit did we make last month?"
 - You're preparing to apply for a loan or talk to investors
 - The business has added employees, inventory or sales channels
@@ -83,7 +84,7 @@ Ask these before you sign:
 3. Which software do you use? Make sure they're experienced with yours.
 4. How do we communicate, and how quickly do you respond?
 5. When will I receive my monthly reports?
-6. Can you catch up past months if my books are behind?
+6. Can you [catch up past months](/blog/catch-up-bookkeeping/) if my books are behind?
 7. How is my data kept secure?
 
 ## Thinking about outsourcing?

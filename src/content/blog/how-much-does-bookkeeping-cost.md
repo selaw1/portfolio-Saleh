@@ -2,6 +2,7 @@
 title: How Much Does Bookkeeping Cost for a Small Business in 2026?
 description: What small businesses typically pay for bookkeeping in 2026, from monthly packages and hourly bookkeepers to hiring in-house, what drives the price up or down, and how to get an accurate quote.
 date: 2026-10-08
+category: bookkeeping
 ---
 
 "How much will this cost?" is usually the first question a business owner asks about bookkeeping. The answer depends on a few clear factors. Once you know them, and what small businesses typically pay in 2026, you can tell whether a quote is fair.
@@ -40,7 +41,7 @@ Tracking products, costs and stock levels adds real work, especially if you sell
 
 ### 4. Payroll and sales tax
 
-Recording payroll and tracking and filing sales tax are often priced as add-ons or included in higher packages.
+Recording [payroll](/blog/biweekly-vs-semi-monthly-payroll/) and tracking and filing [sales tax](/blog/texas-sales-tax-guide/) are often priced as add-ons or included in higher packages.
 
 ### 5. Where your books are today
 
@@ -74,7 +75,7 @@ A good bookkeeper often pays for a large part of their own fee in deductions fou
 | Outsourced bookkeeping (experienced accountant or firm) | Most small businesses | Make sure you know exactly what's included |
 | In-house employee | Larger businesses with full-time volume | Salary, payroll taxes, benefits and training add up |
 
-For most small businesses, outsourcing to an experienced bookkeeper gives the best balance: professional-quality books for a fraction of an employee's cost.
+For most small businesses, [outsourcing to an experienced bookkeeper](/blog/should-you-outsource-bookkeeping/) gives the best balance: professional-quality books for a fraction of an employee's cost.
 
 ## How to get an accurate quote
 

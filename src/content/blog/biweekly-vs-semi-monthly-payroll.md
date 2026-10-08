@@ -2,6 +2,7 @@
 title: Biweekly vs Semi-Monthly Payroll: Which Should Your Business Use?
 description: Biweekly pay means 26 paychecks a year; semi-monthly means 24. Here's how they differ, how each affects overtime, benefits and cash flow, what Texas law requires, and how to choose.
 date: 2026-10-08
+category: payroll
 ---
 
 When you hire your first employee, one of the first decisions is how often to pay them. The two most common choices, biweekly and semi-monthly, sound almost the same, but they work differently and affect your payroll costs, overtime and cash flow.
@@ -37,7 +38,7 @@ Employees are paid every other week on the same weekday, usually Friday.
 Employees are paid on two fixed dates each month, commonly the 15th and the last day of the month.
 
 **Advantages**
-- It lines up with monthly accounting. Payroll expense is the same every month, which makes budgeting and month-end closing simpler.
+- It lines up with [monthly accounting](/blog/accounting-system-setup-guide/). Payroll expense is the same every month, which makes budgeting and month-end closing simpler.
 - It's easy for salaried employees. Annual salary divided by 24 gives the same paycheck every time.
 - Benefits divide evenly, since monthly premiums split cleanly into two deductions.
 - There are fewer payroll runs: 24 instead of 26.

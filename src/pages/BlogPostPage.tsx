@@ -1,10 +1,10 @@
 import PageHeader from '../components/PageHeader';
 import PostCard from '../components/PostCard';
 import { contact } from '../data/content';
-import { formatDate, posts, type Post } from '../lib/blog';
+import { formatDate, relatedPosts, type Post } from '../lib/blog';
 
 export default function BlogPostPage({ post }: { post: Post }) {
-  const more = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const more = relatedPosts(post);
 
   return (
     <article>
@@ -13,6 +13,10 @@ export default function BlogPostPage({ post }: { post: Post }) {
           <nav aria-label="Breadcrumb">
             <a href="/blog/" className="link-draw hover:text-porcelain">
               Blog
+            </a>
+            <span aria-hidden="true"> / </span>
+            <a href={`/blog/#${post.category.slug}`} className="link-draw hover:text-porcelain">
+              {post.category.name}
             </a>
           </nav>
         }

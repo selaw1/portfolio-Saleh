@@ -2,6 +2,7 @@
 title: Texas Sales Tax for Small Businesses: Permits, Rates and Filing Deadlines
 description: What every small business selling in Texas needs to know about sales tax: when you need a permit, how the 6.25% state rate and local rates add up, filing frequency, deadlines, discounts and penalties.
 date: 2026-10-08
+category: texas-taxes
 ---
 
 If you sell products, or certain services, in Texas, you are responsible for collecting sales tax from your customers and sending it to the state. The money isn't yours; you're holding it for the Comptroller. So if you under-collect, the difference comes out of your own pocket.
@@ -72,7 +73,7 @@ Repeated late returns can also lead to the Comptroller requiring a security bond
 
 ## The bookkeeping that keeps you safe
 
-Most sales tax problems come from messy records rather than from not knowing the rules. The basics that prevent them:
+Most sales tax problems come from [messy records](/blog/catch-up-bookkeeping/) rather than from not knowing the rules. The basics that prevent them:
 
 1. Record sales tax separately from your revenue. Collected tax is a liability, not income.
 2. Reconcile the sales tax collected in your books against your sales reports every month.
@@ -80,7 +81,7 @@ Most sales tax problems come from messy records rather than from not knowing the
 4. File every period, including zero periods, and save the confirmations.
 5. Track your due dates with a reminder a week before the 20th.
 
-QuickBooks can track sales tax automatically, but only if it's set up with the right rates and the right taxable and non-taxable items. That setup is one of the first things I check when I take over a client's books.
+QuickBooks can track sales tax automatically, but only if it's [set up](/blog/accounting-system-setup-guide/) with the right rates and the right taxable and non-taxable items. That setup is one of the first things I check when I take over a client's books.
 
 If you'd like someone to handle your sales tax filings and keep the books clean behind them, [book a short intro call](/#book).
 
