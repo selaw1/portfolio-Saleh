@@ -13,8 +13,8 @@ export default function LatestPosts() {
             All articles
           </a>
         </div>
-        <ul className="mt-12 grid gap-5 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
-          {posts.slice(0, 3).map((post, i) => (
+        <ul className="mt-12 grid gap-5 md:mt-16 md:grid-cols-2">
+          {posts.slice(0, 4).map((post, i) => (
             <li key={post.slug} className="reveal" style={{ '--d': `${i * 90}ms` } as React.CSSProperties}>
               <PostCard post={post} />
             </li>
