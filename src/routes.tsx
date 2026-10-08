@@ -27,9 +27,9 @@ const author = { '@id': `${SITE_URL}/#saleh` };
 const home: Page = {
   element: <HomePage />,
   head: {
-    title: 'Saleh Ahmad | Online Bookkeeping, Payroll & Tax Accountant in Texas',
+    title: 'Bookkeeping & Accounting Services for Small Business | Saleh Ahmad',
     description:
-      'Online bookkeeping, payroll, tax preparation and QuickBooks from Saleh Ahmad, an accountant with 38 years of experience. Based in Weatherford, Texas, serving businesses across Texas, the US and worldwide.',
+      'Bookkeeping services, accounting services, payroll and tax preparation for small business from Saleh Ahmad, a small business accountant with 38 years of experience. Based in Weatherford, Texas, working online across the US.',
     path: '/',
   },
 };

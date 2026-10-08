@@ -21,7 +21,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'accounting-system-setup',
     name: 'Accounting system setup',
-    seoTitle: 'Accounting System Setup for Small Businesses | Texas & Online | Saleh Ahmad',
+    seoTitle: 'Accounting System Setup for Small Business | Saleh Ahmad',
     description:
       'A complete accounting system set up for your business: separate business banking, QuickBooks, a chart of accounts built around how you sell, inventory tracking, internal controls, a bookkeeping routine and clear Excel reports. Simple, scalable and ready for tax filing from day one.',
     heading: 'An accounting system built around your business',
@@ -116,10 +116,10 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'bookkeeping',
     name: 'Bookkeeping',
-    seoTitle: 'Online Bookkeeping Services for Small Businesses in Texas | Saleh Ahmad',
+    seoTitle: 'Bookkeeping Services for Small Business | Online & Remote | Saleh Ahmad',
     description:
-      'Monthly online bookkeeping for small businesses in Texas and across the US: bank and card reconciliation, payables and receivables, and monthly financial statements from an accountant with 38 years of experience.',
-    heading: 'Online bookkeeping for small businesses',
+      'Bookkeeping services for small business, done online: bank reconciliation, payables and receivables, and monthly financial statements. Outsource your bookkeeping to a remote bookkeeper with 38 years of experience, based in Texas.',
+    heading: 'Bookkeeping services for small businesses',
     intro:
       'Every transaction recorded, every account reconciled, and a clear set of financial statements at the end of each month. You always know where your business stands, and your tax return starts from numbers you can trust.',
     included: [
@@ -156,7 +156,7 @@ export const servicePages: ServicePage[] = [
     ],
     faqs: [
       {
-        q: 'Do you only work with businesses in Weatherford?',
+        q: 'Do you work as a remote bookkeeper for businesses outside Weatherford?',
         a: "No. I'm based in Weatherford, Texas, but all of the work is done online, so I work with businesses across Texas, the rest of the US and abroad.",
       },
       {
@@ -177,10 +177,10 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'payroll',
     name: 'Payroll',
-    seoTitle: 'Payroll Services for Small Businesses in Texas | Saleh Ahmad',
+    seoTitle: 'Payroll Services for Small Business | Online Payroll | Saleh Ahmad',
     description:
-      'Small business payroll processed accurately and on time with QuickBooks Payroll: pay runs, wage records, payroll reports and year-end records, for employers in Texas and across the US.',
-    heading: 'Payroll for small businesses, done on time',
+      'Online payroll services for small business: payroll processing with QuickBooks Payroll, pay runs, wage records, payroll reports and year-end records, for employers in Texas and across the US.',
+    heading: 'Payroll services for small businesses, done on time',
     intro:
       'Your team paid correctly and on schedule, with payroll recorded in your books and the records kept ready for year-end. You approve the hours; I handle the rest.',
     included: [
@@ -234,9 +234,9 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'tax-preparation',
     name: 'Tax preparation and planning',
-    seoTitle: 'Small Business Tax Preparation & Planning in Texas | Saleh Ahmad',
+    seoTitle: 'Small Business Accountant & Tax Preparer in Texas | Saleh Ahmad',
     description:
-      'Tax preparation and planning for small businesses in Texas and across the US: returns prepared from clean books, deductions claimed, and Texas franchise tax and sales tax filings kept on schedule.',
+      'A small business accountant for tax preparation and planning in Texas and across the US: returns prepared from clean books, deductions claimed, and Texas franchise tax and sales tax filings kept on schedule.',
     heading: 'Tax preparation and planning for small businesses',
     intro:
       'A tax return is only as good as the books behind it. I prepare returns from reconciled records, make sure the deductions you are entitled to are claimed, and plan ahead so tax season holds no surprises.',
@@ -291,10 +291,10 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'quickbooks',
     name: 'QuickBooks',
-    seoTitle: 'QuickBooks Setup, Cleanup & Training | Online or Desktop | Saleh Ahmad',
+    seoTitle: 'QuickBooks Help: Setup, Cleanup & Bookkeeping | Saleh Ahmad',
     description:
-      'QuickBooks Online and Desktop setup, catch-up and cleanup of messy files, staff training and Point of Sale, from an accountant with 38 years of experience. Serving businesses in Texas and across the US online.',
-    heading: 'QuickBooks set up, cleaned up and understood',
+      'QuickBooks help from an accountant with 38 years of experience: QuickBooks Online setup, cleanup of messy files, QuickBooks bookkeeping and training. Serving small businesses in Texas and across the US online.',
+    heading: 'QuickBooks help: set up, cleaned up and understood',
     intro:
       "QuickBooks is only useful when it's set up to match how your business actually runs. I set up new files, fix messy ones, and show you and your team how to use it with confidence.",
     included: [

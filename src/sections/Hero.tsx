@@ -69,7 +69,7 @@ export default function Hero() {
       <div className="wrap grid min-h-[min(100svh,60rem)] content-center gap-14 pb-16 pt-32 lg:grid-cols-12 lg:items-end lg:gap-8 lg:pb-24 lg:pt-40">
         <div className="lg:col-span-7">
           <h1 className="fade-up text-[15px] font-normal text-porcelain/60 [--d:100ms]">
-            Bookkeeping, payroll, tax and QuickBooks services for growing businesses
+            Bookkeeping, accounting, payroll and tax services for small business
           </h1>
           <p className="display mt-6">
             {headline.map((word, i) => (
