@@ -6,6 +6,8 @@ Static React + Vite site for Saleh Ahmad's accounting practice (saleh.selawii.co
 
 Each post is a Markdown file in `src/content/blog/`. The file name is the post's address (`texas-sales-tax-guide.md` is published at `/blog/texas-sales-tax-guide/`). The build adds every post to the blog list, the homepage, `sitemap.xml`, `llms.txt` and Google's structured data automatically.
 
+Every post's front matter has a `category:` line with one of the category slugs in `src/data/blogCategories.ts` (`accounting-setup`, `bookkeeping`, `payroll`, `texas-taxes`, `quickbooks`). The blog page groups posts by category, and the build fails if a post has no category or an unknown one.
+
 ## Rules for rewriting or humanizing existing posts
 
 Rewriting the prose is fine. These parts are not prose and must stay as they are:

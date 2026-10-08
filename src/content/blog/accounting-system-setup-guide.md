@@ -2,6 +2,7 @@
 title: How to Set Up an Accounting System for a Small Business, Step by Step
 description: A practical guide to setting up a small business accounting system that is simple, scalable and ready for tax filing from day one: banking, software, chart of accounts, inventory, a bookkeeping routine, reports and KPIs.
 date: 2026-10-08
+category: accounting-setup
 ---
 
 Most small businesses don't start with an accounting system. They start with a bank account, some software and good intentions. A year later the owner is guessing at profit and personal and business spending are tangled together, while the tax preparer asks for numbers nobody has.
@@ -23,7 +24,7 @@ Never mix personal and business spending. Mixed accounts are the single biggest 
 For most growing businesses I recommend QuickBooks Online. It handles:
 
 - Bank and credit card connections
-- Sales tax tracking
+- [Sales tax tracking](/blog/texas-sales-tax-guide/)
 - Inventory tracking (on the Plus and Advanced plans)
 - Profit and loss, balance sheet and cash flow reports
 - Accountant access, so your bookkeeper or tax preparer can work in the same file

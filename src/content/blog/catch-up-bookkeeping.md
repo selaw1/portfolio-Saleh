@@ -2,6 +2,7 @@
 title: Behind on Your Books? How Catch-Up Bookkeeping Works, Step by Step
 description: Months behind on bookkeeping? Here's how catch-up bookkeeping works, what records you'll need, how long it takes, and how to keep your books current afterwards.
 date: 2026-10-08
+category: bookkeeping
 ---
 
 It usually happens the same way. Business gets busy, the bookkeeping slides for a month, then three, then a year. Now tax season is coming, the bank wants financial statements, or you simply have no idea whether you're making money.
@@ -40,7 +41,7 @@ Each deposit and payment gets recorded and assigned to the right category, such 
 - Personal and business spending are separated. If personal charges went through the business account, they're recorded as owner draws, not expenses.
 - Loan payments are split between principal and interest. Only the interest is an expense.
 - Transfers between your own accounts are recorded as transfers, not as income and expenses. Otherwise revenue is overstated.
-- Sales tax collected is recorded as a liability, not as income.
+- [Sales tax](/blog/texas-sales-tax-guide/) collected is recorded as a liability, not as income.
 
 ## Step 4: Reconcile every account, every month
 
@@ -61,9 +62,9 @@ Catching up is a one-time project. Staying current takes a monthly routine:
 1. Record and categorize transactions every month
 2. Reconcile every bank and card account
 3. Review the profit and loss statement and balance sheet
-4. Handle sales tax and payroll from the reports, on schedule
+4. Handle sales tax and [payroll](/blog/biweekly-vs-semi-monthly-payroll/) from the reports, on schedule
 
-Most of my clients move straight from a catch-up project into a monthly bookkeeping arrangement, so the books never fall behind again.
+Most of my clients move straight from a catch-up project into a [monthly bookkeeping](/blog/should-you-outsource-bookkeeping/) arrangement, so the books never fall behind again.
 
 ## Let's get you caught up
 

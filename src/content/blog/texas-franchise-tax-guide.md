@@ -2,6 +2,7 @@
 title: Texas Franchise Tax: Who Has to File, What You Owe, and When It's Due
 description: A plain-English guide to the Texas franchise tax for small business owners: who must file, the $2.65 million no-tax-due threshold, the reports everyone still has to send, and the May 15 deadline.
 date: 2026-10-08
+category: texas-taxes
 ---
 
 Texas has no personal income tax, which surprises a lot of people who move their business here. What Texas does have is the franchise tax, a tax on businesses for the privilege of operating in the state. Most small businesses end up owing nothing, but almost all of them still have to file something every year. Missing that filing is one of the most common, and most avoidable, problems I see.
@@ -32,7 +33,7 @@ If your revenue is above the threshold, the tax is calculated on your taxable ma
 
 The rate is 0.375% for businesses primarily engaged in retail or wholesale trade and 0.75% for most others. Businesses with $20 million or less in revenue can choose the simpler EZ computation at 0.331% of apportioned revenue, with no deductions.
 
-Choosing between cost of goods sold and compensation can make a real difference, and that choice is only as good as your books. If your expenses aren't categorized correctly, you can't tell which method saves you more.
+Choosing between cost of goods sold and compensation can make a real difference, and that choice is only as good as your books. If your expenses aren't [categorized correctly](/blog/accounting-system-setup-guide/), you can't tell which method saves you more.
 
 ## Owe nothing? You still have to file
 
@@ -60,7 +61,7 @@ Getting reinstated is possible, but it means filing every missing report, paying
 ## A simple checklist for every Texas business
 
 1. Confirm whether your entity type is subject to the franchise tax.
-2. Know your total revenue for the year from clean, reconciled books.
+2. Know your total revenue for the year from clean, [reconciled books](/blog/catch-up-bookkeeping/).
 3. If revenue is at or under $2.65 million, file your PIR or OIR by May 15.
 4. If revenue is over the threshold, compare the margin methods and the EZ computation, then file and pay by May 15.
 5. Put May 15 on your calendar now, with a reminder two weeks before.

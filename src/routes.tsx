@@ -78,6 +78,7 @@ function postPage(post: (typeof posts)[number]): Page {
           datePublished: post.date,
           dateModified: post.updated ?? post.date,
           image: `${SITE_URL}/og-image.png`,
+          articleSection: post.category.name,
           inLanguage: 'en',
           author,
           publisher: { '@id': `${SITE_URL}/#business` },
