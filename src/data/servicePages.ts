@@ -172,7 +172,7 @@ export const servicePages: ServicePage[] = [
         a: "Access to your bank and credit card statements, your accounting software if you have it, and last year's tax return. We'll go through the rest on a short intro call.",
       },
     ],
-    relatedPosts: ['how-much-does-bookkeeping-cost', 'catch-up-bookkeeping'],
+    relatedPosts: ['how-much-does-bookkeeping-cost', 'should-you-outsource-bookkeeping'],
   },
   {
     slug: 'payroll',
@@ -343,6 +343,6 @@ export const servicePages: ServicePage[] = [
         a: 'Yes. Many clients move from a cleanup straight into monthly bookkeeping, so the file stays clean.',
       },
     ],
-    relatedPosts: ['catch-up-bookkeeping', 'texas-sales-tax-guide'],
+    relatedPosts: ['how-to-file-1099s-in-quickbooks', 'catch-up-bookkeeping'],
   },
 ];
