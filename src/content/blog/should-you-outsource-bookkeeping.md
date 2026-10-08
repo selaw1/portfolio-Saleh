@@ -4,15 +4,15 @@ description: Doing your own books, hiring in-house, or outsourcing to a remote b
 date: 2026-10-08
 ---
 
-Most small business owners start out doing their own bookkeeping. It makes sense at first: money is tight and there aren't many transactions. But as the business grows, the books take more time, mistakes get more expensive, and the question comes up: should I hand this off?
+Most small business owners start out doing their own bookkeeping. That's reasonable early on, when money is tight and there aren't many transactions to record. Then the business grows. The books start eating more of your evenings, mistakes start costing real money, and at some point you wonder whether you should hand them to someone else.
 
-For most small businesses, outsourcing is the answer, but not for every business, and not at every stage. Here's how to decide.
+For most small businesses, the answer is yes. It isn't yes for every business, though, or at every stage, so it's worth thinking through.
 
 ## What outsourced bookkeeping means
 
-Outsourced bookkeeping means an outside professional, a remote bookkeeper, accountant or firm, keeps your books instead of you or an employee. Today this is almost always done online: they work in your accounting software (usually QuickBooks Online), connect to your bank feeds, and send you financial statements every month.
+Outsourced bookkeeping means someone outside the business keeps your books instead of you or an employee. That might be a remote bookkeeper, an accountant or a firm. These days it's almost always done online. They work in your accounting software (usually QuickBooks Online), connect to your bank feeds and send you financial statements every month.
 
-A typical monthly arrangement includes:
+A typical monthly arrangement covers:
 
 - Recording and categorizing every transaction
 - Reconciling every bank and credit card account
@@ -22,27 +22,27 @@ A typical monthly arrangement includes:
 
 ## The advantages of outsourcing
 
-**You get your time back.** Bookkeeping done by an owner often happens late at night or not at all. Handing it off frees hours every month for work that actually grows the business.
+**You get your time back.** When owners do their own books, the work tends to happen late at night or not at all. Handing it off frees up hours every month for the work that brings money in.
 
-**You get expertise you couldn't afford to hire.** An outsourced bookkeeper with years of experience costs a fraction of an experienced employee's salary. See [what bookkeeping typically costs](/blog/how-much-does-bookkeeping-cost/) for the numbers.
+**You get expertise you couldn't afford to hire.** An outsourced bookkeeper with years of experience costs a fraction of what you'd pay an experienced employee. See [what bookkeeping typically costs](/blog/how-much-does-bookkeeping-cost/) for the numbers.
 
-**Your books are actually current.** A professional closes the books every month on a schedule, so you always know where you stand.
+**Your books stay current.** A professional closes the books on a set schedule each month, so you know where you stand.
 
-**Fewer costly mistakes.** Miscategorized expenses, missed deductions, and personal spending mixed into the business are the most common problems in owner-kept books. Each one can cost you at tax time.
+**You make fewer costly mistakes.** The problems I see most in owner-kept books are miscategorized expenses, missed deductions and personal spending mixed in with business spending. Any of them can cost you at tax time.
 
-**No hiring, training or turnover.** No payroll taxes, benefits or sick days, and no starting over when an employee leaves.
+**You skip hiring, training and turnover.** There are no payroll taxes, benefits or sick days to cover, and you don't start over when someone quits.
 
-**Better decisions.** Reliable monthly numbers mean you can see margins, cash and trends, not just a bank balance.
+**You make better decisions.** With reliable monthly numbers you can see your margins, cash and trends instead of guessing from the bank balance.
 
-## The disadvantages, honestly
+## The disadvantages
 
-**Less control over day-to-day details.** Someone outside the business needs answers from you about unclear transactions. A good bookkeeper keeps these questions short and batched.
+**You're further from the day-to-day details.** Someone outside the business will need to ask you about transactions they can't identify. A good bookkeeper saves these up and keeps them short.
 
-**It's not instant.** An outsourced bookkeeper works on a schedule, usually monthly. If you need daily in-person support, an in-house employee may fit better.
+**It's not instant.** An outsourced bookkeeper works on a schedule, usually monthly. If you need someone in the office every day, an in-house employee may suit you better.
 
-**You have to share access.** Your bookkeeper needs access to your accounting software and statements. Use individual logins, never shared passwords, and work with someone you trust.
+**You have to share access.** Your bookkeeper will need to get into your accounting software and statements. Give them their own login rather than sharing a password, and work with someone you trust.
 
-**Quality varies.** Low-cost providers sometimes mean rotating staff and little review. Ask who actually does the work.
+**Quality varies.** Cheap providers often rotate staff and do little review. Ask who will be doing the work.
 
 ## Signs it's time to outsource
 
@@ -54,15 +54,15 @@ A typical monthly arrangement includes:
 - You're preparing to **apply for a loan** or talk to investors
 - The business has **added employees, inventory or sales channels**
 
-If several of these sound familiar, outsourcing will likely pay for itself.
+If a few of these sound familiar, outsourcing will probably pay for itself.
 
 ## When doing it yourself still makes sense
 
 - A brand-new business with very few transactions
-- You genuinely enjoy it, have the time, and keep current every month
+- You like doing it, you have the time, and you keep up every month
 - You have accounting training yourself
 
-Even then, many owners pay a professional to **set the books up correctly** at the start and review them once a year. That avoids the most expensive mistakes.
+Even then, it's worth paying a professional to **set the books up correctly** at the start and look them over once a year. That catches the most expensive mistakes early.
 
 ## Outsourced vs in-house bookkeeper
 
@@ -76,7 +76,7 @@ Even then, many owners pay a professional to **set the books up correctly** at t
 
 ## How to choose an outsourced bookkeeper
 
-Ask these before you sign:
+Before you sign anything, ask:
 
 1. **Who will actually do the work?** One experienced person, or a rotating team?
 2. **What's included** in the monthly fee? Reconciliations, statements, sales tax, payroll, year-end support?
@@ -88,6 +88,6 @@ Ask these before you sign:
 
 ## Thinking about outsourcing?
 
-I'm a remote bookkeeper and accountant with 38 years of experience, based in Weatherford, Texas, working with small businesses across the US online. You work directly with me, not a rotating team.
+I'm a remote bookkeeper and accountant based in Weatherford, Texas, with 38 years of experience. I work online with small businesses across the US, and you deal with me directly, not a rotating team.
 
-See what's included in my [bookkeeping services](/bookkeeping/), or [book a short intro call](/#book) to talk about your books.
+You can see what's included in my [bookkeeping services](/bookkeeping/), or [book a short intro call](/#book) and we'll talk about your books.
