@@ -1,4 +1,4 @@
-import { contact } from '../data/content';
+import { contact, services } from '../data/content';
 
 export default function Footer() {
   return (
@@ -9,6 +9,11 @@ export default function Footer() {
           <span className="ml-3">Accounting, payroll and tax. Based in {contact.base}.</span>
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {services.map((s) => (
+            <a key={s.href} href={s.href} className="link-draw hover:text-porcelain">
+              {s.name}
+            </a>
+          ))}
           <a href="/blog" className="link-draw hover:text-porcelain">
             Blog
           </a>

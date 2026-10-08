@@ -1,10 +1,12 @@
 import type { ReactNode } from 'react';
 import { SITE_URL } from './data/site';
 import { posts } from './lib/blog';
+import { servicePages, type ServicePage as Service } from './data/servicePages';
 import HomePage from './pages/HomePage';
 import BlogIndexPage from './pages/BlogIndexPage';
 import BlogPostPage from './pages/BlogPostPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ServicePage from './pages/ServicePage';
 
 // What goes in each page's <head>: title, description, canonical URL, social previews and structured data
 export type Head = {
@@ -95,6 +97,42 @@ function postPage(post: (typeof posts)[number]): Page {
   };
 }
 
+function servicePage(service: Service): Page {
+  const url = `${SITE_URL}/${service.slug}`;
+  return {
+    element: <ServicePage service={service} />,
+    head: {
+      title: service.seoTitle,
+      description: service.description,
+      path: `/${service.slug}`,
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          '@id': `${url}#service`,
+          name: service.name,
+          serviceType: service.name,
+          description: service.description,
+          url,
+          provider: { '@id': `${SITE_URL}/#business` },
+          areaServed: [
+            { '@type': 'State', name: 'Texas' },
+            { '@type': 'Country', name: 'United States' },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+            { '@type': 'ListItem', position: 2, name: service.name, item: url },
+          ],
+        },
+      ],
+    },
+  };
+}
+
 export const notFound: Page = {
   element: <NotFoundPage />,
   head: {
@@ -105,7 +143,7 @@ export const notFound: Page = {
   },
 };
 
-export const pages: Page[] = [home, blogIndex, ...posts.map(postPage)];
+export const pages: Page[] = [home, ...servicePages.map(servicePage), blogIndex, ...posts.map(postPage)];
 
 export function resolve(pathname: string): Page {
   const path = pathname.replace(/\/(index\.html)?$/, '') || '/';

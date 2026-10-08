@@ -24,6 +24,9 @@ function Detail({ service }: { service: Service }) {
       <div className="mt-8">
         <Includes items={service.includes} />
       </div>
+      <a href={service.href} className="link-draw mt-8 inline-block text-[15px] font-medium">
+        {service.name} in detail
+      </a>
     </>
   );
 }
