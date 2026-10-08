@@ -4,9 +4,7 @@ description: What small businesses typically pay for bookkeeping in 2026, from m
 date: 2026-10-08
 ---
 
-"How much will this cost?" is usually the first question a business owner asks about bookkeeping, and the honest answer is: it depends. But it doesn't depend on mystery. A few clear factors decide the price, and once you know them, you can tell whether a quote is fair.
-
-Here's what small businesses typically pay in 2026, what moves the price, and how to get an accurate quote.
+"How much will this cost?" is usually the first question a business owner asks about bookkeeping. The answer depends on a few clear factors. Once you know them, and what small businesses typically pay in 2026, you can tell whether a quote is fair.
 
 ## Typical bookkeeping costs in 2026
 
@@ -22,11 +20,11 @@ These are typical US market ranges from 2026 pricing guides and government wage 
 | In-house bookkeeper (employee) | Around $49,000 to $51,000 a year in median salary, before payroll taxes and benefits |
 | Doing it yourself with software | $15 to $80 a month, plus your own time |
 
-Most small businesses land on a **flat monthly fee**. It's predictable, and you're not watching the clock every time you ask a question.
+Most small businesses land on a flat monthly fee. It's predictable, and you're not watching the clock every time you ask a question.
 
 ## What drives the price up or down
 
-Two businesses with the same revenue can get very different quotes. Here's why.
+Two businesses with the same revenue can get very different quotes, for these reasons.
 
 ### 1. Number of transactions
 
@@ -42,11 +40,11 @@ Tracking products, costs and stock levels adds real work, especially if you sell
 
 ### 4. Payroll and sales tax
 
-Recording payroll, and tracking and filing sales tax, are often priced as add-ons or included in higher packages.
+Recording payroll and tracking and filing sales tax are often priced as add-ons or included in higher packages.
 
 ### 5. Where your books are today
 
-If your books are current, you go straight to monthly bookkeeping. If you're months or years behind, the past periods have to be caught up first. That's usually a **one-time project** priced separately, based on how many months and accounts are involved. More on that in [how catch-up bookkeeping works](/blog/catch-up-bookkeeping/).
+If your books are current, you go straight to monthly bookkeeping. If you're months or years behind, the past periods have to be caught up first. That's usually a one-time project priced separately, based on how many months and accounts are involved. More on that in [how catch-up bookkeeping works](/blog/catch-up-bookkeeping/).
 
 ### 6. How often you want reports
 
@@ -54,16 +52,16 @@ Monthly financial statements cost more than quarterly ones, and extras like budg
 
 ### 7. Experience
 
-An experienced accountant may charge more per hour than a beginner, but often works faster, catches problems a beginner would miss, and sets things up so they stay clean.
+An experienced accountant may charge more per hour than a beginner. They often work faster, though, catch problems a beginner would miss, and set things up so they stay clean.
 
 ## The hidden cost of cheap bookkeeping
 
-The lowest quote isn't always the cheapest option. Common problems with bookkeeping done too cheaply, or not at all:
+The lowest quote isn't always the cheapest option. These are common problems with bookkeeping done too cheaply, or not at all:
 
-- **Missed deductions**, because expenses were miscategorized or never recorded
-- **Cleanup bills** later, when a tax preparer or new bookkeeper has to fix a year of errors
-- **Sales tax and payroll penalties** from late or incorrect filings
-- **Bad decisions**, because the profit and loss you're looking at is wrong
+- Missed deductions, because expenses were miscategorized or never recorded
+- Cleanup bills later, when a tax preparer or new bookkeeper has to fix a year of errors
+- Sales tax and payroll penalties from late or incorrect filings
+- Bad decisions, because the profit and loss you're looking at is wrong
 
 A good bookkeeper often pays for a large part of their own fee in deductions found and penalties avoided.
 
@@ -76,7 +74,7 @@ A good bookkeeper often pays for a large part of their own fee in deductions fou
 | Outsourced bookkeeping (experienced accountant or firm) | Most small businesses | Make sure you know exactly what's included |
 | In-house employee | Larger businesses with full-time volume | Salary, payroll taxes, benefits and training add up |
 
-For most small businesses, **outsourcing to an experienced bookkeeper** gives the best balance: professional-quality books for a fraction of an employee's cost.
+For most small businesses, outsourcing to an experienced bookkeeper gives the best balance: professional-quality books for a fraction of an employee's cost.
 
 ## How to get an accurate quote
 
@@ -89,7 +87,7 @@ Have this ready and any bookkeeper can give you a real number instead of a guess
 5. When the books were last reconciled
 6. What reports you want, and how often
 
-And ask what's included: reconciliations, financial statements, sales tax, payroll, year-end support for your tax preparer, and how quickly they answer questions.
+Also ask what's included: reconciliations, financial statements, sales tax, payroll, year-end support for your tax preparer, and how quickly they answer questions.
 
 ## Get a quote for your business
 
