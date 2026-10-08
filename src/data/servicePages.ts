@@ -1,4 +1,4 @@
-// One page per service, published at /<slug>. The homepage service list links to these.
+// One page per service, published at /<slug>/. The homepage service list links to these.
 
 export type ServicePage = {
   slug: string;

@@ -54,14 +54,14 @@ export default function NotFoundPage() {
           <ul className="mt-8 border-t border-ink/10">
             {posts.slice(0, 4).map((p) => (
               <li key={p.slug} className="border-b border-ink/10">
-                <a href={`/blog/${p.slug}`} className="block py-5">
+                <a href={`/blog/${p.slug}/`} className="block py-5">
                   <span className="link-draw text-lg leading-snug">{p.title}</span>
                   <span className="mt-1 block text-sm text-fog">{formatDate(p.date)}</span>
                 </a>
               </li>
             ))}
           </ul>
-          <a href="/blog" className="link-draw mt-6 inline-block text-[15px] font-medium">
+          <a href="/blog/" className="link-draw mt-6 inline-block text-[15px] font-medium">
             All articles
           </a>
         </div>

@@ -15,7 +15,7 @@ for (const marker of ['<!--app-head-->', '<!--app-html-->']) {
 const fill = ({ head, html }) => template.replace('<!--app-head-->', head).replace('<!--app-html-->', html);
 
 for (const { path } of routes) {
-  const dir = new URL(path === '/' ? '.' : `.${path}/`, dist);
+  const dir = new URL(`.${path}`, dist);
   await mkdir(dir, { recursive: true });
   await writeFile(new URL('index.html', dir), fill(render(path)));
 }
@@ -25,7 +25,7 @@ const today = new Date().toISOString().slice(0, 10);
 const urls = routes
   .map(
     ({ path, lastModified }) => `  <url>
-    <loc>${SITE_URL}${path === '/' ? '/' : path}</loc>
+    <loc>${SITE_URL}${path}</loc>
     <lastmod>${lastModified ?? today}</lastmod>
   </url>`
   )

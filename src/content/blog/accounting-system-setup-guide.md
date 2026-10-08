@@ -135,6 +135,6 @@ Store it in a cloud drive such as OneDrive or Google Drive, so nothing lives onl
 
 A business with a proper system can answer "are we making money?" any day of the month. Tax filing becomes a matter of handing over reports, not a scramble. And when a lender or investor asks for financial statements, they're already there.
 
-If you'd rather have this set up for you, that's exactly what my [accounting system setup](/accounting-system-setup) service does, from the bank accounts to the monthly reports. [Book a short intro call](/#book) to talk about your business.
+If you'd rather have this set up for you, that's exactly what my [accounting system setup](/accounting-system-setup/) service does, from the bank accounts to the monthly reports. [Book a short intro call](/#book) to talk about your business.
 
 *This article is general information, not accounting or tax advice for your specific situation.*
