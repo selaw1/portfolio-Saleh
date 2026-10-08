@@ -111,7 +111,7 @@ export const servicePages: ServicePage[] = [
         a: 'Yes. Many clients continue with monthly bookkeeping, so the system is maintained by the person who designed it.',
       },
     ],
-    relatedPosts: ['catch-up-bookkeeping', 'texas-sales-tax-guide'],
+    relatedPosts: ['accounting-system-setup-guide', 'catch-up-bookkeeping'],
   },
   {
     slug: 'bookkeeping',
@@ -172,7 +172,7 @@ export const servicePages: ServicePage[] = [
         a: "Access to your bank and credit card statements, your accounting software if you have it, and last year's tax return. We'll go through the rest on a short intro call.",
       },
     ],
-    relatedPosts: ['catch-up-bookkeeping', 'texas-sales-tax-guide'],
+    relatedPosts: ['catch-up-bookkeeping', 'accounting-system-setup-guide'],
   },
   {
     slug: 'payroll',
