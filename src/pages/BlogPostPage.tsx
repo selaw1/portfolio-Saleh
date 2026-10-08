@@ -1,5 +1,6 @@
 import PageHeader from '../components/PageHeader';
 import PostCard from '../components/PostCard';
+import { contact } from '../data/content';
 import { formatDate, posts, type Post } from '../lib/blog';
 
 export default function BlogPostPage({ post }: { post: Post }) {
@@ -23,9 +24,30 @@ export default function BlogPostPage({ post }: { post: Post }) {
       </PageHeader>
 
       <div className="wrap py-16 md:py-24">
-        <div className="post-body mx-auto max-w-[68ch]" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="post-body mx-auto max-w-[46rem]" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <aside className="mx-auto mt-16 max-w-[68ch] rounded-[24px] bg-deep p-8 text-porcelain sm:p-10">
+        <aside
+          aria-label="About the author"
+          className="mx-auto mt-16 max-w-[46rem] border-t border-ink/10 pt-10"
+        >
+          <p className="text-sm text-fog">Written by</p>
+          <p className="mt-2 text-2xl font-medium tracking-tight">Saleh Ahmad, ACPA</p>
+          <p className="mt-3 text-[15px] leading-relaxed text-fog">
+            Accountant with 38 years of experience in bookkeeping, payroll, tax and financial management across six
+            countries, including ten years as a financial manager in Texas. Arab Certified Professional Accountant and
+            Master of Commerce in Accounting. Based in {contact.base}, working with clients online.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-medium">
+            <a href="/#about" className="link-draw">
+              More about Saleh
+            </a>
+            <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="link-draw">
+              LinkedIn
+            </a>
+          </div>
+        </aside>
+
+        <aside className="mx-auto mt-12 max-w-[46rem] rounded-[24px] bg-deep p-8 text-porcelain sm:p-10">
           <p className="text-2xl font-medium tracking-tight">Want this handled for you?</p>
           <p className="mt-3 text-[15px] leading-relaxed text-porcelain/70">
             I keep the books, run payroll and prepare taxes for businesses in Texas, across the US and abroad, all
