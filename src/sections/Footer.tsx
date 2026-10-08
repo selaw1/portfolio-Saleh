@@ -14,7 +14,7 @@ export default function Footer() {
               {s.name}
             </a>
           ))}
-          <a href="/blog/" className="link-draw hover:text-porcelain">
+          <a href="/blog" className="link-draw hover:text-porcelain">
             Blog
           </a>
           <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="link-draw hover:text-porcelain">

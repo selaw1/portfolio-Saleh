@@ -2,7 +2,7 @@ import { formatDate, type Post } from '../lib/blog';
 
 export default function PostCard({ post }: { post: Post }) {
   return (
-    <a href={`/blog/${post.slug}/`} className="group flex h-full flex-col rounded-[24px] bg-porcelain p-8 ring-1 ring-inset ring-ink/10 transition-shadow duration-500 hover:shadow-card-hover sm:p-10">
+    <a href={`/blog/${post.slug}`} className="group flex h-full flex-col rounded-[24px] bg-porcelain p-8 ring-1 ring-inset ring-ink/10 transition-shadow duration-500 hover:shadow-card-hover sm:p-10">
       <p className="text-sm text-fog">
         <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingMinutes} min read
       </p>

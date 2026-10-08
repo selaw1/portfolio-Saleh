@@ -6,7 +6,7 @@ const escape = (s: string) =>
 
 // Builds the per-page <head> tags written into each prerendered HTML file
 export function renderHead(head: Head) {
-  const url = `${SITE_URL}${head.path}`;
+  const url = head.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${head.path}`;
   const title = escape(head.title);
   const description = escape(head.description);
   const tags = [

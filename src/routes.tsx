@@ -40,30 +40,30 @@ const blogIndex: Page = {
     title: 'Blog | Bookkeeping, Payroll & Tax Guides for Texas Businesses | Saleh Ahmad',
     description:
       'Plain-English guides to bookkeeping, payroll, Texas taxes and QuickBooks for small business owners, from accountant Saleh Ahmad.',
-    path: '/blog/',
+    path: '/blog',
     jsonLd: [
       {
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        '@id': `${SITE_URL}/blog/#blog`,
-        url: `${SITE_URL}/blog/`,
+        '@id': `${SITE_URL}/blog#blog`,
+        url: `${SITE_URL}/blog`,
         name: 'Saleh Ahmad Blog',
         author,
         publisher: { '@id': `${SITE_URL}/#business` },
-        blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: `${SITE_URL}/blog/${p.slug}/` })),
+        blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: `${SITE_URL}/blog/${p.slug}` })),
       },
     ],
   },
 };
 
 function postPage(post: (typeof posts)[number]): Page {
-  const url = `${SITE_URL}/blog/${post.slug}/`;
+  const url = `${SITE_URL}/blog/${post.slug}`;
   return {
     element: <BlogPostPage post={post} />,
     head: {
       title: `${post.title} | Saleh Ahmad`,
       description: post.description,
-      path: `/blog/${post.slug}/`,
+      path: `/blog/${post.slug}`,
       type: 'article',
       lastModified: post.updated ?? post.date,
       jsonLd: [
@@ -81,14 +81,14 @@ function postPage(post: (typeof posts)[number]): Page {
           inLanguage: 'en',
           author,
           publisher: { '@id': `${SITE_URL}/#business` },
-          isPartOf: { '@id': `${SITE_URL}/blog/#blog` },
+          isPartOf: { '@id': `${SITE_URL}/blog#blog` },
         },
         {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
             { '@type': 'ListItem', position: 3, name: post.title, item: url },
           ],
         },
@@ -98,13 +98,13 @@ function postPage(post: (typeof posts)[number]): Page {
 }
 
 function servicePage(service: Service): Page {
-  const url = `${SITE_URL}/${service.slug}/`;
+  const url = `${SITE_URL}/${service.slug}`;
   return {
     element: <ServicePage service={service} />,
     head: {
       title: service.seoTitle,
       description: service.description,
-      path: `/${service.slug}/`,
+      path: `/${service.slug}`,
       jsonLd: [
         {
           '@context': 'https://schema.org',
@@ -146,7 +146,6 @@ export const notFound: Page = {
 export const pages: Page[] = [home, ...servicePages.map(servicePage), blogIndex, ...posts.map(postPage)];
 
 export function resolve(pathname: string): Page {
-  // Every page lives at an address ending in a slash (/blog/), matching how the host serves folders
-  const path = pathname.replace(/index\.html$/, '').replace(/\/?$/, '/');
+  const path = pathname.replace(/\/(index\.html)?$/, '') || '/';
   return pages.find((page) => page.head.path === path) ?? notFound;
 }

@@ -1,7 +1,7 @@
 import { marked } from 'marked';
 
 // Blog posts are Markdown files in src/content/blog. The file name is the post's
-// address: texas-sales-tax.md is published at /blog/texas-sales-tax/.
+// address: texas-sales-tax.md is published at /blog/texas-sales-tax.
 // Each file starts with a front matter block:
 //
 // ---

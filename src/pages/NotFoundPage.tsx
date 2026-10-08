@@ -7,7 +7,7 @@ export default function NotFoundPage() {
         <a href="/" className="pill-light">
           Go to the homepage
         </a>
-        <a href="/blog/" className="pill-ghost">
+        <a href="/blog" className="pill-ghost">
           Read the blog
         </a>
       </div>
