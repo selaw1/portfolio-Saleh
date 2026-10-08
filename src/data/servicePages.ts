@@ -229,7 +229,7 @@ export const servicePages: ServicePage[] = [
         a: 'Yes. Payroll is handled online, so location is not a barrier.',
       },
     ],
-    relatedPosts: ['catch-up-bookkeeping'],
+    relatedPosts: ['biweekly-vs-semi-monthly-payroll', 'catch-up-bookkeeping'],
   },
   {
     slug: 'tax-preparation',
