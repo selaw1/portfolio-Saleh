@@ -4,11 +4,11 @@
 
 ## Services
 
-- **Accounting system setup:** a complete accounting system set up for the business: separate business banking, QuickBooks, a chart of accounts built around sales channels and products, inventory tracking, internal controls and approvals, a written weekly/monthly/quarterly bookkeeping routine, a budget and KPIs, and clear Excel reports (with routine updates automated where the software allows).
-- **Bookkeeping:** every bank and card transaction recorded and reconciled to statements; payables and receivables; a monthly profit and loss statement, balance sheet and cash flow statement.
-- **Payroll:** salaries and wages processed accurately and on time using QuickBooks Payroll, with records kept ready for year-end.
-- **Tax preparation and planning:** returns prepared from clean books, deductions claimed, filings kept compliant. Uses TurboTax.
-- **QuickBooks setup, cleanup and training:** QuickBooks Online and Desktop setup and customization, catch-up and cleanup of messy files, staff training, and Point of Sale.
+- **Accounting system setup** (https://saleh.selawii.com/accounting-system-setup/): a complete accounting system set up for the business: separate business banking, QuickBooks, a chart of accounts built around sales channels and products, inventory tracking, internal controls and approvals, a written weekly/monthly/quarterly bookkeeping routine, a budget and KPIs, and clear Excel reports (with routine updates automated where the software allows).
+- **Bookkeeping** (https://saleh.selawii.com/bookkeeping/): every bank and card transaction recorded and reconciled to statements; payables and receivables; a monthly profit and loss statement, balance sheet and cash flow statement.
+- **Payroll** (https://saleh.selawii.com/payroll/): salaries and wages processed accurately and on time using QuickBooks Payroll, with records kept ready for year-end.
+- **Tax preparation and planning** (https://saleh.selawii.com/tax-preparation/): returns prepared from clean books, deductions claimed, filings kept compliant. Uses TurboTax.
+- **QuickBooks setup, cleanup and training** (https://saleh.selawii.com/quickbooks/): QuickBooks Online and Desktop setup and customization, catch-up and cleanup of messy files, staff training, and Point of Sale.
 - **Also available:** cost accounting and budgeting, internal audit and internal controls (IAS/IFRS), Islamic finance and Zakat accounting.
 
 ## How working together goes
@@ -37,11 +37,16 @@ Has served 100+ clients across 15+ industries and worked in 6 countries.
 - Master of Commerce in Accounting, Nagpur University, 1989
 - Bachelor of Commerce in Accounting, Nagpur University, 1986
 
+## Blog articles
+
+Plain-English guides for small business owners: https://saleh.selawii.com/blog/
+
+<!--blog-posts-->
+
 ## Contact and booking
 
 - Website: https://saleh.selawii.com/
 - Book an intro call: https://saleh.selawii.com/#book
-- Service pages: https://saleh.selawii.com/accounting-system-setup/, https://saleh.selawii.com/bookkeeping/, https://saleh.selawii.com/payroll/, https://saleh.selawii.com/tax-preparation/, https://saleh.selawii.com/quickbooks/
 - Blog (guides on bookkeeping, payroll and Texas taxes): https://saleh.selawii.com/blog/
 - Email: saleh@selawii.com
 - Phone: +1 (682) 239-7650

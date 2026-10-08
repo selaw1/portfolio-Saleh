@@ -3,7 +3,7 @@
 // get the full content without running JavaScript. Also writes sitemap.xml.
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 
-const { render, routes, SITE_URL } = await import('../dist-server/entry-server.js');
+const { render, routes, posts, SITE_URL } = await import('../dist-server/entry-server.js');
 
 const dist = new URL('../dist/', import.meta.url);
 const template = await readFile(new URL('index.html', dist), 'utf8');
@@ -39,6 +39,13 @@ ${urls}
 `
 );
 
+// List every blog post in llms.txt, so AI assistants can find the articles
+const llms = new URL('llms.txt', dist);
+const llmsText = await readFile(llms, 'utf8');
+if (!llmsText.includes('<!--blog-posts-->')) throw new Error('prerender: <!--blog-posts--> not found in llms.txt');
+const postList = posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}/): ${p.description}`).join('\n');
+await writeFile(llms, llmsText.replace('<!--blog-posts-->', postList));
+
 await rm(new URL('../dist-server', import.meta.url), { recursive: true, force: true });
 
-console.log(`prerender: wrote ${routes.length} pages, 404.html and sitemap.xml`);
+console.log(`prerender: wrote ${routes.length} pages, 404.html, sitemap.xml and llms.txt`);

@@ -6,6 +6,7 @@ import { renderHead } from './head';
 import { notFound, pages } from './routes';
 
 export { SITE_URL } from './data/site';
+export { posts } from './lib/blog';
 
 // Every address the site publishes; scripts/prerender.mjs writes one HTML file for each
 export const routes = pages.map((page) => ({ path: page.head.path, lastModified: page.head.lastModified }));
