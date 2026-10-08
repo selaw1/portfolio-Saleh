@@ -11,7 +11,7 @@ export default function BlogPostPage({ post }: { post: Post }) {
       <PageHeader
         eyebrow={
           <nav aria-label="Breadcrumb">
-            <a href="/blog" className="link-draw hover:text-porcelain">
+            <a href="/blog/" className="link-draw hover:text-porcelain">
               Blog
             </a>
           </nav>

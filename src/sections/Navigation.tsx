@@ -5,7 +5,7 @@ const navLinks = [
   { label: 'Services', href: '/#services' },
   { label: 'Approach', href: '/#approach' },
   { label: 'About', href: '/#about' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/blog/' },
 ];
 
 export default function Navigation() {

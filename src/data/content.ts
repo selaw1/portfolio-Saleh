@@ -20,33 +20,33 @@ export const figures = [
 export const services = [
   {
     name: 'Accounting setup',
-    href: '/accounting-system-setup',
+    href: '/accounting-system-setup/',
     summary:
       'A complete accounting system built for your business, controlling every transaction from the first sale to the final statement, with clear Excel reports that show you the numbers at a glance.',
     includes: ['Full transaction cycle, A to Z', 'Internal controls & approvals', 'Clear Excel reports & budgets'],
   },
   {
     name: 'Bookkeeping',
-    href: '/bookkeeping',
+    href: '/bookkeeping/',
     summary:
       'Every bank and card transaction recorded and reconciled to your statements. Your books are current at the end of each month.',
     includes: ['Bank & card reconciliation', 'Payables & receivables', 'Monthly P&L, balance sheet, cash flow'],
   },
   {
     name: 'Payroll',
-    href: '/payroll',
+    href: '/payroll/',
     summary: 'Salaries and wages processed accurately and on time, with records kept ready for year-end.',
     includes: ['QuickBooks Payroll', 'Wage records', 'Payroll reports'],
   },
   {
     name: 'Tax',
-    href: '/tax-preparation',
+    href: '/tax-preparation/',
     summary: 'Returns prepared from clean books, deductions claimed, and filings kept compliant.',
     includes: ['Tax preparation', 'Tax planning', 'TurboTax'],
   },
   {
     name: 'QuickBooks',
-    href: '/quickbooks',
+    href: '/quickbooks/',
     summary:
       'Online or Desktop, set up to match how your business runs. Messy files brought up to date, and your team shown how to use it.',
     includes: ['Setup & customization', 'Catch-up & cleanup', 'Training', 'Point of Sale'],

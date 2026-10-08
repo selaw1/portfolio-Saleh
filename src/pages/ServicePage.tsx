@@ -139,7 +139,7 @@ export default function ServicePage({ service }: { service: Service }) {
             <ul className="mt-4 space-y-3 text-lg">
               {others.map((s) => (
                 <li key={s.slug}>
-                  <a href={`/${s.slug}`} className="link-draw">
+                  <a href={`/${s.slug}/`} className="link-draw">
                     {s.name}
                   </a>
                 </li>
