@@ -5,7 +5,7 @@ date: 2026-10-08
 category: texas-taxes
 ---
 
-Once you have a Texas sales tax permit, the Comptroller expects a return from you on every due date, whether you sold anything or not. Filing and paying online takes a few minutes when your books are in order. These are the steps I follow for my clients.
+Once you have a Texas sales tax permit, the Comptroller expects a return from you on every due date, whether you sold anything or not. Filing and paying online takes a few minutes when your books are in order, and the steps are the same every period.
 
 If you're still working out whether you need a permit, what rate to charge or how often you file, start with my [guide to Texas sales tax](/blog/texas-sales-tax-guide/) and come back here when it's time to file.
 

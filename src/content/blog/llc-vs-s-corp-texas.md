@@ -18,7 +18,7 @@ An S corp is a tax status that an eligible LLC or corporation chooses by filing 
 | How it's created | Certificate of Formation with the Texas Secretary of State | Same LLC, plus Form 2553 filed with the IRS |
 | Federal tax return | Schedule C on your personal return (one owner) or Form 1065 (two or more owners) | Form 1120-S, due March 15 |
 | How the owner is paid | Owner draws | A reasonable salary through payroll, plus distributions |
-| Self-employment tax | On all of the profit | Payroll taxes on the salary only |
+| Self-employment tax | On most of the profit (92.35% of it) | Payroll taxes on the salary only |
 | Payroll required | No | Yes |
 | Texas franchise tax | Applies | Applies |
 
@@ -26,23 +26,23 @@ An S corp is a tax status that an eligible LLC or corporation chooses by filing 
 
 By default the IRS ignores the LLC for income tax. A single-member LLC is taxed like a sole proprietor, and an LLC with two or more members is taxed as a partnership. Either way, the profit flows through to the owners' personal returns.
 
-The owner pays income tax on that profit, plus self-employment tax of 15.3% (12.4% for Social Security and 2.9% for Medicare). Self-employment tax applies to the whole profit, whether you take the money out of the business or leave it in.
+The owner pays income tax on that profit, plus self-employment tax of 15.3% (12.4% for Social Security and 2.9% for Medicare). Self-employment tax is figured on 92.35% of the profit, whether you take the money out of the business or leave it in. The Social Security part stops once your earnings reach the yearly limit ($184,500 for 2026); the Medicare part has no limit.
 
 ## How an S corp is taxed
 
 An S corp's profit also flows through to the owners' personal returns, so there's no separate corporate income tax. The difference is how the owner who works in the business gets paid:
 
 1. The owner is an employee and must take a reasonable salary through payroll. Social Security and Medicare taxes are withheld and paid on that salary, just as for any employee.
-2. Profit left over after the salary can be paid out as distributions. Distributions are subject to income tax but not to Social Security and Medicare taxes, which is where the savings come from.
+2. Profit left over after the salary can be paid out as distributions. That profit is still subject to income tax on your personal return, but not to Social Security and Medicare taxes, which is where the savings come from.
 
 ## When an S corp saves money: an example
 
 Say your Texas LLC makes $100,000 in profit for the year.
 
-- As a regular LLC, self-employment tax applies to the full $100,000.
-- As an S corp paying you a $60,000 salary, payroll taxes apply to the $60,000, and the other $40,000 comes out as distributions without them.
+- As a regular LLC, self-employment tax applies to 92.35% of the $100,000, which is $92,350. At 15.3%, that's about $14,100.
+- As an S corp paying you a $60,000 salary, payroll taxes of 15.3% apply to the $60,000, which is about $9,200. The other $40,000 comes out as distributions without them.
 
-In this simplified example, that's roughly 15.3% of $40,000, or about $6,000 a year, before the extra costs of running an S corp. Your real numbers depend on your profit, a salary you can defend, and your other income.
+In this simplified example, the difference is about $4,950 a year, before the extra costs of running an S corp. Your real numbers depend on your profit, a salary you can defend, and your other income.
 
 The IRS expects the salary to be reasonable, meaning close to what you'd pay someone else to do your job. Paying yourself a token salary to push everything into distributions is one of the first things the IRS looks for.
 

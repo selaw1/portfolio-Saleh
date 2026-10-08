@@ -58,7 +58,7 @@ The prior-year rule is the easier one to plan around, because you already know t
 
 ## How to make the payments
 
-You can pay the IRS online through IRS Direct Pay, your IRS online account, or EFTPS, or mail a check with a Form 1040-ES voucher. Paying online gives you an immediate confirmation, and your IRS online account shows every payment you've made for the year. Keep those confirmations with your tax records.
+You can pay the IRS online through IRS Direct Pay or your IRS online account, or mail a check with a Form 1040-ES voucher. The IRS stopped accepting new individual enrollments in EFTPS in October 2025 and is moving individuals off it during 2026, so use Direct Pay or your online account for estimated payments. Paying online gives you an immediate confirmation, and your IRS online account shows every payment you've made for the year. Keep those confirmations with your tax records.
 
 ## Common mistakes with estimated taxes
 
