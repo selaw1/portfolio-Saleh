@@ -30,8 +30,8 @@ export const blogCategories: BlogCategory[] = [
   },
   {
     slug: 'texas-taxes',
-    name: 'Texas taxes',
-    description: 'Texas franchise tax, sales tax, deadlines and penalties for small businesses.',
+    name: 'Small business taxes',
+    description: 'Texas franchise tax and sales tax, federal estimated taxes, deadlines and penalties for small businesses.',
     service: { name: 'Tax preparation and planning', href: '/tax-preparation/' },
   },
   {

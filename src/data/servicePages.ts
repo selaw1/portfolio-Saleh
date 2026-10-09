@@ -116,9 +116,9 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'bookkeeping',
     name: 'Bookkeeping',
-    seoTitle: 'Bookkeeping Services for Small Business | Online & Remote | Saleh Ahmad',
+    seoTitle: 'Small Business Bookkeeping Services, Online | Saleh Ahmad',
     description:
-      'Bookkeeping services for small business, done online: bank reconciliation, payables and receivables, and monthly financial statements. Outsource your bookkeeping to a remote bookkeeper with 38 years of experience, based in Texas.',
+      'Small business bookkeeping services, done online: bank reconciliation, payables and receivables, and monthly financial statements. Outsource your bookkeeping to an online QuickBooks bookkeeper with 38 years of experience, based in Texas.',
     heading: 'Bookkeeping services for small businesses',
     intro:
       'Every transaction recorded, every account reconciled, and a clear set of financial statements at the end of each month. You always know where your business stands, and your tax return starts from numbers you can trust.',
@@ -179,7 +179,7 @@ export const servicePages: ServicePage[] = [
     name: 'Payroll',
     seoTitle: 'Payroll Services for Small Business | Online Payroll | Saleh Ahmad',
     description:
-      'Online payroll services for small business: payroll processing with QuickBooks Payroll, pay runs, wage records, payroll reports and year-end records, for employers in Texas and across the US.',
+      'Online payroll services for small business: payroll processing with QuickBooks Payroll, pay runs, wage records, payroll reports and year-end records. Bookkeeping and payroll services in one place for employers in Texas and across the US.',
     heading: 'Payroll services for small businesses, done on time',
     intro:
       'Your team paid correctly and on schedule, with payroll recorded in your books and the records kept ready for year-end. You approve the hours; I handle the rest.',
@@ -234,9 +234,9 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'tax-preparation',
     name: 'Tax preparation and planning',
-    seoTitle: 'Small Business Accountant & Tax Preparer in Texas | Saleh Ahmad',
+    seoTitle: 'Small Business Tax Preparation & Accountant in Texas | Saleh Ahmad',
     description:
-      'A small business accountant for tax preparation and planning in Texas and across the US: returns prepared from clean books, deductions claimed, and Texas franchise tax and sales tax filings kept on schedule.',
+      'Small business tax preparation and accounting services in Texas and across the US: returns prepared from clean books, deductions claimed, and Texas franchise tax and sales tax filings kept on schedule.',
     heading: 'Tax preparation and planning for small businesses',
     intro:
       'A tax return is only as good as the books behind it. I prepare returns from reconciled records, make sure the deductions you are entitled to are claimed, and plan ahead so tax season holds no surprises.',

@@ -72,4 +72,8 @@ What makes the franchise tax hard is having accurate revenue and expense figures
 
 I keep the books and handle franchise tax filings for Texas businesses, all online. If you'd like this off your plate, [book a short intro call](/#book).
 
+## Sources
+
+- [Texas Comptroller: Franchise Tax](https://comptroller.texas.gov/taxes/franchise/)
+
 *This article is general information, not tax advice for your specific situation. Thresholds and rates are set by the Texas Comptroller and change every two years.*

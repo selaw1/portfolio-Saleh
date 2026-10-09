@@ -12,6 +12,20 @@ import { blogCategories, type BlogCategory } from '../data/blogCategories';
 // category: bookkeeping   (a slug from src/data/blogCategories.ts)
 // ---
 
+// Links to other sites (sources, references) open in a new tab so readers keep the article open
+marked.use({
+  renderer: {
+    link({ href, title, tokens }) {
+      const text = this.parser.parseInline(tokens);
+      const titleAttr = title ? ` title="${title}"` : '';
+      if (/^https?:\/\//.test(href)) {
+        return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
+      return `<a href="${href}"${titleAttr}>${text}</a>`;
+    },
+  },
+});
+
 export type Post = {
   slug: string;
   title: string;

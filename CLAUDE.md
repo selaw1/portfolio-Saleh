@@ -6,7 +6,7 @@ Static React + Vite site for Saleh Ahmad's accounting practice (saleh.selawii.co
 
 Each post is a Markdown file in `src/content/blog/`. The file name is the post's address (`texas-sales-tax-guide.md` is published at `/blog/texas-sales-tax-guide/`). The build adds every post to the blog list, the homepage, `sitemap.xml`, `llms.txt` and Google's structured data automatically.
 
-Every post's front matter has a `category:` line with one of the category slugs in `src/data/blogCategories.ts` (`accounting-setup`, `bookkeeping`, `payroll`, `texas-taxes`, `quickbooks`). The blog page groups posts by category, and the build fails if a post has no category or an unknown one.
+Every post's front matter has a `category:` line with one of the category slugs in `src/data/blogCategories.ts` (`accounting-setup`, `bookkeeping`, `payroll`, `texas-taxes`, `quickbooks`; `texas-taxes` is shown as "Small business taxes"). The blog page groups posts by category, and the build fails if a post has no category or an unknown one.
 
 ## Rules for rewriting or humanizing existing posts
 
@@ -23,6 +23,7 @@ Rewriting the prose is fine. These parts are not prose and must stay as they are
 9. **Closing section.** Keep the final call to action with its links to the service page and `/#book`.
 10. **Disclaimer.** Keep the italic line at the end (`*This article is general information...*`) where a post has one.
 11. **No em dashes or en dashes** in the text.
+12. **Sources.** Keep the `## Sources` section (just above the disclaimer) and every link in it. Posts that quote tax figures, deadlines or laws cite official sources only (IRS, SSA, Texas Comptroller, Texas Workforce Commission, Texas Secretary of State, Texas statutes, BLS, Intuit help), never other accounting firms. Links to other sites open in a new tab automatically.
 
 ### Target keywords to keep in each post
 
@@ -39,6 +40,16 @@ Rewriting the prose is fine. These parts are not prose and must stay as they are
 | year-end-checklist-small-business.md | year-end checklist, small business owners, close the books |
 | texas-franchise-tax-guide.md | Texas franchise tax, no-tax-due threshold, Public Information Report |
 | texas-sales-tax-guide.md | Texas sales tax, sales tax permit, filing deadlines |
+| bookkeeping-for-real-estate.md | bookkeeping for real estate, rental property, security deposits, depreciation |
+| bookkeeping-for-restaurants.md | bookkeeping for restaurants, food cost, labor cost, sales tax |
+| how-to-file-texas-sales-tax-online.md | file Texas sales tax online, Webfile, total sales, taxable sales |
+| how-to-pay-quarterly-taxes-on-1099-income.md | quarterly estimated taxes, 1099 income, safe harbor, Form 1040-ES |
+| how-to-pay-yourself-from-an-llc.md | pay yourself from an LLC, owner's draw, guaranteed payments, reasonable salary |
+| how-to-read-a-profit-and-loss-statement.md | profit and loss statement, P&L, gross profit, net income |
+| llc-vs-s-corp-texas.md | LLC vs S corp, Texas, Form 2553, self-employment tax |
+| texas-payroll-taxes.md | Texas payroll taxes, Texas Workforce Commission, FUTA, Form 941 |
+| what-is-a-chart-of-accounts.md | chart of accounts, account numbers, QuickBooks Online |
+| what-is-cost-of-goods-sold.md | cost of goods sold, COGS, gross profit, QuickBooks Online |
 
 ### After rewriting
 

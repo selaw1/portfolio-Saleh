@@ -96,4 +96,8 @@ Every business is different, so I quote after a short conversation about your tr
 
 See what's included in my [bookkeeping services](/bookkeeping/), or [book a short intro call](/#book) for a quote.
 
+## Sources
+
+- [US Bureau of Labor Statistics: Bookkeeping, Accounting, and Auditing Clerks](https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm)
+
 *Prices in this article are typical US market ranges from 2026 pricing guides and US Bureau of Labor Statistics wage data. They are general information, not a quote.*

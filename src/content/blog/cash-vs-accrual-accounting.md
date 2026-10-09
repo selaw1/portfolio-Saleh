@@ -89,4 +89,8 @@ The method is usually decided once, at the start, and it shapes how every transa
 
 I keep books on both methods for small businesses across Texas and the US, all online. See my [bookkeeping services](/bookkeeping/) and [tax preparation](/tax-preparation/), read [how to reconcile your bank account](/blog/how-to-do-a-bank-reconciliation/), or [book a short intro call](/#book).
 
+## Sources
+
+- [IRS Publication 538, Accounting Periods and Methods](https://www.irs.gov/publications/p538)
+
 *This article is general information, not tax advice for your specific situation. IRS thresholds change every year.*
