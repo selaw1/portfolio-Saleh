@@ -7,9 +7,10 @@ import { notFound, pages } from './routes';
 
 export { SITE_URL } from './data/site';
 export { posts } from './lib/blog';
+export { ogImagePath } from './lib/og';
 
 // Every address the site publishes; scripts/prerender.mjs writes one HTML file for each
-export const routes = pages.map((page) => ({ path: page.head.path, lastModified: page.head.lastModified }));
+export const routes = pages.map((page) => ({ path: page.head.path, lastModified: page.head.lastModified, card: page.head.card }));
 
 // Used at build time by scripts/prerender.mjs to write each page's HTML
 export function render(path: string) {

@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Approach', href: '/#approach' },
   { label: 'About', href: '/#about' },
   { label: 'Blog', href: '/blog/' },
-  { label: 'Zakat calculator', href: '/zakat-calculator/' },
+  { label: 'Calculators', href: '/calculators/' },
 ];
 
 export default function Navigation() {

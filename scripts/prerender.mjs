@@ -3,7 +3,9 @@
 // get the full content without running JavaScript. Also writes sitemap.xml.
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 
-const { render, routes, posts, SITE_URL } = await import('../dist-server/entry-server.js');
+import { writeOgImages } from './og.mjs';
+
+const { render, routes, posts, SITE_URL, ogImagePath } = await import('../dist-server/entry-server.js');
 
 const dist = new URL('../dist/', import.meta.url);
 const template = await readFile(new URL('index.html', dist), 'utf8');
@@ -46,6 +48,8 @@ if (!llmsText.includes('<!--blog-posts-->')) throw new Error('prerender: <!--blo
 const postList = posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}/): ${p.description}`).join('\n');
 await writeFile(llms, llmsText.replace('<!--blog-posts-->', postList));
 
+const ogCount = await writeOgImages(routes, dist, ogImagePath);
+
 await rm(new URL('../dist-server', import.meta.url), { recursive: true, force: true });
 
-console.log(`prerender: wrote ${routes.length} pages, 404.html, sitemap.xml and llms.txt`);
+console.log(`prerender: wrote ${routes.length} pages, 404.html, sitemap.xml, llms.txt and ${ogCount} preview images`);

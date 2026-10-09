@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { SITE_URL } from './data/site';
 import { posts } from './lib/blog';
+import { ogImagePath } from './lib/og';
 import { servicePages, type ServicePage as Service } from './data/servicePages';
 import HomePage from './pages/HomePage';
 import BlogIndexPage from './pages/BlogIndexPage';
@@ -8,6 +9,10 @@ import BlogPostPage from './pages/BlogPostPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ServicePage from './pages/ServicePage';
 import ZakatCalculatorPage from './pages/ZakatCalculatorPage';
+import CalculatorsPage from './pages/CalculatorsPage';
+import QuarterlyTaxCalculatorPage from './pages/QuarterlyTaxCalculatorPage';
+import SCorpCalculatorPage from './pages/SCorpCalculatorPage';
+import SalesTaxCalculatorPage from './pages/SalesTaxCalculatorPage';
 
 // What goes in each page's <head>: title, description, canonical URL, social previews and structured data
 export type Head = {
@@ -19,6 +24,8 @@ export type Head = {
   // For sitemap.xml; pages without one use the build date
   lastModified?: string;
   jsonLd?: object[];
+  // Text for this page's generated social preview image (scripts/og.mjs)
+  card?: { eyebrow: string; title: string };
 };
 
 export type Page = { element: ReactNode; head: Head };
@@ -42,6 +49,7 @@ const blogIndex: Page = {
     description:
       'Plain-English guides to bookkeeping, payroll, Texas taxes and QuickBooks for small business owners, from accountant Saleh Ahmad.',
     path: '/blog/',
+    card: { eyebrow: 'Blog', title: 'Bookkeeping, payroll and tax, explained plainly' },
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -66,6 +74,7 @@ function postPage(post: (typeof posts)[number]): Page {
       description: post.description,
       path: `/blog/${post.slug}/`,
       type: 'article',
+      card: { eyebrow: post.category.name, title: post.title },
       lastModified: post.updated ?? post.date,
       jsonLd: [
         {
@@ -78,7 +87,7 @@ function postPage(post: (typeof posts)[number]): Page {
           mainEntityOfPage: url,
           datePublished: post.date,
           dateModified: post.updated ?? post.date,
-          image: `${SITE_URL}/og-image.png`,
+          image: `${SITE_URL}${ogImagePath(`/blog/${post.slug}/`)}`,
           articleSection: post.category.name,
           inLanguage: 'en',
           author,
@@ -107,6 +116,7 @@ function servicePage(service: Service): Page {
       title: service.seoTitle,
       description: service.description,
       path: `/${service.slug}/`,
+      card: { eyebrow: 'Services', title: service.heading },
       jsonLd: [
         {
           '@context': 'https://schema.org',
@@ -142,6 +152,7 @@ const zakatCalculator: Page = {
     description:
       'Free zakat calculator for savings, gold, silver, investments and business assets. Uses live gold and silver prices to check the nisab and show the 2.5% zakat due. By Saleh Ahmad, Zakat Accounting Diploma, Kuwait Zakat House.',
     path: '/zakat-calculator/',
+    card: { eyebrow: 'Free calculator', title: 'Zakat calculator for personal and business wealth' },
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -168,6 +179,79 @@ const zakatCalculator: Page = {
   },
 };
 
+// A calculator page: a free tool, with breadcrumbs back to /calculators/
+function toolPage(element: ReactNode, path: string, name: string, title: string, description: string): Page {
+  const url = `${SITE_URL}${path}`;
+  return {
+    element,
+    head: {
+      title,
+      description,
+      path,
+      card: { eyebrow: 'Free calculator', title: name },
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          '@id': `${url}#app`,
+          name,
+          url,
+          applicationCategory: 'FinanceApplication',
+          operatingSystem: 'Any',
+          isAccessibleForFree: true,
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+          author,
+          publisher: { '@id': `${SITE_URL}/#business` },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+            { '@type': 'ListItem', position: 2, name: 'Calculators', item: `${SITE_URL}/calculators/` },
+            { '@type': 'ListItem', position: 3, name, item: url },
+          ],
+        },
+      ],
+    },
+  };
+}
+
+const calculatorsHub: Page = {
+  element: <CalculatorsPage />,
+  head: {
+    title: 'Free Calculators for Small Business Owners | Saleh Ahmad',
+    description:
+      'Free calculators for zakat, quarterly estimated taxes, LLC vs S corp savings and Texas sales tax, from accountant Saleh Ahmad.',
+    path: '/calculators/',
+    card: { eyebrow: 'Free tools', title: 'Free calculators for small business owners' },
+  },
+};
+
+const quarterlyTax = toolPage(
+  <QuarterlyTaxCalculatorPage />,
+  '/quarterly-tax-calculator/',
+  'Quarterly estimated tax calculator',
+  'Quarterly Estimated Tax Calculator for 1099 Income (2026) | Saleh Ahmad',
+  'Free 2026 quarterly estimated tax calculator for 1099 and self-employment income: self-employment tax, federal income tax, the four due dates and the safe harbor amount.'
+);
+
+const sCorpSavings = toolPage(
+  <SCorpCalculatorPage />,
+  '/s-corp-tax-calculator/',
+  'LLC vs S corp tax savings calculator',
+  'LLC vs S Corp Tax Savings Calculator | Saleh Ahmad',
+  'Free calculator comparing self-employment tax as an LLC with payroll taxes on a reasonable salary as an S corp, after the extra costs of an S corp.'
+);
+
+const salesTax = toolPage(
+  <SalesTaxCalculatorPage />,
+  '/texas-sales-tax-calculator/',
+  'Texas sales tax calculator',
+  'Texas Sales Tax Calculator (6.25% + Local) | Saleh Ahmad',
+  'Free Texas sales tax calculator: add tax to a price or find the tax in a total, at the 6.25% state rate plus up to 2% local tax.'
+);
+
 export const notFound: Page = {
   element: <NotFoundPage />,
   head: {
@@ -178,7 +262,7 @@ export const notFound: Page = {
   },
 };
 
-export const pages: Page[] = [home, ...servicePages.map(servicePage), zakatCalculator, blogIndex, ...posts.map(postPage)];
+export const pages: Page[] = [home, ...servicePages.map(servicePage), calculatorsHub, zakatCalculator, quarterlyTax, sCorpSavings, salesTax, blogIndex, ...posts.map(postPage)];
 
 export function resolve(pathname: string): Page {
   // Every page lives at an address ending in a slash (/blog/), matching how the host serves folders

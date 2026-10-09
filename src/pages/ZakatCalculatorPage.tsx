@@ -265,7 +265,7 @@ const faqs = [
 export default function ZakatCalculatorPage() {
   return (
     <>
-      <PageHeader eyebrow="Free tool" title="Zakat calculator for personal and business wealth">
+      <PageHeader eyebrow={<a href="/calculators/" className="link-draw hover:text-porcelain">Calculators</a>} title="Zakat calculator for personal and business wealth">
         <p className="lede mt-8 max-w-[52ch] text-porcelain/70">
           Work out the zakat due on your savings, gold, investments and business assets. Built by Saleh Ahmad, who
           holds a Zakat Accounting Diploma from Kuwait Zakat House and worked there as an internal auditor.
