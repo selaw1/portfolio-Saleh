@@ -68,4 +68,4 @@ Most of my clients move straight from a catch-up project into a [monthly bookkee
 
 ## Let's get you caught up
 
-I've been keeping books for 38 years, and I work with businesses across Texas and beyond, fully online. Send me your statements and I'll handle the rest. [Book a short intro call](/#book) to talk about where your books stand.
+I've been keeping books for 38 years, and I work with businesses across Texas and beyond, fully online. Send me your statements and I'll handle the rest. See my [bookkeeping services](/bookkeeping/), or [book a short intro call](/#book) to talk about where your books stand.

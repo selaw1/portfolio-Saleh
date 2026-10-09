@@ -70,7 +70,7 @@ Getting reinstated is possible, but it means filing every missing report, paying
 
 What makes the franchise tax hard is having accurate revenue and expense figures when the deadline arrives. When your books are reconciled every month, filing in May takes minutes instead of a scramble.
 
-I keep the books and handle franchise tax filings for Texas businesses, all online. If you'd like this off your plate, [book a short intro call](/#book).
+I've worked in accounting for 38 years, and I keep the books and handle franchise tax filings for Texas businesses, all online. See my [tax preparation and planning services](/tax-preparation/), or if you'd like this off your plate, [book a short intro call](/#book).
 
 ## Sources
 

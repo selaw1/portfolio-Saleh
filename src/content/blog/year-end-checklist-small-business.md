@@ -87,7 +87,7 @@ Once the year is reconciled and reviewed, close the books by setting a closing d
 
 ## Want help closing the year?
 
-Year-end is the busiest time to start, so the earlier the better. I help small businesses across Texas and the US close the year, get payroll and 1099 records ready, and hand clean books to their tax preparer, all online.
+Year-end is the busiest time to start, so the earlier the better. With 38 years in accounting, I help small businesses across Texas and the US close the year, get payroll and 1099 records ready, and hand clean books to their tax preparer, all online.
 
 See my [bookkeeping services](/bookkeeping/) or [book a short intro call](/#book).
 

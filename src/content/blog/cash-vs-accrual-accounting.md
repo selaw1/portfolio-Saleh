@@ -87,7 +87,7 @@ QuickBooks Online lets you run reports on either basis. On most reports, such as
 
 The method is usually decided once, at the start, and it shapes how every transaction is recorded after that. If you're not sure which one your books use, or which one you should, I can look at your business and tell you.
 
-I keep books on both methods for small businesses across Texas and the US, all online. See my [bookkeeping services](/bookkeeping/) and [tax preparation](/tax-preparation/), read [how to reconcile your bank account](/blog/how-to-do-a-bank-reconciliation/), or [book a short intro call](/#book).
+I've worked in accounting for 38 years, and I keep books on both methods for small businesses across Texas and the US, all online. See my [bookkeeping services](/bookkeeping/) and [tax preparation](/tax-preparation/), read [how to reconcile your bank account](/blog/how-to-do-a-bank-reconciliation/), or [book a short intro call](/#book).
 
 ## Sources
 

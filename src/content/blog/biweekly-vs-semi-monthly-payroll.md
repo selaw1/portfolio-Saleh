@@ -80,7 +80,7 @@ You can change pay frequency, but do it carefully. Give employees plenty of noti
 
 Choosing the schedule is the first step. Payroll also has to be recorded correctly in your books, with taxes, deductions and reports kept ready for year-end.
 
-I set up and run payroll for small businesses with QuickBooks Payroll, fully online. See my [payroll services](/payroll/), or [book a short intro call](/#book) to talk about your team.
+I've worked in accounting for 38 years, and I set up and run payroll for small businesses with QuickBooks Payroll, fully online. See my [payroll services](/payroll/), or [book a short intro call](/#book) to talk about your team.
 
 ## Sources
 

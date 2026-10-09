@@ -83,7 +83,7 @@ Most sales tax problems come from [messy records](/blog/catch-up-bookkeeping/) r
 
 QuickBooks can track sales tax automatically, but only if it's [set up](/blog/accounting-system-setup-guide/) with the right rates and the right taxable and non-taxable items. That setup is one of the first things I check when I take over a client's books.
 
-If you'd like someone to handle your sales tax filings and keep the books clean behind them, [book a short intro call](/#book).
+I've worked in accounting for 38 years. If you'd like someone to handle your sales tax filings and keep the books clean behind them, see my [tax preparation and planning services](/tax-preparation/) or [book a short intro call](/#book).
 
 ## Sources
 

@@ -91,7 +91,7 @@ Late or incorrect 1099s carry IRS penalties per form, and the penalty grows the 
 
 ## Want 1099s handled for you?
 
-I prepare and file 1099s as part of keeping clean QuickBooks books for small businesses across Texas and the US, all online. See my [QuickBooks services](/quickbooks/), or [book a short intro call](/#book) before January arrives.
+I've worked in accounting for 38 years, and I prepare and file 1099s as part of keeping clean QuickBooks books for small businesses across Texas and the US, all online. See my [QuickBooks services](/quickbooks/), or [book a short intro call](/#book) before January arrives.
 
 ## Sources
 
