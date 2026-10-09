@@ -12,6 +12,7 @@ const navLinks = [
 export default function Navigation() {
   const [onDark, setOnDark] = useState(true);
   const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Navigation() {
         })
       );
       setHidden(y > 120 && y > lastY);
+      setScrolled(y > 24);
       lastY = y;
       ticking = false;
     };
@@ -53,12 +55,25 @@ export default function Navigation() {
 
   return (
     <>
+      {/* Phones: a full-width bar that hides while scrolling down.
+          Desktop: stays visible and shrinks into a floating rounded bar once the page scrolls,
+          the reverse of the booking section opening up to full width. */}
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-[transform,background-color,color] duration-500 ease-expo ${
-          hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0'
-        } ${light ? 'text-porcelain' : 'bg-porcelain/80 text-ink backdrop-blur-xl'}`}
+          hidden && !menuOpen ? 'max-md:-translate-y-full' : ''
+        } ${light ? 'text-porcelain' : 'text-ink max-md:bg-porcelain/80 max-md:backdrop-blur-xl'}`}
       >
-        <div className="wrap flex h-16 items-center justify-between md:h-20">
+        <div
+          className={`wrap flex h-16 items-center justify-between md:transition-[max-width,margin,height,padding,border-radius,background-color,box-shadow] md:duration-700 md:ease-expo ${
+            scrolled && !menuOpen
+              ? `md:mt-3 md:h-14 md:w-[calc(100%-2rem)] md:max-w-[1040px] md:rounded-full md:px-6 lg:px-7 md:backdrop-blur-xl ${
+                  light
+                    ? 'md:bg-deep/75 md:shadow-[0_12px_40px_-12px_rgb(0_0_0/0.5),inset_0_0_0_1px_rgb(var(--porcelain)/0.1)]'
+                    : 'md:bg-porcelain/85 md:shadow-[0_12px_40px_-16px_rgb(0_0_0/0.25),inset_0_0_0_1px_rgb(var(--ink)/0.08)]'
+                }`
+              : 'md:mt-0 md:h-20 md:max-w-[1320px] md:rounded-none'
+          }`}
+        >
           <a href="/" onClick={() => setMenuOpen(false)} className="text-[17px] font-semibold tracking-tight">
             Saleh Ahmad
           </a>
