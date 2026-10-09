@@ -97,6 +97,6 @@ I prepare and file 1099s as part of keeping clean QuickBooks books for small bus
 
 - [IRS Publication 1099 (2026), General Instructions for Certain Information Returns](https://www.irs.gov/publications/p1099)
 - [IRS: Reporting Payments to Independent Contractors](https://www.irs.gov/businesses/small-businesses-self-employed/reporting-payments-to-independent-contractors)
-- [QuickBooks Help: Prepare and File 1099s](https://quickbooks.intuit.com/learn-support/en-us/1099-misc-payroll-forms/prepare-and-file-1099s/00/185823)
+- [QuickBooks Help: Create and File 1099s with QuickBooks Online](https://quickbooks.intuit.com/learn-support/en-us/help-article/form-1099-nec/create-file-1099s-using-quickbooks-online/L2BapEpb1_US_en_US)
 
 *This article is general information, not tax advice for your specific situation. Thresholds and rules come from the IRS and can change.*
