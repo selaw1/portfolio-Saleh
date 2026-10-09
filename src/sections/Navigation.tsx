@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// Absolute links so they work from the blog pages too; on the homepage they just scroll
+// Absolute links so they work from every page; on the homepage they just scroll
 const navLinks = [
   { label: 'Services', href: '/#services' },
   { label: 'Approach', href: '/#approach' },
