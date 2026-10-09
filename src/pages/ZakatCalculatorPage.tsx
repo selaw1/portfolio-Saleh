@@ -1,10 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
 
 // Commonly used nisab weights. Some scholars use slightly different figures (87.48 g gold, 612.36 g silver).
 const GOLD_NISAB_GRAMS = 85;
 const SILVER_NISAB_GRAMS = 595;
 const ZAKAT_RATE = 0.025;
+const GRAMS_PER_TROY_OUNCE = 31.1034768;
+
+// Free spot price feed (USD per troy ounce), open to browser requests
+const PRICE_URL = 'https://api.gold-api.com/price/';
+
+type LivePrices = { gold: number; silver: number; updatedAt: string };
+
+async function fetchPrices(): Promise<LivePrices> {
+  const get = async (symbol: 'XAU' | 'XAG') => {
+    const res = await fetch(PRICE_URL + symbol);
+    if (!res.ok) throw new Error(`price ${symbol}: ${res.status}`);
+    const data = (await res.json()) as { price: number; updatedAt: string };
+    if (!(data.price > 0)) throw new Error(`price ${symbol}: no price`);
+    return data;
+  };
+  const [gold, silver] = await Promise.all([get('XAU'), get('XAG')]);
+  return {
+    gold: gold.price / GRAMS_PER_TROY_OUNCE,
+    silver: silver.price / GRAMS_PER_TROY_OUNCE,
+    updatedAt: gold.updatedAt,
+  };
+}
 
 type FieldKey =
   | 'cash'
@@ -85,6 +107,27 @@ function Calculator() {
   const [goldPrice, setGoldPrice] = useState('');
   const [silverPrice, setSilverPrice] = useState('');
   const [basis, setBasis] = useState<'gold' | 'silver'>('silver');
+  const [priceStatus, setPriceStatus] = useState<'loading' | 'live' | 'failed'>('loading');
+  const [updatedAt, setUpdatedAt] = useState('');
+
+  // Prefill today's prices; anything the visitor already typed is kept
+  useEffect(() => {
+    let cancelled = false;
+    fetchPrices()
+      .then((p) => {
+        if (cancelled) return;
+        setGoldPrice((v) => v || p.gold.toFixed(2));
+        setSilverPrice((v) => v || p.silver.toFixed(2));
+        setUpdatedAt(
+          new Date(p.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
+        );
+        setPriceStatus('live');
+      })
+      .catch(() => !cancelled && setPriceStatus('failed'));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const set = (key: string) => (value: string) => setValues((v) => ({ ...v, [key]: value }));
   const amount = (key: FieldKey) => toNumber(values[key] ?? '');
@@ -118,7 +161,12 @@ function Calculator() {
           <legend className="sr-only">Nisab</legend>
           <p className="text-xl font-medium tracking-tight">1. Nisab (the minimum)</p>
           <p className="mt-2 text-[15px] leading-relaxed text-fog">
-            Enter today's price per gram from a gold dealer or financial site, then choose which standard to use.
+            {priceStatus === 'loading' && 'Loading today\'s gold and silver prices…'}
+            {priceStatus === 'live' &&
+              `Filled in with the live spot price per gram (updated ${updatedAt}). You can change them, for example to a local dealer's price.`}
+            {priceStatus === 'failed' &&
+              'Live prices couldn\'t be loaded right now. Enter today\'s price per gram from a gold dealer or financial site.'}{' '}
+            Then choose which standard to use.
           </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             <AmountInput id="zakat-gold-price" label="Gold price per gram" hint="In US dollars" value={goldPrice} onChange={setGoldPrice} />
@@ -144,24 +192,34 @@ function Calculator() {
       </div>
 
       <aside className="lg:sticky lg:top-24 lg:col-span-5" aria-live="polite">
-        <div className="rounded-[24px] bg-deep p-6 text-porcelain sm:p-8">
-          <p className="text-sm text-porcelain/60">Your zakat</p>
+        <div
+          className={`rounded-[24px] p-6 text-porcelain transition-colors duration-500 sm:p-8 ${
+            !hasNisab || zakatable === 0 ? 'bg-deep' : aboveNisab ? 'bg-[#13633f]' : 'bg-[#8a2424]'
+          }`}
+        >
+          {hasNisab && zakatable > 0 && (
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-porcelain/15 px-3 py-1.5 text-sm font-medium">
+              <span className={`h-2 w-2 rounded-full ${aboveNisab ? 'bg-[#7ee2a8]' : 'bg-[#ffb4a8]'}`} aria-hidden="true" />
+              {aboveNisab ? 'Above nisab: zakat is due' : 'Below nisab: no zakat due'}
+            </p>
+          )}
+          <p className="text-sm text-porcelain/70">Your zakat</p>
           <p className="mt-2 text-5xl font-medium tracking-tight">{money(zakat)}</p>
           <dl className="mt-8 space-y-3 border-t border-porcelain/10 pt-6 text-[15px]">
             <div className="flex justify-between gap-4">
-              <dt className="text-porcelain/60">Total assets</dt>
+              <dt className="text-porcelain/75">Total assets</dt>
               <dd>{money(assets)}</dd>
             </div>
             <div className="flex justify-between gap-4">
-              <dt className="text-porcelain/60">Less debts due now</dt>
+              <dt className="text-porcelain/75">Less debts due now</dt>
               <dd>{money(debts)}</dd>
             </div>
             <div className="flex justify-between gap-4">
-              <dt className="text-porcelain/60">Zakatable wealth</dt>
+              <dt className="text-porcelain/75">Zakatable wealth</dt>
               <dd>{money(zakatable)}</dd>
             </div>
             <div className="flex justify-between gap-4">
-              <dt className="text-porcelain/60">Nisab ({basis} standard)</dt>
+              <dt className="text-porcelain/75">Nisab ({basis} standard)</dt>
               <dd>{hasNisab ? money(nisab) : 'Enter a price'}</dd>
             </div>
           </dl>

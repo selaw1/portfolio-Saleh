@@ -140,7 +140,7 @@ const zakatCalculator: Page = {
   head: {
     title: 'Zakat Calculator for Personal and Business Wealth | Saleh Ahmad',
     description:
-      'Free zakat calculator for savings, gold, silver, investments and business assets. Enter today\'s gold or silver price to check the nisab and see the 2.5% zakat due. By Saleh Ahmad, Zakat Accounting Diploma, Kuwait Zakat House.',
+      'Free zakat calculator for savings, gold, silver, investments and business assets. Uses live gold and silver prices to check the nisab and show the 2.5% zakat due. By Saleh Ahmad, Zakat Accounting Diploma, Kuwait Zakat House.',
     path: '/zakat-calculator/',
     jsonLd: [
       {
