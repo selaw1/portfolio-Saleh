@@ -194,7 +194,7 @@ function Calculator() {
       <aside className="lg:sticky lg:top-24 lg:col-span-5" aria-live="polite">
         <div
           className={`rounded-[24px] p-6 text-porcelain transition-colors duration-500 sm:p-8 ${
-            !hasNisab || zakatable === 0 ? 'bg-deep' : aboveNisab ? 'bg-[#13633f]' : 'bg-[#8a2424]'
+            !hasNisab || zakatable === 0 ? 'bg-deep' : aboveNisab ? 'bg-evergreen ring-1 ring-inset ring-brass/40' : 'bg-[#8a2424]'
           }`}
         >
           {hasNisab && zakatable > 0 && (
