@@ -5,7 +5,8 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 
 import { writeOgImages } from './og.mjs';
 
-const { render, routes, posts, SITE_URL, ogImagePath } = await import('../dist-server/entry-server.js');
+const { render, routes, posts, loadAllPostHtml, SITE_URL, ogImagePath } = await import('../dist-server/entry-server.js');
+await loadAllPostHtml();
 
 const dist = new URL('../dist/', import.meta.url);
 const template = await readFile(new URL('index.html', dist), 'utf8');

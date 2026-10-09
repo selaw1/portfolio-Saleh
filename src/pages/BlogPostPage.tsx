@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader';
 import PostCard from '../components/PostCard';
 import { contact } from '../data/content';
-import { formatDate, relatedPosts, type Post } from '../lib/blog';
+import { formatDate, postHtml, relatedPosts, type Post } from '../lib/blog';
 
 export default function BlogPostPage({ post }: { post: Post }) {
   const more = relatedPosts(post);
@@ -28,7 +28,7 @@ export default function BlogPostPage({ post }: { post: Post }) {
       </PageHeader>
 
       <div className="wrap py-16 md:py-24">
-        <div className="post-body mx-auto max-w-[46rem]" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="post-body mx-auto max-w-[46rem]" dangerouslySetInnerHTML={{ __html: postHtml(post.slug) }} />
 
         <aside
           aria-label="About the author"

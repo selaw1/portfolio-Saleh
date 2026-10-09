@@ -41,7 +41,7 @@ export default function Services() {
           <div className="lg:col-span-6">
             <h2 className="heading reveal max-w-[12ch]">What I handle for you</h2>
 
-            <ul className="mt-12 border-t border-ink/10 md:mt-16" role="tablist" aria-orientation="vertical">
+            <ul className="mt-12 border-t border-ink/10 md:mt-16">
               {services.map((service, i) => {
                 const isActive = i === active;
                 return (
@@ -51,9 +51,7 @@ export default function Services() {
                     style={{ '--d': `${i * 70}ms` } as React.CSSProperties}
                   >
                     <button
-                      role="tab"
-                      aria-selected={isActive}
-                      aria-controls={`service-${i}`}
+                      aria-expanded={isActive}
                       onClick={() => setActive(i)}
                       onMouseEnter={() => window.matchMedia('(min-width: 1024px)').matches && setActive(i)}
                       className="group flex w-full items-center justify-between py-5 text-left md:py-6"
@@ -101,11 +99,7 @@ export default function Services() {
 
           {/* Desktop: detail panel beside the list */}
           <div className="hidden lg:col-span-5 lg:col-start-8 lg:flex lg:items-end">
-            <div
-              id={`service-${active}`}
-              role="tabpanel"
-              className="w-full rounded-[28px] bg-porcelain p-10 xl:p-12"
-            >
+            <div aria-live="polite" className="w-full rounded-[28px] bg-porcelain p-10 xl:p-12">
               <div key={active} className="fade-up">
                 <p className="text-sm text-fog">
                   {String(active + 1).padStart(2, '0')} of {String(services.length).padStart(2, '0')}

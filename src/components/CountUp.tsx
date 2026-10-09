@@ -41,7 +41,12 @@ export default function CountUp({ value, suffix = '', duration = 1600 }: CountUp
   }, [value, duration]);
 
   return (
-    <span ref={ref} aria-label={`${value}${suffix}`}>
+    <span ref={ref}>
+      {/* Screen readers get the final number, not the animation */}
+      <span className="sr-only">
+        {value}
+        {suffix}
+      </span>
       <span aria-hidden="true">
         {shown}
         {suffix}

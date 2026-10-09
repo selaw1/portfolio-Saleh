@@ -40,7 +40,7 @@ function ClosePanel() {
         <div className="mt-8 border-t border-ink/10 pt-6">
           <div className="flex items-baseline justify-between">
             <p className="text-sm text-fog">Net income</p>
-            <p className="text-xs text-fog/70">Sample report</p>
+            <p className="text-xs text-fog">Sample report</p>
           </div>
           <div className="mt-4 flex h-24 items-end gap-2 sm:gap-3" aria-hidden="true">
             {bars.map((h, i) => (

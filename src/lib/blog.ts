@@ -1,4 +1,3 @@
-import { marked } from 'marked';
 import { blogCategories, type BlogCategory } from '../data/blogCategories';
 
 // Blog posts are Markdown files in src/content/blog. The file name is the post's
@@ -11,20 +10,8 @@ import { blogCategories, type BlogCategory } from '../data/blogCategories';
 // date: 2026-10-08
 // category: bookkeeping   (a slug from src/data/blogCategories.ts)
 // ---
-
-// Links to other sites (sources, references) open in a new tab so readers keep the article open
-marked.use({
-  renderer: {
-    link({ href, title, tokens }) {
-      const text = this.parser.parseInline(tokens);
-      const titleAttr = title ? ` title="${title}"` : '';
-      if (/^https?:\/\//.test(href)) {
-        return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
-      }
-      return `<a href="${href}"${titleAttr}>${text}</a>`;
-    },
-  },
-});
+//
+// plugins/blogMarkdown.ts turns each file into its details (?meta) and its HTML (?html) at build time.
 
 export type Post = {
   slug: string;
@@ -33,52 +20,42 @@ export type Post = {
   date: string;
   updated?: string;
   category: BlogCategory;
-  html: string;
   readingMinutes: number;
 };
 
-const files = import.meta.glob('../content/blog/*.md', { query: '?raw', import: 'default', eager: true }) as Record<
-  string,
-  string
->;
+type PostMeta = Omit<Post, 'slug' | 'category'> & { category: string };
 
-function parse(path: string, raw: string): Post {
+const metas = import.meta.glob<PostMeta>('../content/blog/*.md', { query: '?meta', import: 'default', eager: true });
+// Each post's HTML is its own small file, fetched only where it is shown
+const bodies = import.meta.glob<string>('../content/blog/*.md', { query: '?html', import: 'default' });
+
+function toPost(path: string, meta: PostMeta): Post {
   const slug = path.split('/').pop()!.replace(/\.md$/, '');
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
-  if (!match) throw new Error(`blog: ${slug}.md is missing its --- front matter block`);
-
-  const meta: Record<string, string> = {};
-  for (const line of match[1].split(/\r?\n/)) {
-    const i = line.indexOf(':');
-    if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim();
-  }
-  for (const key of ['title', 'description', 'date', 'category']) {
-    if (!meta[key]) throw new Error(`blog: ${slug}.md needs a "${key}:" line in its front matter`);
-  }
-
   const category = blogCategories.find((c) => c.slug === meta.category);
   if (!category) {
     const slugs = blogCategories.map((c) => c.slug).join(', ');
     throw new Error(`blog: ${slug}.md has category "${meta.category}"; use one of: ${slugs}`);
   }
-
-  const body = match[2];
-  return {
-    slug,
-    title: meta.title,
-    description: meta.description,
-    date: meta.date,
-    updated: meta.updated,
-    category,
-    html: marked.parse(body, { async: false }),
-    readingMinutes: Math.max(1, Math.round(body.split(/\s+/).length / 220)),
-  };
+  return { ...meta, slug, category };
 }
 
 // Newest first
-export const posts: Post[] = Object.entries(files)
-  .map(([path, raw]) => parse(path, raw))
+export const posts: Post[] = Object.entries(metas)
+  .map(([path, meta]) => toPost(path, meta))
   .sort((a, b) => b.date.localeCompare(a.date));
+
+const loadedHtml: Record<string, string> = {};
+
+// Loads a post's article HTML; main.tsx waits for it before hydrating a post page,
+// and scripts/prerender.mjs loads them all before writing pages
+export async function loadPostHtml(slug: string) {
+  const load = bodies[`../content/blog/${slug}.md`];
+  if (load && !(slug in loadedHtml)) loadedHtml[slug] = await load();
+}
+
+export const loadAllPostHtml = () => Promise.all(posts.map((p) => loadPostHtml(p.slug)));
+
+export const postHtml = (slug: string) => loadedHtml[slug] ?? '';
 
 // Posts grouped by category, in category order, leaving out empty categories
 export const postsByCategory = blogCategories

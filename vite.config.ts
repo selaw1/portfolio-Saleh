@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react"
 import { defineConfig, type Plugin } from "vite"
 import { inspectAttr } from 'kimi-plugin-inspect-react'
 import { SITE_URL } from './src/data/site'
+import blogMarkdown from './plugins/blogMarkdown'
 
 // Fills %SITE_URL% in index.html. Per-page tags and sitemap.xml are written by scripts/prerender.mjs.
 function siteUrl(): Plugin {
@@ -18,6 +19,7 @@ export default defineConfig(({ command, isSsrBuild }) => ({
   plugins: [
     // Source-path attributes are only for the dev inspector; keep them out of the live site
     command === 'serve' && inspectAttr(),
+    blogMarkdown(),
     react(),
     !isSsrBuild && siteUrl(),
   ],
