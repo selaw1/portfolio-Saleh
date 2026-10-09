@@ -37,6 +37,10 @@ Has served 100+ clients across 15+ industries and worked in 6 countries.
 - Master of Commerce in Accounting, Nagpur University, 1989
 - Bachelor of Commerce in Accounting, Nagpur University, 1986
 
+## Free tools
+
+- [Zakat calculator](https://saleh.selawii.com/zakat-calculator/): calculates zakat on personal and business wealth (cash, gold, silver, investments, receivables, inventory, minus debts due now) against the gold or silver nisab.
+
 ## Blog articles
 
 Plain-English guides for small business owners: https://saleh.selawii.com/blog/

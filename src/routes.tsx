@@ -7,6 +7,7 @@ import BlogIndexPage from './pages/BlogIndexPage';
 import BlogPostPage from './pages/BlogPostPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ServicePage from './pages/ServicePage';
+import ZakatCalculatorPage from './pages/ZakatCalculatorPage';
 
 // What goes in each page's <head>: title, description, canonical URL, social previews and structured data
 export type Head = {
@@ -134,6 +135,39 @@ function servicePage(service: Service): Page {
   };
 }
 
+const zakatCalculator: Page = {
+  element: <ZakatCalculatorPage />,
+  head: {
+    title: 'Zakat Calculator for Personal and Business Wealth | Saleh Ahmad',
+    description:
+      'Free zakat calculator for savings, gold, silver, investments and business assets. Enter today\'s gold or silver price to check the nisab and see the 2.5% zakat due. By Saleh Ahmad, Zakat Accounting Diploma, Kuwait Zakat House.',
+    path: '/zakat-calculator/',
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        '@id': `${SITE_URL}/zakat-calculator/#app`,
+        name: 'Zakat calculator',
+        url: `${SITE_URL}/zakat-calculator/`,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Any',
+        isAccessibleForFree: true,
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        author,
+        publisher: { '@id': `${SITE_URL}/#business` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+          { '@type': 'ListItem', position: 2, name: 'Zakat calculator', item: `${SITE_URL}/zakat-calculator/` },
+        ],
+      },
+    ],
+  },
+};
+
 export const notFound: Page = {
   element: <NotFoundPage />,
   head: {
@@ -144,7 +178,7 @@ export const notFound: Page = {
   },
 };
 
-export const pages: Page[] = [home, ...servicePages.map(servicePage), blogIndex, ...posts.map(postPage)];
+export const pages: Page[] = [home, ...servicePages.map(servicePage), zakatCalculator, blogIndex, ...posts.map(postPage)];
 
 export function resolve(pathname: string): Page {
   // Every page lives at an address ending in a slash (/blog/), matching how the host serves folders

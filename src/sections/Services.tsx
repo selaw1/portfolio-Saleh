@@ -91,7 +91,11 @@ export default function Services() {
             </ul>
 
             <p className="reveal mt-10 max-w-[44ch] text-[15px] leading-relaxed text-fog">
-              Also available: {alsoOffered.join(', ')}.
+              Also available: {alsoOffered.join(', ')}. Try the free{' '}
+              <a href="/zakat-calculator/" className="link-draw text-ink">
+                zakat calculator
+              </a>
+              .
             </p>
           </div>
 
