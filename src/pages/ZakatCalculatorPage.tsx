@@ -163,7 +163,7 @@ function Calculator() {
           <p className="mt-2 text-[15px] leading-relaxed text-fog">
             {priceStatus === 'loading' && 'Loading today\'s gold and silver prices…'}
             {priceStatus === 'live' &&
-              `Filled in with the live spot price per gram (updated ${updatedAt}). You can change them, for example to a local dealer's price.`}
+              `Filled in with an approximate live spot price per gram (updated ${updatedAt}). Prices vary slightly between sources; you can enter the price from your dealer or another source.`}
             {priceStatus === 'failed' &&
               'Live prices couldn\'t be loaded right now. Enter today\'s price per gram from a gold dealer or financial site.'}{' '}
             Then choose which standard to use.
