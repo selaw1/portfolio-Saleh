@@ -74,4 +74,10 @@ A separate savings account for taxes helps with most of these. Each time you're 
 
 I've worked in accounting for 38 years, and I help small business owners and contractors plan what they'll owe during the year, so April holds no surprises. I work online from Weatherford, Texas. See my [tax preparation and planning services](/tax-preparation/) or [book a short intro call](/#book).
 
+## Sources
+
+- [IRS: About Form 1040-ES, Estimated Tax for Individuals](https://www.irs.gov/forms-pubs/about-form-1040-es)
+- [IRS Direct Pay](https://www.irs.gov/payments/direct-pay)
+- [EFTPS: notice on individual enrollments](https://www.eftps.gov)
+
 *This article is general information, not tax advice for your specific situation. Tax rules and thresholds can change.*

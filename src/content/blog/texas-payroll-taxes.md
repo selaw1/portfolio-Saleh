@@ -84,4 +84,11 @@ If you're paying yourself through payroll as an S corp owner, the same rules app
 
 I've worked in accounting for 38 years, and I run payroll for small businesses through QuickBooks Payroll, with every pay run recorded in the books, working online from Weatherford, Texas. See my [payroll services](/payroll/) or [book a short intro call](/#book).
 
+## Sources
+
+- [IRS Publication 15 (Circular E), Employer's Tax Guide for 2026](https://www.irs.gov/pub/irs-pdf/p15.pdf)
+- [Social Security Administration: Contribution and Benefit Base](https://www.ssa.gov/oact/cola/cbb.html)
+- [Texas Workforce Commission: Unemployment Tax Basics](https://www.twc.texas.gov/programs/unemployment-tax/unemployment-tax-basics)
+- [Texas Workforce Commission: New Texas Employer Information](https://www.twc.texas.gov/programs/unemployment-tax/new-texas-employer-information)
+
 *This article is general information, not tax advice for your specific situation. Rates, wage limits and deadlines are set by the IRS and the Texas Workforce Commission and can change.*

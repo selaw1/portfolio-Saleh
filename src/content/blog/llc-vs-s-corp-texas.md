@@ -85,4 +85,10 @@ Whichever you choose, the way you take money out of the business matters. I expl
 
 I've worked in accounting for 38 years and help small business owners make this decision with real numbers from their own books, working online from Weatherford, Texas. See my [tax preparation and planning services](/tax-preparation/) or [book a short intro call](/#book).
 
+## Sources
+
+- [Texas Secretary of State: Form 205 Instructions, Certificate of Formation for an LLC](https://www.sos.state.tx.us/corp/instructions/205.shtml)
+- [IRS: About Form 2553, Election by a Small Business Corporation](https://www.irs.gov/forms-pubs/about-form-2553)
+- [Social Security Administration: Contribution and Benefit Base](https://www.ssa.gov/oact/cola/cbb.html)
+
 *This article is general information, not tax advice for your specific situation. Tax rules can change, and the right choice depends on your own numbers.*

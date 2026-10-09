@@ -91,4 +91,10 @@ Year-end is the busiest time to start, so the earlier the better. I help small b
 
 See my [bookkeeping services](/bookkeeping/) or [book a short intro call](/#book).
 
+## Sources
+
+- [IRS Publication 509 (2026), Tax Calendars](https://www.irs.gov/publications/p509)
+- [Texas Comptroller: Requirements for Reporting and Paying Sales and Use Tax](https://comptroller.texas.gov/taxes/sales/filing-requirements.php)
+- [Texas Comptroller: Franchise Tax](https://comptroller.texas.gov/taxes/franchise/)
+
 *This article is general information, not tax advice for your specific situation. Deadlines move when they fall on a weekend or holiday.*

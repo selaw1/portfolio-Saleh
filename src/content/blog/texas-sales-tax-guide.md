@@ -85,4 +85,9 @@ QuickBooks can track sales tax automatically, but only if it's [set up](/blog/ac
 
 If you'd like someone to handle your sales tax filings and keep the books clean behind them, [book a short intro call](/#book).
 
+## Sources
+
+- [Texas Comptroller: Sales and Use Tax](https://comptroller.texas.gov/taxes/sales/)
+- [Texas Comptroller: Requirements for Reporting and Paying Sales and Use Tax](https://comptroller.texas.gov/taxes/sales/filing-requirements.php)
+
 *This article is general information, not tax advice for your specific situation. Rules and rates are set by the Texas Comptroller and can change.*

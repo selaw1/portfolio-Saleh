@@ -82,4 +82,9 @@ Choosing the schedule is the first step. Payroll also has to be recorded correct
 
 I set up and run payroll for small businesses with QuickBooks Payroll, fully online. See my [payroll services](/payroll/), or [book a short intro call](/#book) to talk about your team.
 
+## Sources
+
+- [Texas Labor Code, Chapter 61 (Texas Payday Law)](https://statutes.capitol.texas.gov/Docs/LA/pdf/LA.61.pdf)
+- [Texas Workforce Commission: Frequency of Pay](https://efte.twc.texas.gov/frequency_of_pay.html)
+
 *This article is general information, not legal or tax advice for your specific situation.*

@@ -23,6 +23,7 @@ Rewriting the prose is fine. These parts are not prose and must stay as they are
 9. **Closing section.** Keep the final call to action with its links to the service page and `/#book`.
 10. **Disclaimer.** Keep the italic line at the end (`*This article is general information...*`) where a post has one.
 11. **No em dashes or en dashes** in the text.
+12. **Sources.** Keep the `## Sources` section (just above the disclaimer) and every link in it. Posts that quote tax figures, deadlines or laws cite official sources only (IRS, SSA, Texas Comptroller, Texas Workforce Commission, Texas Secretary of State, Texas statutes, BLS, Intuit help), never other accounting firms. Links to other sites open in a new tab automatically.
 
 ### Target keywords to keep in each post
 

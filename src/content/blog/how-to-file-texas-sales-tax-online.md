@@ -90,4 +90,9 @@ Every one of these traces back to the books. When sales and sales tax are record
 
 I've spent 38 years in accounting, and I file Texas sales tax returns for small businesses as part of their monthly books, working online from Weatherford, Texas. If you'd rather not think about the 20th of the month again, see my [tax preparation and planning services](/tax-preparation/) or [book a short intro call](/#book).
 
+## Sources
+
+- [Texas Comptroller: Getting Started with Webfile](https://comptroller.texas.gov/taxes/file-pay/about-webfile.php)
+- [Texas Comptroller: Requirements for Reporting and Paying Sales and Use Tax](https://comptroller.texas.gov/taxes/sales/filing-requirements.php)
+
 *This article is general information, not tax advice for your specific situation. Rules and rates are set by the Texas Comptroller and can change.*
