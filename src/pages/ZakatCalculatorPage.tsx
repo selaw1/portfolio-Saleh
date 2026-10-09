@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import { AmountInput } from '../components/calculator';
+import { money, toNumber } from '../lib/numbers';
 
 // Commonly used nisab weights. Some scholars use slightly different figures (87.48 g gold, 612.36 g silver).
 const GOLD_NISAB_GRAMS = 85;
@@ -58,49 +60,6 @@ const businessFields: Field[] = [
 const deductionFields: Field[] = [
   { key: 'debts', label: 'Debts and bills due now', hint: 'Personal and business amounts currently due' },
 ];
-
-const money = (n: number) =>
-  n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
-
-const toNumber = (value: string) => {
-  const n = parseFloat(value.replace(/[$,\s]/g, ''));
-  return Number.isFinite(n) && n > 0 ? n : 0;
-};
-
-function AmountInput({
-  id,
-  label,
-  hint,
-  value,
-  onChange,
-}: {
-  id: string;
-  label: string;
-  hint: string;
-  value: string;
-  onChange: (value: string) => void;
-}) {
-  return (
-    <label htmlFor={id} className="block">
-      <span className="block text-[15px] font-medium">{label}</span>
-      <span className="mt-0.5 block text-sm text-fog">{hint}</span>
-      <span className="mt-2 flex items-center rounded-xl bg-white ring-1 ring-inset ring-ink/15 focus-within:ring-2 focus-within:ring-evergreen">
-        <span className="pl-4 text-fog" aria-hidden="true">
-          $
-        </span>
-        <input
-          id={id}
-          inputMode="decimal"
-          autoComplete="off"
-          placeholder="0"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full rounded-xl bg-transparent px-2 py-3 text-[16px] outline-none"
-        />
-      </span>
-    </label>
-  );
-}
 
 function Calculator() {
   const [values, setValues] = useState<Record<string, string>>({});

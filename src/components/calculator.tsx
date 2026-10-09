@@ -20,7 +20,6 @@ export function AmountInput({
   return (
     <label htmlFor={id} className="block">
       <span className="block text-[15px] font-medium">{label}</span>
-      <span className="mt-0.5 block text-sm text-fog">{hint}</span>
       <span className="mt-2 flex items-center rounded-xl bg-white ring-1 ring-inset ring-ink/15 focus-within:ring-2 focus-within:ring-evergreen">
         {unit === '$' && (
           <span className="pl-4 text-fog" aria-hidden="true">
@@ -42,6 +41,7 @@ export function AmountInput({
           </span>
         )}
       </span>
+      <span className="mt-1.5 block text-sm leading-snug text-fog">{hint}</span>
     </label>
   );
 }
