@@ -87,6 +87,13 @@ export default function SCorpCalculatorPage() {
           { href: '/blog/how-to-pay-yourself-from-an-llc/', label: "How to pay yourself from an LLC: owner's draw vs salary" },
         ]}
         cta="I've worked in accounting for 38 years and help small business owners decide on an S corp election with real numbers from their own books, working online from Weatherford, Texas."
+        sources={[
+          { href: 'https://www.ssa.gov/oact/cola/cbb.html', label: 'Social Security Administration: contribution and benefit base' },
+          { href: 'https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes', label: 'IRS: Self-employment tax (Social Security and Medicare taxes)' },
+          { href: 'https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues', label: 'IRS: S corporation compensation and medical insurance issues' },
+          { href: 'https://www.irs.gov/taxtopics/tc759', label: 'IRS: Topic 759, Form 940 and federal unemployment tax' },
+          { href: 'https://www.irs.gov/forms-pubs/about-form-2553', label: 'IRS: About Form 2553, Election by a Small Business Corporation' },
+        ]}
         disclaimer="This is a simplified comparison of payroll taxes only, using 2026 rates and the $184,500 Social Security wage base. It leaves out income tax effects such as the deduction for half of self-employment tax and the qualified business income deduction. It is not tax advice."
       >
         <ol>

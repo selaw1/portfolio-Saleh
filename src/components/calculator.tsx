@@ -138,12 +138,14 @@ export function CalculatorFooter({
   related,
   cta,
   disclaimer,
+  sources = [],
 }: {
   heading: string;
   children: ReactNode;
   related: { href: string; label: string }[];
   cta: string;
   disclaimer: string;
+  sources?: { href: string; label: string }[];
 }) {
   return (
     <>
@@ -160,6 +162,20 @@ export function CalculatorFooter({
                     <li key={r.href}>
                       <a href={r.href} className="link-draw text-[17px] font-medium">
                         {r.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {sources.length > 0 && (
+              <div className="mt-8 border-t border-ink/10 pt-6">
+                <p className="text-sm text-fog">Sources</p>
+                <ul className="mt-3 space-y-2 text-[15px]">
+                  {sources.map((s) => (
+                    <li key={s.href}>
+                      <a href={s.href} target="_blank" rel="noopener noreferrer" className="link-draw">
+                        {s.label}
                       </a>
                     </li>
                   ))}

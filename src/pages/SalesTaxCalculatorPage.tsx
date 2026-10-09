@@ -104,6 +104,9 @@ export default function SalesTaxCalculatorPage() {
           { href: '/blog/how-to-file-texas-sales-tax-online/', label: 'How to file and pay Texas sales tax online' },
         ]}
         cta="I've worked in accounting for 38 years and handle Texas sales tax filings for small businesses as part of their monthly books, working online from Weatherford, Texas."
+        sources={[
+          { href: 'https://comptroller.texas.gov/taxes/sales/', label: 'Texas Comptroller: Sales and use tax' },
+        ]}
         disclaimer="This calculator applies the 6.25% Texas state rate plus the local rate you enter, capped at 2%. Whether an item is taxable, and which local rate applies, depends on what you sell and where. It is not tax advice."
       >
         <p>
