@@ -39,10 +39,6 @@ Has served 100+ clients across 15+ industries and worked in 6 countries.
 
 ## Free tools
 
-- [All calculators](https://saleh.selawii.com/calculators/)
-- [Quarterly estimated tax calculator](https://saleh.selawii.com/quarterly-tax-calculator/): 2026 self-employment tax, federal income tax and safe harbor quarterly payments for 1099 income.
-- [LLC vs S corp tax savings calculator](https://saleh.selawii.com/s-corp-tax-calculator/): compares self-employment tax with payroll taxes on a reasonable salary.
-- [Texas sales tax calculator](https://saleh.selawii.com/texas-sales-tax-calculator/): 6.25% state rate plus up to 2% local tax.
 - [Zakat calculator](https://saleh.selawii.com/zakat-calculator/): calculates zakat on personal and business wealth (cash, gold, silver, investments, receivables, inventory, minus debts due now) against the gold or silver nisab.
 
 ## Blog articles

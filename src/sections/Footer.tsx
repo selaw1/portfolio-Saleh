@@ -14,8 +14,8 @@ export default function Footer() {
               {s.name}
             </a>
           ))}
-          <a href="/calculators/" className="link-draw hover:text-porcelain">
-            Calculators
+          <a href="/zakat-calculator/" className="link-draw hover:text-porcelain">
+            Zakat calculator
           </a>
           <a href="/blog/" className="link-draw hover:text-porcelain">
             Blog
