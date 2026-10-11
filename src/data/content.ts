@@ -11,7 +11,7 @@ export const contact = {
 export const calendlyUrl = 'https://calendly.com/saleh-selawii/30min';
 
 export const figures = [
-  { value: 38, suffix: '+', label: 'Years in accounting' },
+  { value: 38, suffix: '+', label: 'Years in practice' },
   { value: 100, suffix: '+', label: 'Clients served' },
   { value: 15, suffix: '+', label: 'Industries' },
   { value: 6, suffix: '', label: 'Countries worked in' },
@@ -22,7 +22,7 @@ export const services = [
     name: 'Accounting setup',
     href: '/accounting-system-setup/',
     summary:
-      'A complete accounting system built for your business, controlling every transaction from the first sale to the final statement, with clear Excel reports that show you the numbers at a glance.',
+      'A complete set of books and controls built for your business, controlling every transaction from the first sale to the final statement, with clear Excel reports that show you the numbers at a glance.',
     includes: ['Full transaction cycle, A to Z', 'Internal controls & approvals', 'Clear Excel reports & budgets'],
   },
   {

@@ -9,11 +9,11 @@ export default function PostCard({ post, showCategory = true }: { post: Post; sh
       href={href}
       className="group flex h-full flex-col overflow-hidden rounded-[24px] bg-porcelain ring-1 ring-inset ring-ink/10 transition-shadow duration-500 hover:shadow-card-hover"
     >
-      {/* The post's generated preview image (scripts/og.mjs); decorative, since the title follows */}
+      {/* The post's generated preview image (scripts/og.mjs) */}
       <div className="aspect-[1200/630] overflow-hidden bg-deep">
         <img
           src={ogImagePath(href)}
-          alt=""
+          alt={`Preview card for the ${post.category.name} article: ${post.title}`}
           width={1200}
           height={630}
           loading="lazy"
