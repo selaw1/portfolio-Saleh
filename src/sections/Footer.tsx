@@ -5,7 +5,7 @@ export default function Footer() {
     <footer data-tone="dark" className="bg-deep text-porcelain/60">
       <div className="wrap flex flex-col gap-6 border-t border-porcelain/10 py-10 text-sm md:flex-row md:items-center md:justify-between">
         <p>
-          <span className="font-semibold text-porcelain">Saleh Ahmad</span>
+          <span className="font-semibold text-porcelain">AlSelawi Financial Services</span>
           <span className="ml-3">Accounting, payroll and tax. Based in {contact.base}.</span>
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">

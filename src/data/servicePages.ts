@@ -21,7 +21,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'accounting-system-setup',
     name: 'Accounting system setup',
-    seoTitle: 'Accounting System Setup for Small Business | Saleh Ahmad',
+    seoTitle: 'Accounting System Setup for Small Business | AlSelawi Financial Services',
     description:
       'A complete accounting system set up for your business: separate business banking, QuickBooks, a chart of accounts built around how you sell, inventory tracking, internal controls, a bookkeeping routine and clear Excel reports. Simple, scalable and ready for tax filing from day one.',
     heading: 'An accounting system built around your business',
@@ -116,7 +116,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'bookkeeping',
     name: 'Bookkeeping',
-    seoTitle: 'Small Business Bookkeeping Services, Online | Saleh Ahmad',
+    seoTitle: 'Small Business Bookkeeping Services, Online | AlSelawi Financial Services',
     description:
       'Small business bookkeeping services, done online: bank reconciliation, payables and receivables, and monthly financial statements. Outsource your bookkeeping to an online QuickBooks bookkeeper with 38 years of experience, based in Texas.',
     heading: 'Bookkeeping services for small businesses',
@@ -177,7 +177,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'payroll',
     name: 'Payroll',
-    seoTitle: 'Payroll Services for Small Business | Online Payroll | Saleh Ahmad',
+    seoTitle: 'Payroll Services for Small Business | Online Payroll | AlSelawi Financial Services',
     description:
       'Online payroll services for small business: payroll processing with QuickBooks Payroll, pay runs, wage records, payroll reports and year-end records. Bookkeeping and payroll services in one place for employers in Texas and across the US.',
     heading: 'Payroll services for small businesses, done on time',
@@ -234,7 +234,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'tax-preparation',
     name: 'Tax preparation and planning',
-    seoTitle: 'Small Business Tax Preparation & Accountant in Texas | Saleh Ahmad',
+    seoTitle: 'Small Business Tax Preparation & Accountant in Texas | AlSelawi Financial Services',
     description:
       'Small business tax preparation and accounting services in Texas and across the US: returns prepared from clean books, deductions claimed, and Texas franchise tax and sales tax filings kept on schedule.',
     heading: 'Tax preparation and planning for small businesses',
@@ -291,7 +291,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: 'quickbooks',
     name: 'QuickBooks',
-    seoTitle: 'QuickBooks Help: Setup, Cleanup & Bookkeeping | Saleh Ahmad',
+    seoTitle: 'QuickBooks Help: Setup, Cleanup & Bookkeeping | AlSelawi Financial Services',
     description:
       'QuickBooks help from an accountant with 38 years of experience: QuickBooks Online setup, cleanup of messy files, QuickBooks bookkeeping and training. Serving small businesses in Texas and across the US online.',
     heading: 'QuickBooks help: set up, cleaned up and understood',

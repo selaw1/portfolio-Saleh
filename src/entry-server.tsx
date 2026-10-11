@@ -8,6 +8,8 @@ import { notFound, pages } from './routes';
 export { SITE_URL } from './data/site';
 export { loadAllPostHtml, posts } from './lib/blog';
 export { ogImagePath } from './lib/og';
+export { servicePages } from './data/servicePages';
+export { contact, credentials } from './data/content';
 
 // Every address the site publishes; scripts/prerender.mjs writes one HTML file for each
 export const routes = pages.map((page) => ({ path: page.head.path, lastModified: page.head.lastModified, card: page.head.card }));

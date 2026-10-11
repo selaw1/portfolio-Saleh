@@ -15,9 +15,10 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="AlSelawi Financial Services Blog" href="/blog/rss.xml" />
 
     <!-- Social previews (Facebook, LinkedIn, WhatsApp, X) -->
-    <meta property="og:site_name" content="Saleh Ahmad" />
+    <meta property="og:site_name" content="AlSelawi Financial Services" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -31,7 +32,8 @@
           {
             "@type": "AccountingService",
             "@id": "%SITE_URL%/#business",
-            "name": "Saleh Ahmad",
+            "name": "AlSelawi Financial Services",
+            "founder": { "@id": "%SITE_URL%/#saleh" },
             "description": "Online bookkeeping, payroll, tax preparation and QuickBooks services. Based in Weatherford, Texas, serving businesses across Texas, the United States and worldwide.",
             "url": "%SITE_URL%/",
             "image": "%SITE_URL%/og-image.png",
@@ -61,6 +63,7 @@
             "@id": "%SITE_URL%/#saleh",
             "name": "Saleh Ahmad",
             "jobTitle": "Certified Accountant",
+            "worksFor": { "@id": "%SITE_URL%/#business" },
             "url": "%SITE_URL%/",
             "sameAs": ["https://www.linkedin.com/in/saleh-ahmad-57807142/"],
             "hasCredential": [
@@ -74,7 +77,7 @@
             "@type": "WebSite",
             "@id": "%SITE_URL%/#website",
             "url": "%SITE_URL%/",
-            "name": "Saleh Ahmad",
+            "name": "AlSelawi Financial Services",
             "publisher": { "@id": "%SITE_URL%/#business" },
             "inLanguage": "en"
           }

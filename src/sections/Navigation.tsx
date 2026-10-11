@@ -75,7 +75,7 @@ export default function Navigation() {
           }`}
         >
           <a href="/" onClick={() => setMenuOpen(false)} className="text-[17px] font-semibold tracking-tight">
-            Saleh Ahmad
+            AlSelawi Financial Services
           </a>
 
           <nav className="hidden items-center gap-9 md:flex" aria-label="Main">

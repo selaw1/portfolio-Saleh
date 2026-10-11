@@ -35,7 +35,7 @@ function card({ eyebrow, title }) {
     h(
       'div',
       { display: 'flex', justifyContent: 'space-between', fontSize: 26 },
-      h('div', { display: 'flex', fontWeight: 500 }, 'Saleh Ahmad'),
+      h('div', { display: 'flex', fontWeight: 500 }, 'AlSelawi Financial Services'),
       h('div', { display: 'flex', opacity: 0.6 }, 'Accounting · Weatherford, Texas')
     ),
     h(

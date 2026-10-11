@@ -10,9 +10,9 @@ export function renderHead(head: Head) {
   const url = `${SITE_URL}${head.path}`;
   const title = escape(head.title);
   const description = escape(head.description);
-  // Pages with a card get their own generated preview image; the rest share the site image
-  const image = `${SITE_URL}${head.card ? ogImagePath(head.path) : '/og-image.png'}`;
-  const imageAlt = escape(head.card ? head.card.title : 'Saleh Ahmad: Your books, finally in order.');
+  // Pages with a card get their own generated preview image; the rest share the homepage's (/og-image.png)
+  const image = `${SITE_URL}${ogImagePath(head.card ? head.path : '/')}`;
+  const imageAlt = escape(head.card ? head.card.title : 'AlSelawi Financial Services: Your books, finally in order.');
   const tags = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
@@ -28,6 +28,10 @@ export function renderHead(head: Head) {
     '<meta property="og:image:width" content="1200" />',
     '<meta property="og:image:height" content="630" />',
     `<meta property="og:image:alt" content="${imageAlt}" />`,
+    head.published ? `<meta property="article:published_time" content="${head.published}" />` : '',
+    head.published && head.lastModified
+      ? `<meta property="article:modified_time" content="${head.lastModified}" />`
+      : '',
     `<meta name="twitter:image" content="${image}" />`,
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${description}" />`,

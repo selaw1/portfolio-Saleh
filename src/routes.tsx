@@ -17,6 +17,8 @@ export type Head = {
   path: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  // Articles only: first publish date, shown to search engines with lastModified
+  published?: string;
   // For sitemap.xml; pages without one use the build date
   lastModified?: string;
   jsonLd?: object[];
@@ -31,19 +33,21 @@ const author = { '@id': `${SITE_URL}/#saleh` };
 const home: Page = {
   element: <HomePage />,
   head: {
-    title: 'Bookkeeping & Accounting Services for Small Business | Saleh Ahmad',
+    title: 'Bookkeeping & Accounting Services for Small Business | AlSelawi Financial Services',
     description:
-      'Bookkeeping services, accounting services, payroll and tax preparation for small business from Saleh Ahmad, a small business accountant with 38 years of experience. Based in Weatherford, Texas, working online across the US.',
+      'Bookkeeping services, accounting services, payroll and tax preparation for small business from AlSelawi Financial Services, run by Saleh Ahmad, a small business accountant with 38 years of experience. Based in Weatherford, Texas, working online across the US.',
     path: '/',
+    // Also the fallback preview for pages without a card (written to /og-image.png)
+    card: { eyebrow: 'Bookkeeping, payroll and tax', title: 'Your books, finally in order.' },
   },
 };
 
 const blogIndex: Page = {
   element: <BlogIndexPage />,
   head: {
-    title: 'Blog | Bookkeeping, Payroll & Tax Guides for Texas Businesses | Saleh Ahmad',
+    title: 'Blog | Bookkeeping, Payroll & Tax Guides for Texas Businesses | AlSelawi Financial Services',
     description:
-      'Plain-English guides to bookkeeping, payroll, Texas taxes and QuickBooks for small business owners, from accountant Saleh Ahmad.',
+      'Plain-English guides to bookkeeping, payroll, Texas taxes and QuickBooks for small business owners, from AlSelawi Financial Services, run by accountant Saleh Ahmad.',
     path: '/blog/',
     card: { eyebrow: 'Blog', title: 'Bookkeeping, payroll and tax, explained plainly' },
     jsonLd: [
@@ -52,7 +56,7 @@ const blogIndex: Page = {
         '@type': 'Blog',
         '@id': `${SITE_URL}/blog/#blog`,
         url: `${SITE_URL}/blog/`,
-        name: 'Saleh Ahmad Blog',
+        name: 'AlSelawi Financial Services Blog',
         author,
         publisher: { '@id': `${SITE_URL}/#business` },
         blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: `${SITE_URL}/blog/${p.slug}/` })),
@@ -66,11 +70,12 @@ function postPage(post: (typeof posts)[number]): Page {
   return {
     element: <BlogPostPage post={post} />,
     head: {
-      title: `${post.title} | Saleh Ahmad`,
+      title: `${post.title} | AlSelawi Financial Services`,
       description: post.description,
       path: `/blog/${post.slug}/`,
       type: 'article',
       card: { eyebrow: post.category.name, title: post.title },
+      published: post.date,
       lastModified: post.updated ?? post.date,
       jsonLd: [
         {
@@ -130,6 +135,16 @@ function servicePage(service: Service): Page {
         },
         {
           '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          '@id': `${url}#faq`,
+          mainEntity: service.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: { '@type': 'Answer', text: faq.a },
+          })),
+        },
+        {
+          '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
@@ -144,7 +159,7 @@ function servicePage(service: Service): Page {
 const zakatCalculator: Page = {
   element: <ZakatCalculatorPage />,
   head: {
-    title: 'Zakat Calculator for Personal and Business Wealth | Saleh Ahmad',
+    title: 'Zakat Calculator for Personal and Business Wealth | AlSelawi Financial Services',
     description:
       'Free zakat calculator for savings, gold, silver, investments and business assets. Uses live gold and silver prices to check the nisab and show the 2.5% zakat due. By Saleh Ahmad, Zakat Accounting Diploma, Kuwait Zakat House.',
     path: '/zakat-calculator/',
@@ -178,7 +193,7 @@ const zakatCalculator: Page = {
 export const notFound: Page = {
   element: <NotFoundPage />,
   head: {
-    title: 'Page not found | Saleh Ahmad',
+    title: 'Page not found | AlSelawi Financial Services',
     description: 'This page does not exist.',
     path: '/404',
     noindex: true,
